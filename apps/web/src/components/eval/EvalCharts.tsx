@@ -144,7 +144,11 @@ export function MetricChart({ summary }: { summary: EvaluationSummary }) {
       </p>
       <div className="chart-frame" aria-hidden="true">
         <ResponsiveContainer width="100%" height={260} minWidth={0} debounce={50}>
-          <BarChart data={rows} margin={{ top: 16, right: 8, bottom: 0, left: 4 }}>
+          <BarChart
+            accessibilityLayer={false}
+            data={rows}
+            margin={{ top: 16, right: 8, bottom: 0, left: 4 }}
+          >
             <CartesianGrid vertical={false} stroke="#1d2631" />
             <XAxis dataKey="policy" tickLine={false} axisLine={AXIS} tick={TICK} interval={0} />
             <YAxis
@@ -255,7 +259,12 @@ export function FamilyChart({ summary }: { summary: EvaluationSummary }) {
         <>
           <div className="chart-frame" aria-hidden="true">
             <ResponsiveContainer width="100%" height={280} minWidth={0} debounce={50}>
-              <BarChart data={rows} margin={{ top: 16, right: 8, bottom: 0, left: 4 }} barGap={2}>
+              <BarChart
+                accessibilityLayer={false}
+                data={rows}
+                margin={{ top: 16, right: 8, bottom: 0, left: 4 }}
+                barGap={2}
+              >
                 <CartesianGrid vertical={false} stroke="#1d2631" />
                 <XAxis dataKey="family" tickLine={false} axisLine={AXIS} tick={TICK} />
                 <YAxis
@@ -362,7 +371,11 @@ export function ScalingChart({ summary }: { summary: EvaluationSummary }) {
     >
       <div className="chart-frame" aria-hidden="true">
         <ResponsiveContainer width="100%" height={260} minWidth={0} debounce={50}>
-          <LineChart data={rows} margin={{ top: 16, right: 12, bottom: 4, left: 4 }}>
+          <LineChart
+            accessibilityLayer={false}
+            data={rows}
+            margin={{ top: 16, right: 12, bottom: 4, left: 4 }}
+          >
             <CartesianGrid stroke="#1d2631" />
             <XAxis
               dataKey="zones"

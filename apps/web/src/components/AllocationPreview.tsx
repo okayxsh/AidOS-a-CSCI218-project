@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import type { ScenarioDetail } from '../api/types';
 import { POLICY_DESCRIPTION, STATUS_TONE } from '../lib/display';
 import { formatInt, formatRatio } from '../lib/format';
+import { useFocusAfterRun } from '../lib/useFocusAfterRun';
 import { useAllocationRun, useHealth, useScenarioQuery } from '../state/scenario';
 import { Panel } from './ui/Panel';
 import { ErrorState } from './ui/States';
@@ -12,6 +13,7 @@ import { StatusBadge } from './ui/StatusBadge';
 export function AllocationPreview({ detail }: { detail: ScenarioDetail }) {
   const health = useHealth();
   const run = useAllocationRun(detail);
+  const resultsRef = useFocusAfterRun<HTMLUListElement>(run.status);
   const query = useScenarioQuery();
   const results = new Map(run.data?.results.map((r) => [r.policy_id, r]));
 
@@ -46,7 +48,12 @@ export function AllocationPreview({ detail }: { detail: ScenarioDetail }) {
       )}
       {run.status === 'error' && <ErrorState error={run.error} onRetry={run.retry} />}
       {health.data && (
-        <ul className="policy-list">
+        <ul
+          className="policy-list focus-target"
+          ref={resultsRef}
+          tabIndex={-1}
+          aria-label="Allocation results by policy"
+        >
           {health.data.policies.map((policy) => {
             const result = results.get(policy.id);
             const m = result?.metrics;

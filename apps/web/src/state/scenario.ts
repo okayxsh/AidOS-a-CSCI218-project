@@ -7,7 +7,8 @@ import { hasCachedRequest, useRequest } from './useRequest';
 /** The scenario the dashboard opens with: the spec's default demo fixture. */
 export const DEFAULT_SCENARIO_ID = 'triage-demo-001';
 
-export const useHealth = () => useRequest('health', api.health);
+// keepPrevious: a periodic re-check does not flash "Checking engine…" while it runs.
+export const useHealth = () => useRequest('health', api.health, { keepPrevious: true });
 
 export const useScenarioList = () => useRequest('scenarios', api.listScenarios);
 

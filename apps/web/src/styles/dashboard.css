@@ -529,6 +529,7 @@
 .panel__actions {
   display: flex;
   flex: none;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -1483,24 +1484,6 @@ th[aria-sort='descending'] svg {
 .route-fallback {
   min-height: 100vh;
   background: var(--ink-850);
-}
-
-.not-found {
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 14px;
-  min-height: 100vh;
-  padding: 24px;
-  text-align: center;
-}
-
-.not-found p {
-  color: var(--text-2);
-}
-
-.not-found a {
-  color: var(--teal);
 }
 
 /* ---------- responsive ---------- */

@@ -16,7 +16,9 @@ import { EmptyState, ErrorState } from '../components/ui/States';
 import { StatusBadge } from '../components/ui/StatusBadge';
 import type { PolicyId, PolicyResult, ScenarioDetail } from '../api/types';
 import { ORDER_LABEL, STATUS_MEANING, STATUS_TONE } from '../lib/display';
+import { formatValue } from '../lib/evaluation';
 import { formatInt, formatRatio, zoneShortName } from '../lib/format';
+import { useFocusAfterRun } from '../lib/useFocusAfterRun';
 import { useDashboard } from '../state/dashboard';
 import { useAllocationRun, useHealth, useUrgency } from '../state/scenario';
 
@@ -112,7 +114,7 @@ function ResultSummary({ detail, result }: { detail: ScenarioDetail; result: Pol
               ? 'warn'
               : 'default'
         }
-        detail={`${result.runtime_ms.toFixed(1)} ms on the engine`}
+        detail={`${formatValue(result.runtime_ms, 'ms')} on the engine`}
       />
     </dl>
   );
@@ -120,6 +122,7 @@ function ResultSummary({ detail, result }: { detail: ScenarioDetail; result: Pol
 
 function Workspace({ detail }: { detail: ScenarioDetail }) {
   const run = useAllocationRun(detail);
+  const resultsRef = useFocusAfterRun<HTMLDivElement>(run.status);
   const urgency = useUrgency(detail);
   const [policy, setPolicy] = useState<PolicyId>(DEFAULT_POLICY);
   const [picked, setPicked] = useState<CellKey | null>(null);
@@ -177,7 +180,12 @@ function Workspace({ detail }: { detail: ScenarioDetail }) {
 
       {data && result && (
         <>
-          <ResultSummary detail={detail} result={result} />
+          <div ref={resultsRef} tabIndex={-1} className="focus-target">
+            <p className="visually-hidden" role="status">
+              Allocation computed for four policies. Showing {result.label}.
+            </p>
+            <ResultSummary detail={detail} result={result} />
+          </div>
 
           {!result.has_plan ? (
             <Panel title="No plan" description={STATUS_MEANING[result.status]}>

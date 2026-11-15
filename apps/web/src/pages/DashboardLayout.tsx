@@ -10,9 +10,10 @@ import {
   X,
   type LucideIcon,
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router';
 import { ScenarioSelector } from '../components/ScenarioSelector';
+import { RouteErrorBoundary } from '../components/ui/RouteErrorBoundary';
 import { Logo } from '../components/ui/Logo';
 import { SyntheticBadge } from '../components/ui/StatusBadge';
 import type { DashboardContext } from '../state/dashboard';
@@ -22,7 +23,11 @@ import {
   useScenarioDetail,
   useScenarioQuery,
 } from '../state/scenario';
+import { forgetRequest } from '../state/useRequest';
 import '../styles/dashboard.css';
+
+/** How often the sidebar re-checks the engine, so "Engine online" cannot go stale. */
+const HEALTH_RECHECK_MS = 20_000;
 
 interface NavItem {
   to: string;
@@ -55,6 +60,18 @@ const TITLES: Record<string, string> = {
 
 function EngineStatus() {
   const health = useHealth();
+  const retry = useRef(health.retry);
+  useEffect(() => {
+    retry.current = health.retry;
+  });
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      if (document.visibilityState !== 'visible') return;
+      forgetRequest('health');
+      retry.current();
+    }, HEALTH_RECHECK_MS);
+    return () => window.clearInterval(timer);
+  }, []);
   if (health.status === 'loading') {
     return (
       <p className="engine-status">
@@ -127,6 +144,9 @@ export default function DashboardLayout() {
   const detail = useScenarioDetail(scenarioId);
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const closeButton = useRef<HTMLButtonElement>(null);
+  const wasOpen = useRef(false);
   const title = TITLES[location.pathname.replace(/\/$/, '')] ?? 'Not found';
 
   useEffect(() => {
@@ -140,12 +160,19 @@ export default function DashboardLayout() {
     return () => window.removeEventListener('keydown', onKey);
   }, [menuOpen]);
 
+  // Phone drawer: move focus into it on open, and back to the menu button on close.
+  useEffect(() => {
+    if (menuOpen) closeButton.current?.focus();
+    else if (wasOpen.current) menuButton.current?.focus();
+    wasOpen.current = menuOpen;
+  }, [menuOpen]);
+
   const context: DashboardContext = { scenarioId, detail };
   const close = () => setMenuOpen(false);
 
   return (
     <div className="dash dash-palette">
-      <a className="skip-link" href="#dash-main">
+      <a className="skip-link" href="#dash-main" inert={menuOpen}>
         Skip to content
       </a>
 
@@ -156,6 +183,7 @@ export default function DashboardLayout() {
           </Link>
           <button
             type="button"
+            ref={closeButton}
             className="icon-button dash__close"
             aria-label="Close menu"
             onClick={close}
@@ -174,9 +202,11 @@ export default function DashboardLayout() {
       </aside>
       {menuOpen && <div className="dash__scrim" onClick={close} aria-hidden="true" />}
 
-      <div className="dash__body">
+      {/* While the phone drawer is open, the page behind it is out of the tab order. */}
+      <div className="dash__body" inert={menuOpen}>
         <header className="dash__top">
           <button
+            ref={menuButton}
             type="button"
             className="icon-button dash__menu"
             aria-label="Open menu"
@@ -193,7 +223,9 @@ export default function DashboardLayout() {
           </div>
         </header>
         <main id="dash-main" className="dash__main" tabIndex={-1}>
-          <Outlet context={context} />
+          <RouteErrorBoundary key={location.pathname}>
+            <Outlet context={context} />
+          </RouteErrorBoundary>
         </main>
       </div>
     </div>

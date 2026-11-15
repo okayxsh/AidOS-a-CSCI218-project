@@ -15,8 +15,8 @@ export function DashboardReveal() {
             From the story <em>to the system.</em>
           </h2>
           <p>
-            The dashboard loads this same synthetic scenario from the engine. Run the FCFS baseline,
-            inspect every allocation and the limit behind it, then switch scenarios.
+            The dashboard loads this same synthetic scenario from the engine. Compare all four
+            policies, inspect every allocation and the limit behind it, then replay crisis events.
           </p>
           <LaunchDashboardButton />
         </div>

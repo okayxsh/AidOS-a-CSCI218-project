@@ -50,17 +50,33 @@ export class ApiError extends Error {
   }
 }
 
-async function request<T>(path: string, init?: RequestInit): Promise<T> {
+/** Most calls finish in milliseconds; a hung engine must not leave a spinner forever. */
+const DEFAULT_TIMEOUT_MS = 60_000;
+/** Replay and import recompute every event (up to 200), so they get longer. */
+const LONG_TIMEOUT_MS = 300_000;
+
+async function request<T>(
+  path: string,
+  init?: RequestInit,
+  timeoutMs: number = DEFAULT_TIMEOUT_MS,
+): Promise<T> {
   let response: Response;
   try {
     response = await fetch(`${API_BASE_URL}${path}`, {
       ...init,
+      signal: AbortSignal.timeout(timeoutMs),
       headers: {
         Accept: 'application/json',
         ...(init?.body ? { 'Content-Type': 'application/json' } : {}),
       },
     });
-  } catch {
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'TimeoutError') {
+      throw new ApiError(
+        `The AidOS engine did not answer within ${Math.round(timeoutMs / 1000)} s.`,
+        'network',
+      );
+    }
     throw new ApiError(`Cannot reach the AidOS engine at ${API_BASE_URL}.`, 'network');
   }
 
@@ -77,7 +93,15 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     throw new ApiError(message, 'http', response.status, code);
   }
 
-  return (await response.json()) as T;
+  try {
+    return (await response.json()) as T;
+  } catch {
+    throw new ApiError(
+      'The engine sent a response that is not valid JSON.',
+      'http',
+      response.status,
+    );
+  }
 }
 
 export const api = {
@@ -110,10 +134,14 @@ export const simApi = {
   apply: (id: string, version: number, event: SimEvent) =>
     request<SimSession>(`${session(id)}/events`, post({ expected_version: version, event })),
   replay: (id: string, version: number, events: SimEvent[]) =>
-    request<SimSession>(`${session(id)}/replay`, post({ expected_version: version, events })),
+    request<SimSession>(
+      `${session(id)}/replay`,
+      post({ expected_version: version, events }),
+      LONG_TIMEOUT_MS,
+    ),
   exportSession: (id: string) => request<SimExport>(`${session(id)}/export`),
   importSession: (document: unknown) =>
-    request<ImportResult>('/api/simulation/import', post(document)),
+    request<ImportResult>('/api/simulation/import', post(document), LONG_TIMEOUT_MS),
 };
 
 /** Precomputed evaluation runs (Stage 4). Read-only: experiments run offline. */

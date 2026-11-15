@@ -15,6 +15,11 @@ export function clearRequestCache(): void {
   cache.clear();
 }
 
+/** Drop one cached request so the next use fetches it again (e.g. a periodic health check). */
+export function forgetRequest(key: string): void {
+  cache.delete(key);
+}
+
 export function hasCachedRequest(key: string): boolean {
   return cache.has(key);
 }

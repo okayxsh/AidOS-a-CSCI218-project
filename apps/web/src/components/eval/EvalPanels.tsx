@@ -109,7 +109,7 @@ export function RunMetadata({ run }: { run: EvaluationRun }) {
           </dd>
         </div>
         <div className="eval-facts__wide">
-          <dt>Source revision</dt>
+          <dt>Source revision (when the run was made)</dt>
           <dd>{manifest.source_revision ?? 'not recorded'}</dd>
         </div>
       </dl>

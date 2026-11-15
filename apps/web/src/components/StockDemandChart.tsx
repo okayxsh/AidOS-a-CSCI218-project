@@ -101,6 +101,7 @@ export function StockDemandChart({ detail }: { detail: ScenarioDetail }) {
             collapse if the container is measured before layout settles. */}
         <ResponsiveContainer width="100%" height={CHART_HEIGHT} minWidth={0} debounce={50}>
           <BarChart
+            accessibilityLayer={false}
             data={rows}
             margin={{ top: 24, right: 8, bottom: 0, left: -12 }}
             barGap={4}

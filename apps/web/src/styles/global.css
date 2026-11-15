@@ -422,3 +422,27 @@ kbd,
   left: 0;
   transform: none;
 }
+
+/* Top-level 404 lives here, not in dashboard.css: that sheet loads only with the dashboard. */
+.not-found {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+}
+
+.not-found p {
+  color: var(--text-2);
+}
+
+.not-found a {
+  color: var(--teal);
+}
+
+/* Results that receive focus after a run: no outline box around a whole region. */
+.focus-target:focus {
+  outline: none;
+}
