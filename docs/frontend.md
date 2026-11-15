@@ -68,13 +68,13 @@ Defined in `src/styles/tokens.css`; recorded in `DESIGN.md` at the repository ro
 
 `Landing.tsx` now tells one story: hero → **How a shortage becomes a decision** (pinned 3D story, 9 chapters) → How AidOS works → Features → Technology → About → **From the story to the system** (dashboard reveal). The earlier problem section and closing CTA were folded into the story and the reveal.
 
-| Chapter (`content/story.ts`) | What the visitor learns | Status label |
+| Chapter (`content/story.ts`) | What the visitor learns | Status label (as shown since Stage 3) |
 |---|---|---|
 | depot, zones, routes, requests, shortage | one depot, three zones, per-resource contests, 560 requested vs 330 in stock | synthetic scenario data |
-| fuzzy | imprecise ratings become a priority score | **Concept** · Stage 2 |
-| constraints | whole units, ≤ request, ≤ stock | **Partly built** (FCFS obeys these today) |
-| oversight | every cell explainable; a coordinator commits | **Partly built** · commit Stage 3 |
-| adapt | a new zone and lost stock make a plan stale | **Illustration** · Stage 3 |
+| fuzzy | imprecise ratings become a priority score | **Built** (zero-order Sugeno; scores computed live in the dashboard) |
+| constraints | whole units, ≤ request, ≤ stock | **Built** (OR-Tools CP-SAT; every plan checked against the limits) |
+| oversight | every cell explainable; a coordinator commits | **Built** (rule traces and allocation reasons; stock moves only on dispatch in the simulator) |
+| adapt | a new zone and lost stock make a plan stale | **Built** (simulator); the zone and losses drawn in the story are a labelled example |
 
 All numbers come from `data/scenarios/triage-demo-001.json` (the same file the engine serves). The story never shows allocation results; the adapt chapter's lost stock and zone D are labelled examples.
 

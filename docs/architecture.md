@@ -84,6 +84,6 @@ GET /api/evaluation/...  ->  artifacts.py (validated run id, fixed file names)  
 
 The evaluation code imports the engine but nothing from FastAPI; the API only reads finished artifacts.
 
-## Not built yet
+## Out of scope
 
-Persistence of simulation sessions is out of scope. The report-writing stage has not started.
+Persistence of simulation sessions, authentication and multi-process deployment are out of scope. The group report draft (Stage 6) is in `docs/report/`.

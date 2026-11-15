@@ -53,7 +53,7 @@ Model size on `triage-demo-001`: 9 variables and 5 constraints for `aidos` after
 | `random_seed` | 0 | fixed |
 | `max_time_in_seconds` | 5.0 total, shared by all phases (API allows 0.01–10) | the request cannot hang |
 
-Determinism does not rest on solver internals alone: the lexicographic tie-break makes the optimal plan unique (formulation, section 5), so any correct solver run returns the same allocations. Wall-clock time is the only field that varies between runs.
+Determinism does not rest on solver internals alone: the lexicographic tie-break makes the optimal plan unique (formulation, section 5), so any correct solver run that proves every phase OPTIMAL returns the same allocations. Wall-clock time is the only field that varies between such runs. If the time limit stops a phase first (possible for balanced mode near the 50 × 10 size limit), the plan is still valid and is reported as FEASIBLE, but which feasible plan is returned can depend on timing. Every evaluated run was OPTIMAL.
 
 Scale: the built-in scenarios solve in milliseconds. The model is small by construction (at most 50 zones × 10 resources).
 

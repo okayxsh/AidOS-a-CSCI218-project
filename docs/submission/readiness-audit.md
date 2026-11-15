@@ -8,14 +8,16 @@
 - **BLOCKED:** cannot be completed without a team or instructor action.
 - **N/A:** not applicable.
 
-No grade is predicted. **The group report itself has not been written** (Stage 6). Rows about the report assess whether the *material* for it exists.
+No grade is predicted.
+
+> **Superseded.** This is the Stage 5 snapshot (12 Nov 2026). The group report has since been drafted (`docs/report/`), and the project is on GitHub with an initial import commit. The current status of every item is in [`final-checklist.md`](final-checklist.md); the rows below are updated only where they had become false.
 
 ## Deliverables (guidelines section 4)
 
 | Requirement | Evidence | Location | Status | Gap | Action |
 |---|---|---|---|---|---|
-| 4.1 Group report with the ten prescribed sections | Material exists for every section; the report has not been written | `docs/` (see the mapping below); a template at `../AidOS_Group_Project_Report.docx` | BLOCKED (Stage 6) | The report | Write it from the evidence map below |
-| 4.1 Appendix A: Git link and contribution table | Local repository only; no remote, no commits | `docs/submission/git-and-reproducibility.md` | BLOCKED | Shared repository, real contribution table | Team creates the remote and commits under their own identities |
+| 4.1 Group report with the ten prescribed sections | Draft with all ten sections (Stage 6) | `docs/report/AidOS_Final_Group_Report.docx` | PARTIAL | Team details, contribution table and AI declaration are placeholders | Team completes them; see `final-checklist.md` |
+| 4.1 Appendix A: Git link and contribution table | GitHub repository with one import commit; no per-member history yet | `docs/submission/git-and-reproducibility.md` | BLOCKED | Per-member commits; a real contribution table | Each member commits their own work under their own identity |
 | 4.1 Appendix B/C (bonus): meeting log, mentor form | None | — | N/A unless a partner was approved by Week 3 | — | Do not claim a partner |
 | 4.3 Code via Git with a README for install and run | README with setup, run and test commands; lockfiles; CI workflow | `README.md`, `apps/api/uv.lock`, `apps/web/package-lock.json`, `.github/workflows/ci.yml` | PARTIAL | Not pushed; **"history must show contributions from all members"** | Push; every member contributes genuinely from now on |
 | 4.4 Live online demo and individual viva | A working system; smoke test; runbook; viva notes | `scripts/smoke_test.py`, `docs/submission/demo-runbook.md`, `docs/submission/viva-preparation.md` | PARTIAL | Rehearsal, timing, screenshots for the fallback | Rehearse; capture screenshots |
@@ -67,7 +69,7 @@ No grade is predicted. **The group report itself has not been written** (Stage 6
 
 | Requirement | Evidence | Location | Status | Gap or action |
 |---|---|---|---|---|
-| Follows the section 4 structure | — | — | BLOCKED (Stage 6) | Write the report |
+| Follows the section 4 structure | Draft follows sections A–J | `docs/report/` | PARTIAL | Placeholders to complete |
 | Captioned figures and tables | Figures 1–12 (PNG and SVG) with titles and axes; generated tables | `docs/evaluation/figures/`, `results-tables.md` | PASS (material) | Add captions in the report |
 | Citations and references; data sources disclosed | Data is synthetic and disclosed; the official guidelines and the Project C sheet are listed in spec §12 | `data/README.md` | PARTIAL | No academic references compiled. **Do not invent any.** Cite only sources the team actually consulted (for example the OR-Tools documentation, and course texts on fuzzy logic) |
 | Screenshots | Captures exist only in a temporary folder | — | PARTIAL | Capture final screenshots into the repository for the report |

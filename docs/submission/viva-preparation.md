@@ -122,4 +122,4 @@ None of this exists, and AidOS does not claim it.
 **Q: If the problem doubled in size, what happens?**
 The engine accepts at most 50 zones and 10 resources (input validation). In the benchmarks, runtime grew roughly linearly with zones for the heuristics, and faster for CP-SAT (see the Stage 5 runtime benchmark).
 
-The largest input the API accepts (50 zones × 10 resources × 1,000,000 units) solved validly, with balanced mode taking about 2.6 s of its 5 s limit. That is the closest the system comes to its time limit. Beyond it the status would be reported as FEASIBLE or UNKNOWN, never mislabelled.
+At the largest size the API accepts (50 zones × 10 resources), balanced mode can reach its 5 s limit. One check with every entry at the 1,000,000-unit cap finished in about 2.6 s, but random requests at that size stopped at the limit with a valid plan labelled FEASIBLE, not proven optimal. Urgency-first AidOS stayed OPTIMAL. The status is always reported truthfully.

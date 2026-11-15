@@ -145,7 +145,11 @@ Reading:
 - **Where the time goes.** CP-SAT's own solve time is about 62–78% of the AidOS call. The rest is Python model construction and explanation building.
 - **End to end.** Including validation and metrics, the median is at most 2.6 ms for the heuristics and 126 ms for AidOS at 50 zones.
 - **Comparison with Stage 4.** These supersede the Stage 4 scaling figures *for reporting absolute times* (Stage 4 measured 334 ms at 50 zones under heavier background load). The Stage 4 numbers remain in their run directory, unchanged.
-- **Worst case.** The largest input the API accepts (50 zones × 10 resources at the 1,000,000-unit cap) solved validly in a separate check, but balanced mode took about 2.6 s of its 5 s limit.
+- **Worst case.** The largest input the API accepts is 50 zones × 10 resources, with up to 1,000,000 units per entry.
+  - With every entry at the cap, a separate check solved validly, and balanced mode took about 2.6 s of its 5 s limit.
+  - With random requests and stock at the same size (an audit check on 14 Nov 2026), balanced mode reached its 5 s limit (about 5.3 s per call) and returned a **valid plan labelled FEASIBLE**, not proven optimal. Urgency-first AidOS stayed OPTIMAL.
+  - So near the size limit, balanced mode may stop on time rather than on proof. That is reported truthfully and never mislabelled.
+  - Every run in the benchmarks above (at most 50 zones × 4 resources) was OPTIMAL.
 
 ![Runtime benchmark](figures/fig12_runtime_benchmark.png)
 

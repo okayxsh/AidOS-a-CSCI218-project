@@ -88,7 +88,7 @@ Each policy runs its own trajectory, dispatching its own plan. Every event is va
 | standard | 20 per family (140) | 20 | 3 | 5–50 zones × 3 seeds × 3 repeats | 5,000 |
 | extended | 72 per family (504) | 60 | 3 | 5–50 zones × 5 seeds × 5 repeats | 5,000 |
 
-The standard preset took under a minute and the extended preset under three minutes on the development laptop, so the **extended run is the reported evidence**. The standard run is kept as an independent re-execution: it covers the first 20 scenarios and scripts of every family, and must reproduce the extended run's logical values exactly (`verify_results.py --against`).
+The standard preset took about 88 s and the extended preset about 279 s on the development laptop (durations recorded in each run's `manifest.json`), so the **extended run is the reported evidence**. The standard run is kept as an independent re-execution: it covers the first 20 scenarios and scripts of every family, and must reproduce the extended run's logical values exactly (`verify_results.py --against`).
 
 ## Statistics
 
