@@ -1,6 +1,7 @@
 """Writes docs/report/report-evidence-map.md from the builder's label export and a source table."""
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -19,14 +20,12 @@ SRC = {
     "d_fsm": "`simulation/fsm.py` (`TRANSITIONS`), `docs/simulation/state-machine.md`",
     "d_events": "`simulation/{events,reducer,session,store}.py`, `main.py` (HTTP codes), `docs/simulation/events.md`, `replay.md`",
     "d_eval": "`evaluation/{families,campaign,dynamic,stats,analysis}.py`; counts from `extended-20261112T100136Z/manifest.json` and `config.json`",
-    "s_landing": "Live capture, `/`, engine 0.4.0, 13 Nov 2026",
-    "s_overview": "Live capture, `/dashboard?scenario=triage-demo-001`",
-    "s_urgency": "Live capture, Allocate page → Run allocation → Fuzzy urgency panel, Zone C",
-    "s_alloc": "Live capture, `/dashboard/allocate?scenario=triage-demo-001` → Run allocation (AidOS tab)",
-    "s_compare": "Live capture, same page, Baseline comparison",
-    "s_sim": "Live capture, Simulate: Zone B severity 9; Zone D added (8/9/9; 40/50/10); 30 medical kits lost",
-    "s_simdiff": "Live capture, Simulate: Zone B severity 6 → 9 only",
-    "s_eval": "Live capture, `/dashboard/evaluate`, run `extended-20261112T100136Z`",
+    "s_landing": "Live capture 15 Nov 2026, `/` at 1440 x 900, 2x; crop script `docs/report/figures/src/crop_report_shots.py`",
+    "s_alloc": "Live capture 15 Nov 2026, `/dashboard/allocate?scenario=triage-demo-001` at 1040 px, 2x -> Run allocation (AidOS tab)",
+    "s_explain": "Same capture: the Explanation panel for Zone B, medical kits",
+    "s_compare": "Same capture: the Baseline comparison table",
+    "s_simdiff": "Live capture 15 Nov 2026, Simulate at 1040 px, 2x: Load -> Start -> Zone B severity 6 -> 9; the before/after panel",
+    "s_eval": "Live capture 15 Nov 2026, `/dashboard/evaluate` at 1040 px, 2x (run `extended-20261112T100136Z`)",
     "c_fuzzy": "`apps/api/aidos/ai/fuzzy.py`, `evaluate()` (abridged)",
     "c_cpsat": "`apps/api/aidos/ai/constraints.py`, `allocate_aidos()` (abridged)",
     "c_fsm": "`apps/api/aidos/simulation/fsm.py` (`TRANSITIONS`) and `reducer.py` (`PlanCommitted` branch)",
@@ -162,8 +161,13 @@ lines = [
     + RT
     + " §8 |",
     "| Runtime medians (Stage 5) | AidOS 6.3 ms (3 zones) to 124 ms (50); greedy 0.05 to 0.81 ms; CPU load 1–15% | `supplementary-runtime-benchmark-*/summary.json` |",
-    "| Static runtime (Stage 4) | AidOS median 12.06 ms, mean 12.43 (sd 5.85); FCFS 0.114 ms | `extended-*/summary.json` (`runtime_ms`) |",
-    "| Tests | 288 backend passed; 81 frontend passed | Final verification, 13 Nov 2026 |",
+    "| Static runtime (Stage 4) | AidOS median 12.06 ms, mean 12.42 (sd 5.85); FCFS 0.114 ms | `extended-*/summary.json` (`runtime_ms`) |",
+    "| Tests | 299 backend passed; 87 frontend passed | Final verification, 15 Nov 2026 (after the hardening pass) |",
+    "| Urgency ties | 26 distinct scores; 390 of 504 scenarios contain tied zones; 113 have two or more zones at 87.5 | `docs/report/source/derived_stats.py` (from `static_zones.csv`) |",
+    "| High-urgency zones left uncovered by AidOS | 41 of 414 uncovered zones score >= 50 (families C 13, E 22, F 6) | same script |",
+    "| Controlled dynamic, all zones (AidOS - FCFS) | lowest fulfilment at most +0.010; zones never served at high urgency -0.30 [-0.53, -0.07] | same script (from `dispatch.csv`) |",
+    "| FCFS and the late zone | dispatch: served in 0 of 120 scripts; recommendation: coverage > 0 in 12 of 480 steps (max 0.172) | same script |",
+    "| Balanced at the 50 x 10 size limit | random requests: FEASIBLE (time limit), 3 of 3 runs; all entries at the cap: about 2.6 s | Audit check 14 Nov 2026 (not a versioned run); `stage5-supplementary.md` section 5 |",
     "",
     "## Figures",
     "",
@@ -171,11 +175,11 @@ lines = [
     "|---|---|---|---|",
 ]
 for x in figs:
-    cap = x["caption"].split(". ")[0][:90]
+    cap = re.sub(r"\{(?:sec|tab|fig|eq):[\w-]+\}", "", x["caption"]).split(". ")[0][:90]
     lines.append(f"| {x['num']} | {cap} | `{x['path'] or '(code excerpt)'}` | {src(x)} |")
 lines += ["", "## Tables", "", "| Table | Caption (short) | Source |", "|---|---|---|"]
 for x in tabs:
-    cap = x["caption"].split(". ")[0][:90]
+    cap = re.sub(r"\{(?:sec|tab|fig|eq):[\w-]+\}", "", x["caption"]).split(". ")[0][:90]
     lines.append(f"| {x['num']} | {cap} | {src(x)} |")
 lines += [
     "",
@@ -192,7 +196,7 @@ lines += [
     "",
     "- **Team details still to complete:** student names and IDs, lab group, instructor, repository URL and submission date (cover, Appendix A).",
     "- **Pending confirmations:** the instructor's decision on Sugeno versus Mamdani, the topic registration, and the AI-tool policy (Appendix A, Appendix E).",
-    "- **Screenshot dependency:** the screenshots show engine version 0.4.0. Recapture them if the UI changes before submission.",
+    "- **Screenshot dependency:** the report screenshots were recaptured on 15 Nov 2026 after the final code fixes. Recapture them if the UI changes again before submission.",
 ]
 if missing:
     lines += ["", "**Builder warning: no source recorded for:** " + ", ".join(missing)]

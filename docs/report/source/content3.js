@@ -4,16 +4,13 @@ const path = require('path');
 
 module.exports = function part3(D) {
   const { P, H1, H2, B, T, F, V, md, ROOT } = D;
-  const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'apps/api/aidos/config/fuzzy_rules.json'), 'utf8'));
-  const ruleRows = cfg.rules.map((r) => [r.id, r.if.severity, r.if.time_criticality, r.if.vulnerability, r.then]);
-  const scaling = md('docs/evaluation/results-tables.md', '## 9. Runtime scaling', 0);
   const runs = V.runs; // [{id, kind, files, ok, status}]
 
   return [
     { t: 'appendixStart' },
-    H1('Git Repository and Team Contribution Table', 'appA', { pageBreak: true }),
-    P('Git repository link: [[INSERT the shared GitHub/GitLab repository URL]]'),
-    P('The guidelines require that the repository history shows contributions from all members and that this table reflects actual work. **At the time this report was prepared, the local repository had been initialised but contained no commits and no remote.** No history has been created on any member\'s behalf. Each member must commit their own genuine work under their own identity, and the table below must be completed from that evidence (commits, specific functions or modules, experiments, report sections). Contribution shares must be agreed by the team and must be consistent with the repository.'),
+    H1('Git Repository and Team Contribution Table', 'appA'),
+    P('Git repository link: https://github.com/okayxsh/AidOS-a-CSCI218-project'),
+    P('The guidelines require that the repository history shows contributions from all members and that this table reflects actual work. **At the time this report was prepared, the repository held an initial import commit and the final correction commits, all made under one member\'s account; it did not yet show contributions from every member.** No history has been created on any member\'s behalf. Each member must commit their own genuine work under their own identity, and the table below must be completed from that evidence (commits, specific functions or modules, experiments, report sections). Contribution shares must be agreed by the team and must be consistent with the repository.'),
     T({
       id: 'contrib', caption: 'Team contribution table (template from the CSCI218 guidelines, Appendix A).',
       cols: [1.7, 3.0, 0.8, 1.0],
@@ -28,12 +25,11 @@ module.exports = function part3(D) {
     }),
     P('Open items for the team, also tracked in `docs/submission/final-checklist.md`: (1) instructor confirmation that a documented zero-order Sugeno system satisfies the fuzzy-logic component (the specification preferred Mamdani); (2) confirmation of topic registration and the technique combination; (3) the subject descriptor\'s rules on AI-tool use (Appendix E). None of these has been confirmed at the time of writing.'),
 
-    H1('Industry Engagement', 'appB'),
+    H1('Industry Engagement (guidelines Appendices B and C)', 'appB'),
     P('**Not applicable.** No industry partner was approved for this project, and no meetings with a partner mentor took place. The guidelines\' industry meeting log and mentor feedback form are therefore not included, and no bonus marks are claimed. Choosing a Dubai Humanitarian use case does not by itself constitute industry engagement; the project uses only the published use-case description [@dhproj].'),
 
     H1('Supplementary Technical Material', 'appC'),
-    H2('Complete rule base (configuration version 1.0)'),
-    T({ id: 'allrules', caption: 'The 27 rules of the production fuzzy configuration (apps/api/aidos/config/fuzzy_rules.json).', cols: [0.6, 1.2, 1.4, 1.2, 1.2], header: ['Rule', 'Severity', 'Time criticality', 'Vulnerability', 'Urgency'], rows: ruleRows, size: 15 }),
+    P('The complete rule base (rules R01–R27) is fully determined by {tab:rules}: each rule pairs one combination of input terms with the consequent shown there. The machine-readable rules are in `apps/api/aidos/config/fuzzy_rules.json` (version 1.0).', { align: 'left' }),
     H2('API endpoints'),
     T({
       id: 'endpoints', caption: 'Complete list of API endpoints.',
@@ -72,24 +68,14 @@ module.exports = function part3(D) {
         ['Re-run the benchmark', '`cd apps/api && uv run python ../../experiments/run_benchmarks.py --preset extended`'],
         ['Verify a run', '`uv run python ../../experiments/verify_results.py extended-20261112T100136Z --against standard-20261112T100617Z`'],
         ['Figures and tables', '`uv run --group analysis python ../../experiments/plot_results.py <run_id>` and `report_results.py <run_id>`'],
-        ['Supplementary experiments', '`uv run python ../../experiments/{greedy_equivalence,floor_sweep,fuzzy_sensitivity,dynamic_controlled,runtime_benchmark}.py`'],
+        ['Supplementary experiments', 'From `apps/api`, `uv run --group analysis python ../../experiments/<name>.py` with name `greedy_equivalence`, `floor_sweep`, `fuzzy_sensitivity`, `dynamic_controlled` or `runtime_benchmark`'],
       ],
     }),
 
     H1('Supplementary Experiment Evidence', 'appD'),
     H2('Run identifiers and integrity'),
-    P(`Every run directory under \`experiments/results/\` holds its configuration, raw CSV, a summary and a \`manifest.json\` with a SHA-256 checksum of every output file. Runs are never overwritten. On ${V.verifDate} every checksum was recomputed and compared with its manifest ({tab:runs}). The Stage 4 runs record their source revision as "unavailable" because the folder was not yet a git repository when they were produced.`),
+    P(`Every run directory under \`experiments/results/\` holds its configuration, raw CSV, a summary and a \`manifest.json\` with a SHA-256 checksum of every data file (the extended run's figures were added after its manifest and are checked as byte-identical copies instead). Runs are never overwritten. On ${V.verifDate} every checksum was recomputed and compared with its manifest ({tab:runs}). The Stage 4 runs record their source revision as "unavailable" because the folder was not yet a git repository when they were produced.`),
     T({ id: 'runs', caption: 'Result directories and checksum verification.', cols: [3.4, 1.6, 0.6, 1.2], size: 15, header: ['Run directory', 'Role', 'Files', 'Checksums'], rows: runs.map((r) => [`\`${r.id}\``, r.role, String(r.files), r.ok]) }),
-    H2('Stage 4 scaling study'),
-    P('Measured under heavier background load than the Stage 5 benchmark; kept for completeness and not comparable with {tab:runtime}.'),
-    T({ id: 'scaling', caption: 'Stage 4 scaling study: median runtime (ms) by number of zones.', cols: [0.8, 1, 1.3, 1, 1.3, 1.4], align: ['r', 'r', 'r', 'r', 'r', 'r'], header: scaling.header, rows: scaling.rows }),
-    H2('Additional figures'),
-    F({ id: 'r_scarcity', path: V.res('fig3_scarcity'), widthCm: 15, caption: 'Stage 4: metrics by scarcity family (A low, B moderate, C severe).' }),
-    F({ id: 'r_tradeoff', path: V.res('fig4_tradeoff'), widthCm: 11.5, caption: 'Stage 4: urgency-weighted coverage against lowest-zone coverage, family means. Greedy is hidden under AidOS because their plans are identical.' }),
-    F({ id: 'r_runtime4', path: V.res('fig5_runtime'), widthCm: 13, caption: 'Stage 4 scaling study (heavier background load; see {sec:runtime}).' }),
-    F({ id: 'r_realloc', path: V.res('fig6_dynamic_reallocation'), widthCm: 15, caption: 'Stage 4 recommendation mode: units reallocated per event type.' }),
-    F({ id: 'r_dispatch', path: V.res('fig7_dispatch'), widthCm: 15, caption: 'Stage 4 dispatch mode: outcomes per policy. The equity advantage shown here is driven by the late, urgent zone ({sec:dynamic}).' }),
-
     H1('Declaration on the Use of AI Tools', 'appE'),
     P('[[TEAM TO COMPLETE according to the CSCI218 subject descriptor\'s rules on AI-tool use, which the project guidelines defer to.]] For accuracy, the project\'s contribution log records that the prototype (engine, simulator, evaluation, dashboard and documentation) was produced in AI-assisted development sessions using Claude Code, directed by a team member, and that this report was drafted with the same assistance from the project\'s own documentation and artifacts. The team must state here how AI tools were used, which parts each member reviewed and can explain, and confirm that the declaration complies with the descriptor.'),
   ];

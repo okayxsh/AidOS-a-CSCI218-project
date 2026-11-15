@@ -127,24 +127,23 @@ const cover = [
       detail('Topic', 'Topic 11, Dubai Humanitarian use case: Project C, Emergency Resource Allocation Simulation'),
       detail('Group members', '[[Name, student ID]]  ·  [[Name, student ID]]  ·  [[Name, student ID]]  ·  [[Name, student ID]]  ·  [[Name, student ID, if applicable]]'),
       detail('Lab group / instructor', '[[Lab group]]  ·  [[Instructor name]]'),
-      detail('Repository', '[[Shared Git repository URL]]'),
+      detail('Repository', 'https://github.com/okayxsh/AidOS-a-CSCI218-project'),
       detail('Submission date', '[[As shown on the Moodle/Turnitin submission link]]'),
     ],
   }),
   new Paragraph({ spacing: { before: 700, after: 0 }, alignment: AlignmentType.LEFT, children: runs('**Synthetic data only.** All scenarios are synthetic and all results describe a simulation. AidOS has not been deployed or validated with humanitarian practitioners, and makes no claim about real-world outcomes.', { size: 17, color: C.muted }, null) }),
+  new Paragraph({ spacing: { before: 160 }, alignment: AlignmentType.LEFT, children: runs('Text highlighted in [[yellow]] is team-specific information that the group must complete before submission. Everything else is drawn from the project\'s code, documentation and saved experiment artifacts.', { size: 18, color: C.muted }, null) }),
 ];
 
 // ---------- front matter ----------
-const frontTitle = (t) => new Paragraph({ style: 'FrontTitle', children: [new TextRun(t)] });
+const frontTitle = (t, newPage = false) =>
+  new Paragraph({ style: 'FrontTitle', pageBreakBefore: newPage, children: [new TextRun(t)] });
 const front = [
   frontTitle('Contents'),
   new TableOfContents('Contents', { hyperlink: true, headingStyleRange: '1-2' }),
-  new Paragraph({ spacing: { before: 240 }, alignment: AlignmentType.LEFT, children: runs('Text shown as [[highlighted brackets]] is team-specific information that must be completed by the group before submission. Everything else is drawn from the project\'s code, documentation and saved experiment artifacts.', { size: 18, color: C.muted }, null) }),
-  new Paragraph({ children: [new PageBreak()] }),
-  frontTitle('List of Figures'),
+  frontTitle('List of Figures', true),
   new TableOfContents('List of Figures', { hyperlink: true, stylesWithLevels: [{ styleName: 'Figure Caption', level: 3 }] }),
-  new Paragraph({ children: [new PageBreak()] }),
-  frontTitle('List of Tables'),
+  frontTitle('List of Tables', true),
   new TableOfContents('List of Tables', { hyperlink: true, stylesWithLevels: [{ styleName: 'Table Caption', level: 3 }] }),
 ];
 
@@ -159,9 +158,9 @@ const styles = {
     { id: 'TableCaption', name: 'Table Caption', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 18, color: C.ink }, paragraph: { spacing: { before: 200, after: 80, line: 252 }, keepNext: true, alignment: AlignmentType.LEFT } },
     { id: 'Reference', name: 'Reference', basedOn: 'Normal', run: { font: FONT, size: 19 }, paragraph: { spacing: { after: 90, line: 252 }, indent: { left: 560, hanging: 560 }, tabStops: [{ type: TabStopType.LEFT, position: 560 }], alignment: AlignmentType.LEFT } },
     { id: 'FrontTitle', name: 'Front Title', basedOn: 'Normal', run: { font: FONT_LIGHT, size: 40, color: C.navy }, paragraph: { spacing: { before: 0, after: 240 }, border: { bottom: { style: BorderStyle.SINGLE, size: 8, color: C.teal, space: 6 } } } },
-    { id: 'TOC1', name: 'toc 1', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 21, bold: true, color: C.navy }, paragraph: { spacing: { before: 120, after: 40 } } },
-    { id: 'TOC2', name: 'toc 2', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 20 }, paragraph: { spacing: { before: 0, after: 30 }, indent: { left: 360 } } },
-    { id: 'TOC3', name: 'toc 3', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 19, color: C.ink }, paragraph: { spacing: { before: 0, after: 70, line: 252 }, indent: { left: 0, hanging: 0 } } },
+    { id: 'TOC1', name: 'toc 1', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 19, bold: true, color: C.navy }, paragraph: { spacing: { before: 20, after: 0, line: 240 } } },
+    { id: 'TOC2', name: 'toc 2', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 18 }, paragraph: { spacing: { before: 0, after: 0, line: 240 }, indent: { left: 360 } } },
+    { id: 'TOC3', name: 'toc 3', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 19, color: C.ink }, paragraph: { spacing: { before: 0, after: 30, line: 240 }, indent: { left: 0, hanging: 0 } } },
     { id: 'TableofFigures', name: 'table of figures', basedOn: 'Normal', next: 'Normal', run: { font: FONT, size: 19 }, paragraph: { spacing: { after: 50 }, indent: { left: 0 } } },
   ],
 };

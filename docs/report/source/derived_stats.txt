@@ -1,0 +1,10 @@
+static scenarios: 504
+distinct urgency scores: 26
+scenarios with tied urgency: 390; with two or more zones at 87.5: 113
+AidOS zones left uncovered: 414; with urgency >= 50: 41 {'C': 13, 'E': 22, 'F': 6}
+low: n=30 all-zone lowest fulfilment AidOS-FCFS 0.000 [0.000, 0.000]; zones never served AidOS-FCFS 0.03 [-0.10, 0.20]
+moderate: n=30 all-zone lowest fulfilment AidOS-FCFS 0.001 [0.000, 0.003]; zones never served AidOS-FCFS -0.13 [-0.33, 0.07]
+high: n=30 all-zone lowest fulfilment AidOS-FCFS 0.010 [0.001, 0.024]; zones never served AidOS-FCFS -0.30 [-0.53, -0.07]
+random: n=30 all-zone lowest fulfilment AidOS-FCFS 0.001 [0.000, 0.004]; zones never served AidOS-FCFS -0.03 [-0.23, 0.17]
+dispatch: FCFS served the late zone in 0 of 120 scripts
+recommendation: FCFS late-zone coverage > 0 in 12 of 480 steps; max 0.172

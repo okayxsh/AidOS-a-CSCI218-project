@@ -69,3 +69,4 @@ No due date is recorded here. Check the Turnitin/Moodle links for the real deadl
   - smoke test passed;
   - `verify_results.py` passed;
   - all 8 result folders match their checksums.
+- **Final correction pass (15 Nov 2026):** backend 299 tests passed, Ruff clean; frontend typecheck, lint, format, 87 tests and the build passed; smoke test, `verify_results.py` and all checksums passed again.
