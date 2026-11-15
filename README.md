@@ -2,17 +2,38 @@
 
 **Explainable Emergency Resource Allocation Simulation** — CSCI218 Foundations of Artificial Intelligence, UOWD, Autumn 2026.
 
-AidOS is an academic simulator that helps a *simulated* emergency coordinator decide how to distribute scarce relief supplies (medical kits, water, shelter, nutrition) among competing crisis zones. It combines **fuzzy urgency scoring** and **constraint-based allocation (OR-Tools CP-SAT)**, compares them against FCFS and urgency-greedy baselines, and is designed to add **finite-state crisis updates**.
+AidOS is an academic simulator that helps a *simulated* emergency coordinator decide how to distribute scarce relief supplies (medical kits, water, shelter, nutrition) among competing crisis zones. It combines **fuzzy urgency scoring** (zero-order Sugeno) and **constraint-based allocation (OR-Tools CP-SAT)**, compares them against FCFS and urgency-greedy baselines, and replays **crisis events** through a finite-state simulator.
 
-> **Status: Stage 6 (report, demo and viva preparation).** The editable group report is [`docs/report/AidOS_Final_Group_Report.docx`](docs/report/) (PDF preview alongside), with its figures, an evidence map tracing every number to an artifact, and a reference verification log. The final demo runbook, viva question bank, reflection template, instructor confirmation request and final checklist are in [`docs/submission/`](docs/submission/). Team details in the report are placeholders for the team to complete.
->
-> **Stage 5 (submission readiness).** Stage 5 adds an engineering and scientific audit: a proof and exhaustive check that the urgency-first CP-SAT plan equals urgency greedy ([`docs/algorithms/greedy-vs-cpsat-analysis.md`](docs/algorithms/greedy-vs-cpsat-analysis.md)); supplementary floor, fuzzy-sensitivity, controlled-dynamic and runtime experiments ([`docs/evaluation/stage5-supplementary.md`](docs/evaluation/stage5-supplementary.md)); a local git repository with versioned evidence and CI; and submission material in [`docs/submission/`](docs/submission/) (readiness audit, demo runbook, viva preparation, instructor review items).
->
-> **Stage 4.** Stage 4 adds the evaluation framework: seven scenario families plus dynamic event scripts, a metric suite that separates objective-aligned from external measures, paired statistics with bootstrap confidence intervals, saved raw and summary results, report figures, and the Evaluation dashboard. Results are in [`docs/evaluation/`](docs/evaluation/); they describe behaviour on synthetic scenarios only.
->
-> **Stage 3.** Built: the fuzzy urgency engine (zero-order Sugeno, 27 rules, full rule traces), the CP-SAT allocator (urgency-first and a balanced coverage-floor variant), the FCFS and urgency-greedy baselines, an independent constraint validator, the comparison API, the **crisis simulator** (state machine, eight event types, atomic recomputation, before/after explanations, dispatch ledger, deterministic replay and export/import), the dashboard that shows all of it, and a seeded experiment interface. Also the Stage 1.5 landing story with one 3D scene. **Not built yet:** the evaluation campaign with statistics (Stage 4). No claim is made that any policy is better than another; that needs the Stage 4 experiments. The simulator applies hypothetical events; it does not predict real crises.
->
-> This is a student prototype that uses **synthetic data only**. It is not a real dispatch, medical or humanitarian decision system.
+> This is a student prototype that uses **synthetic data only**. It is not a real dispatch, medical or humanitarian decision system, and no result here says anything about real-world outcomes.
+
+Repository: <https://github.com/okayxsh/AidOS-a-CSCI218-project>
+
+## Status
+
+**Complete and verified** (all checks pass in CI):
+
+- **Engine:** a fuzzy urgency engine (27 rules, exact rule traces), and a CP-SAT allocator with an urgency-first mode and a balanced mode (coverage floor). It also has FCFS and urgency-greedy baselines and an independent constraint validator.
+- **Simulator:** a crisis simulator with a session state machine, eight event types, atomic recomputation, a dispatch ledger, and deterministic replay with export/import.
+- **Evaluation:** seeded scenario families, paired statistics and versioned, checksummed results in [`experiments/results/`](experiments/results/), summarised in [`docs/evaluation/`](docs/evaluation/).
+- **Dashboard and landing page:** they show only numbers the engine computed.
+- **Group report draft:** [`docs/report/`](docs/report/), the editable Word file with a PDF preview, an evidence map and a reference verification log. Submission material is in [`docs/submission/`](docs/submission/).
+
+**Main findings** (synthetic scenarios only; details and confidence intervals in [`docs/evaluation/results.md`](docs/evaluation/results.md)):
+
+- **Every policy is valid and allocates the same total.** Every plan passed every hard constraint, and all four policies allocate the same number of units. They differ only in *who* receives the stock.
+- **Urgency-first CP-SAT gives exactly the urgency-greedy plan.** This is proven, not just observed ([`docs/algorithms/greedy-vs-cpsat-analysis.md`](docs/algorithms/greedy-vs-cpsat-analysis.md)). The solver certifies optimality; it does not change the plan for this objective.
+- **The balanced mode trades a little urgency priority for equity.** In the tested scenarios it removed starvation. It is the only policy that differs from greedy in an equity-relevant way.
+- **No policy is shown to be "fairer" in general.** That includes the dynamic experiments.
+
+**Still to be done by the team** (see [`docs/submission/final-checklist.md`](docs/submission/final-checklist.md)):
+
+- complete the report's placeholders (names, IDs, contribution table, AI-use declaration);
+- make individual commits;
+- write the reflection statements;
+- get the instructor's confirmations;
+- rehearse the demo.
+
+The engine reports version `0.4.0` and stage 4, because Stages 5 and 6 added experiments and documentation rather than engine features.
 
 The full specification is in [`AidOS project info.md`](AidOS%20project%20info.md), and it overrides this README if the two disagree.
 
@@ -58,7 +79,8 @@ Use two terminals.
 
 ```bash
 # 1. Engine (FastAPI) on http://localhost:8000 — from apps/api/
-uv run uvicorn aidos.main:app --reload --port 8000
+#    (add --reload while developing; leave it off for demos, because a reload ends in-memory simulation sessions)
+uv run uvicorn aidos.main:app --port 8000
 
 # 2. Frontend (Vite) on http://localhost:5173 — from apps/web/
 npm run dev
@@ -124,4 +146,15 @@ npm run preview         # serve the production build on :4173
 
 - Synthetic scenarios only, and every fixture declares `"synthetic": true`.
 - Decisions stay with a human; AidOS only suggests them and does not control any real operation.
-- No benchmark result or performance claim is made until real experiments produce it.
+- Reported results come from the saved experiment runs and describe synthetic scenarios only. They make no claim about real humanitarian outcomes.
+
+## Development stages
+
+| Stage | Added |
+|---|---|
+| 1 and 1.5 | Repository, scenario fixtures, FCFS baseline, dashboard shell, landing story with one 3D scene |
+| 2 | Fuzzy urgency engine, CP-SAT allocator (urgency-first and balanced), urgency-greedy baseline, independent validator, comparison API |
+| 3 | Crisis simulator: state machine, eight event types, dispatch ledger, replay, export/import |
+| 4 | Evaluation framework: scenario families, metrics, paired statistics, frozen benchmark runs, Evaluate page |
+| 5 | Audit and supplementary experiments: CP-SAT/greedy proof, coverage-floor sweep, fuzzy sensitivity, controlled dynamic scripts, runtime benchmark, CI |
+| 6 | Group report draft, demo runbook, viva question bank, submission checklist |
