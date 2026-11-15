@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>AidOS · Ops Horizon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;background:#04070d;font-family:Geist,system-ui,sans-serif;color:#e8eef7;padding:20px;overflow:hidden;-webkit-font-smoothing:antialiased}
+.frame{position:relative;height:860px;border-radius:28px;overflow:hidden;border:1px solid rgba(160,190,230,.14);background:radial-gradient(90% 90% at 85% 40%,#123050 0%,#0a1829 45%,#060b15 80%)}
+canvas{position:absolute;inset:0;width:100%;height:100%;-webkit-mask-image:linear-gradient(90deg,transparent 18%,#000 55%);mask-image:linear-gradient(90deg,transparent 18%,#000 55%)}
+header{position:relative;z-index:3;height:78px;display:flex;align-items:center;gap:40px;padding:0 44px;border-bottom:1px solid rgba(160,190,230,.10)}
+.mark{display:flex;align-items:center;gap:10px;font-weight:600;font-size:23px;letter-spacing:-.02em}
+.nav{display:flex;gap:28px;font-size:14.5px;color:#b9c7d9}
+.hcta{margin-left:auto;font-size:14.5px;font-weight:500;padding:10px 18px;border-radius:999px;background:#f4f7fb;color:#08101c}
+.hero{position:absolute;z-index:3;left:64px;top:170px;width:700px}
+h1{font-weight:600;font-size:80px;line-height:.98;letter-spacing:-.04em}
+h1 em{display:block;font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;font-size:94px;letter-spacing:-.015em;color:#bfeee9}
+.sub{margin-top:24px;max-width:560px;font-size:19px;line-height:1.5;color:#a9b8cc}
+.ctas{display:flex;gap:12px;margin-top:32px}
+.p1{display:flex;align-items:center;gap:12px;background:#f4f7fb;color:#08101c;font-weight:500;font-size:16px;padding:7px 7px 7px 22px;border-radius:999px}
+.p1 i{width:34px;height:34px;border-radius:50%;background:#08101c;display:grid;place-items:center}
+.p2{display:flex;align-items:center;background:rgba(6,12,23,.7);border:1px solid rgba(160,190,230,.22);font-weight:500;font-size:16px;padding:0 22px;border-radius:999px}
+.note{margin-top:20px;font-size:13.5px;color:#8091a9}
+.stack{position:absolute;z-index:3;right:64px;top:150px;width:470px;display:flex;flex-direction:column;gap:14px}
+.cap{display:flex;justify-content:space-between;font-family:"Geist Mono";font-size:12px;color:#8fa2ba;padding:0 4px}
+.cap b{font-weight:500;color:#f5c46e}
+.panel{padding:18px 20px;border-radius:16px;background:rgba(8,16,29,.82);border:1px solid rgba(160,190,230,.16);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.panel:nth-child(3){margin-left:-36px;margin-right:36px}
+.panel h3{display:flex;justify-content:space-between;align-items:baseline;font-weight:500;font-size:16px}
+.panel h3 span{font-family:"Geist Mono";font-size:13px;color:#f5b042;padding:3px 8px;border-radius:6px;background:rgba(245,176,66,.12)}
+.seg{display:flex;gap:3px;margin-top:14px;height:12px;position:relative}
+.seg i{height:100%;border-radius:3px}
+.seg::after{content:"";position:absolute;top:-6px;bottom:-6px;width:2px;background:#e8eef7;left:var(--stock)}
+.leg{display:flex;justify-content:space-between;margin-top:12px;font-family:"Geist Mono";font-size:12px;color:#93a6be}
+.leg b{color:#e8eef7;font-weight:500}
+.steps{position:absolute;z-index:3;left:64px;right:64px;bottom:40px;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(160,190,230,.14)}
+.st{padding:18px 18px 0 0;font-size:15px}
+.st small{display:inline-block;margin-top:8px;font-size:11.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(160,190,230,.2);color:#93a6be}
+.st small.ok{color:#7fe3da;border-color:rgba(63,208,201,.35)}
+.st p{color:#8fa2ba;font-size:13px;margin-top:6px}
+</style></head><body>
+<div class="frame"><canvas id="terrain" width="1400" height="860"></canvas>
+<header><div class="mark"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="1" y="1" width="24" height="24" rx="7" stroke="#3fd0c9" stroke-width="1.6"/><path d="M7 17.5 13 7l6 10.5" stroke="#e8eef7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.6 13.6h6.8" stroke="#3fd0c9" stroke-width="1.8" stroke-linecap="round"/></svg>AidOS</div>
+<nav class="nav"><span>How it works</span><span>Features</span><span>Technology</span><span>About</span></nav><span class="hcta">Launch Dashboard</span></header>
+<section class="hero"><h1>When every resource matters, <em>every decision counts.</em></h1>
+<p class="sub">An explainable AI simulation for splitting scarce relief supplies between competing crisis zones, and re-deciding when conditions change.</p>
+<div class="ctas"><span class="p1">Launch Dashboard <i><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 10 10 4M5 4h5v5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i></span><span class="p2">Explore how it works</span></div>
+<p class="note">CSCI218 academic prototype · synthetic scenarios only</p></section>
+<div class="stack"><div class="cap"><span>triage-demo-001 · synthetic</span><b>3 zones · 1 depot</b></div>
+<div class="panel"><h3>Medical kits <span>60 short</span></h3><div class="seg" style="--stock:60%"><i style="flex:75;background:#5b8def"></i><i style="flex:45;background:#7fa6f2"></i><i style="flex:30;background:#a9c3f7"></i></div><div class="leg"><span>A 75 · B 45 · C 30</span><span><b>90</b> in stock / 150</span></div></div>
+<div class="panel"><h3>Water packs <span>110 short</span></h3><div class="seg" style="--stock:62%"><i style="flex:100;background:#2fb8b1"></i><i style="flex:130;background:#5fd0c9"></i><i style="flex:60;background:#9be3de"></i></div><div class="leg"><span>A 100 · B 130 · C 60</span><span><b>180</b> in stock / 290</span></div></div>
+<div class="panel"><h3>Shelter kits <span>60 short</span></h3><div class="seg" style="--stock:50%"><i style="flex:30;background:#a78bfa"></i><i style="flex:50;background:#c0aafb"></i><i style="flex:40;background:#d9cdfd"></i></div><div class="leg"><span>A 30 · B 50 · C 40</span><span><b>60</b> in stock / 120</span></div></div></div>
+<div class="steps"><div class="st">Define a scenario<p>Zones, stock, requests</p><small class="ok">Built</small></div><div class="st">Assess urgency<p>Fuzzy logic</p><small>Planned</small></div><div class="st">Allocate<p>Constraint solver</p><small>Planned</small></div><div class="st">Explain<p>Rules and binding limits</p><small>Planned</small></div><div class="st">Adapt<p>Crisis events, re-plan</p><small>Planned</small></div></div>
+</div>
+<script>
+(function(){
+ const c=document.getElementById('terrain'),x=c.getContext('2d'),W=c.width,H=c.height,S=7;
+ const hills=[[1050,330,240,1],[1300,620,200,.8],[800,700,220,.7],[1250,130,170,.6],[620,300,180,.5]];
+ const f=(px,py)=>{let v=0;for(const[a,b,s,h]of hills){const dx=px-a,dy=py-b;v+=h*Math.exp(-(dx*dx+dy*dy)/(2*s*s))}return v+.08*Math.sin(px*.006+py*.004)+.06*Math.cos(px*.0031-py*.007)};
+ const cols=Math.ceil(W/S)+1,rows=Math.ceil(H/S)+1,g=[];for(let j=0;j<rows;j++){g[j]=[];for(let i=0;i<cols;i++)g[j][i]=f(i*S,j*S)}
+ const T={1:[[3,2]],2:[[2,1]],3:[[3,1]],4:[[0,1]],5:[[3,0],[2,1]],6:[[0,2]],7:[[3,0]],8:[[3,0]],9:[[0,2]],10:[[0,1],[3,2]],11:[[0,1]],12:[[3,1]],13:[[2,1]],14:[[3,2]]};
+ for(let L=0,lv=-.1;lv<1.2;lv+=.045,L++){x.beginPath();x.strokeStyle=L%5===0?'rgba(140,185,235,.32)':'rgba(120,165,220,.14)';x.lineWidth=L%5===0?1.1:.8;
+  for(let j=0;j<rows-1;j++)for(let i=0;i<cols-1;i++){const a=g[j][i],b=g[j][i+1],cc=g[j+1][i+1],d=g[j+1][i];const k=(a>lv?8:0)|(b>lv?4:0)|(cc>lv?2:0)|(d>lv?1:0);const segs=T[k];if(!segs)continue;
+   const X=i*S,Y=j*S,p=e=>e===0?[X+S*(lv-a)/(b-a),Y]:e===1?[X+S,Y+S*(lv-b)/(cc-b)]:e===2?[X+S*(lv-d)/(cc-d),Y+S]:[X,Y+S*(lv-a)/(d-a)];
+   for(const[e1,e2]of segs){const p1=p(e1),p2=p(e2);x.moveTo(p1[0],p1[1]);x.lineTo(p2[0],p2[1])}}
+  x.stroke()}
+})();
+</script>
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "no-scarcity",
+  "title": "Sufficient stock",
+  "description": "The depot holds enough of every resource. Every policy should meet every request exactly.",
+  "seed": 2182027,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {"id": "medical_kits", "label": "Medical kits", "unit": "kits"},
+    {"id": "water_packs", "label": "Water packs", "unit": "packs"},
+    {"id": "shelter_kits", "label": "Shelter kits", "unit": "kits"},
+    {"id": "nutrition_packs", "label": "Nutrition packs", "unit": "packs"}
+  ],
+  "stock": {"medical_kits": 200, "water_packs": 400, "shelter_kits": 150, "nutrition_packs": 300},
+  "zones": [
+    {"id": "zone-a", "name": "Zone A · River crossing", "arrival_order": 1, "severity": 5, "vulnerability": 4, "time_criticality": 5, "population": 5200, "demand": {"medical_kits": 40, "water_packs": 90, "shelter_kits": 25, "nutrition_packs": 60}},
+    {"id": "zone-b", "name": "Zone B · School shelter", "arrival_order": 2, "severity": 6, "vulnerability": 8, "time_criticality": 4, "population": 2100, "demand": {"medical_kits": 30, "water_packs": 70, "shelter_kits": 40, "nutrition_packs": 80}},
+    {"id": "zone-c", "name": "Zone C · Coastal road", "arrival_order": 3, "severity": 4, "vulnerability": 3, "time_criticality": 6, "population": 3800, "demand": {"medical_kits": 25, "water_packs": 110, "shelter_kits": 20, "nutrition_packs": 50}}
+  ]
+}

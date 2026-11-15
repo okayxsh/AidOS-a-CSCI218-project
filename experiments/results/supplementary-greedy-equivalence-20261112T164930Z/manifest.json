@@ -1,0 +1,30 @@
+{
+  "run_id": "supplementary-greedy-equivalence-20261112T164930Z",
+  "experiment": "greedy-equivalence",
+  "status": "complete",
+  "classification": "supplementary / exploratory (Stage 5); not the frozen Stage 4 benchmark",
+  "created_utc": "2026-11-12T16:49:30+00:00",
+  "finished_utc": "2026-11-12T16:49:48+00:00",
+  "counts": {
+    "exhaustive": 36240,
+    "random": 700
+  },
+  "notes": "Checks a mathematical claim; no policy parameter was changed.",
+  "environment": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 16,
+    "source_revision": "unavailable: no commit yet"
+  },
+  "files": {
+    "config.json": "43d039afedcfec88747de17e3fddb69eeb7b74759c74e7bd6965a688a41809b9",
+    "exhaustive.csv": "90b4ab255f04e3be6be2541d930cd0c93de79c02144298ce470d73cffbb1b681",
+    "random.csv": "6daf999a103513606efa6f52f8fe932827937838e1eef7e81b3ee6d58c18ddcf",
+    "summary.json": "b177c192a8d688126f41009deaa32cd8540742b0af79159f15b867cc99e6a497"
+  }
+}

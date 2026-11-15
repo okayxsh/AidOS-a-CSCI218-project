@@ -1,0 +1,5 @@
+* text=auto
+*.png binary
+*.svg text
+# Evaluation artifacts are checksummed byte-for-byte in their manifests: never convert line endings.
+experiments/results/** -text

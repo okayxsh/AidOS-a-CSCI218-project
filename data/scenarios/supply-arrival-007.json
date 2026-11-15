@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "supply-arrival-007",
+  "title": "Supply arrival",
+  "description": "Water and medical kits are short. The demo event is a water shipment large enough to cover every water request.",
+  "seed": 2182032,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {
+      "id": "medical_kits",
+      "label": "Medical kits",
+      "unit": "kits"
+    },
+    {
+      "id": "water_packs",
+      "label": "Water packs",
+      "unit": "packs"
+    },
+    {
+      "id": "shelter_kits",
+      "label": "Shelter kits",
+      "unit": "kits"
+    },
+    {
+      "id": "nutrition_packs",
+      "label": "Nutrition packs",
+      "unit": "packs"
+    }
+  ],
+  "stock": {
+    "medical_kits": 80,
+    "water_packs": 150,
+    "shelter_kits": 90,
+    "nutrition_packs": 160
+  },
+  "zones": [
+    {
+      "id": "zone-a",
+      "name": "Zone A · Harbour camp",
+      "arrival_order": 1,
+      "severity": 8,
+      "vulnerability": 6,
+      "time_criticality": 7,
+      "activation_step": 0,
+      "population": 6100,
+      "demand": {
+        "medical_kits": 35,
+        "water_packs": 110,
+        "shelter_kits": 30,
+        "nutrition_packs": 55
+      }
+    },
+    {
+      "id": "zone-b",
+      "name": "Zone B · Ridge villages",
+      "arrival_order": 2,
+      "severity": 5,
+      "vulnerability": 8,
+      "time_criticality": 5,
+      "activation_step": 0,
+      "population": 3300,
+      "demand": {
+        "medical_kits": 25,
+        "water_packs": 70,
+        "shelter_kits": 25,
+        "nutrition_packs": 50
+      }
+    },
+    {
+      "id": "zone-c",
+      "name": "Zone C · Rail depot shelter",
+      "arrival_order": 3,
+      "severity": 6,
+      "vulnerability": 4,
+      "time_criticality": 8,
+      "activation_step": 0,
+      "population": 4700,
+      "demand": {
+        "medical_kits": 35,
+        "water_packs": 80,
+        "shelter_kits": 30,
+        "nutrition_packs": 45
+      }
+    }
+  ]
+}

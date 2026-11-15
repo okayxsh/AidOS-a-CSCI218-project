@@ -1,0 +1,19 @@
+{
+  "sizes": [
+    3,
+    5,
+    10,
+    20,
+    30,
+    40,
+    50
+  ],
+  "seeds": [
+    100,
+    104
+  ],
+  "warmup": 3,
+  "repeats": 15,
+  "resources": 4,
+  "interleaving": "round-robin across policies per repeat"
+}

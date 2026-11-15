@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "severe-shortage-008",
+  "title": "Severe multi-resource shortage",
+  "description": "Five zones; every resource covers only about a third of what is requested.",
+  "seed": 2182033,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {
+      "id": "medical_kits",
+      "label": "Medical kits",
+      "unit": "kits"
+    },
+    {
+      "id": "water_packs",
+      "label": "Water packs",
+      "unit": "packs"
+    },
+    {
+      "id": "shelter_kits",
+      "label": "Shelter kits",
+      "unit": "kits"
+    },
+    {
+      "id": "nutrition_packs",
+      "label": "Nutrition packs",
+      "unit": "packs"
+    }
+  ],
+  "stock": {
+    "medical_kits": 55,
+    "water_packs": 140,
+    "shelter_kits": 45,
+    "nutrition_packs": 90
+  },
+  "zones": [
+    {
+      "id": "zone-a",
+      "name": "Zone A · East bank",
+      "arrival_order": 1,
+      "severity": 6,
+      "vulnerability": 7,
+      "time_criticality": 6,
+      "activation_step": 0,
+      "population": 9800,
+      "demand": {
+        "medical_kits": 30,
+        "water_packs": 90,
+        "shelter_kits": 25,
+        "nutrition_packs": 60
+      }
+    },
+    {
+      "id": "zone-b",
+      "name": "Zone B · Old town",
+      "arrival_order": 2,
+      "severity": 9,
+      "vulnerability": 8,
+      "time_criticality": 8,
+      "activation_step": 0,
+      "population": 12600,
+      "demand": {
+        "medical_kits": 40,
+        "water_packs": 80,
+        "shelter_kits": 30,
+        "nutrition_packs": 50
+      }
+    },
+    {
+      "id": "zone-c",
+      "name": "Zone C · Farm belt",
+      "arrival_order": 3,
+      "severity": 4,
+      "vulnerability": 6,
+      "time_criticality": 5,
+      "activation_step": 0,
+      "population": 4100,
+      "demand": {
+        "medical_kits": 20,
+        "water_packs": 70,
+        "shelter_kits": 20,
+        "nutrition_packs": 45
+      }
+    },
+    {
+      "id": "zone-d",
+      "name": "Zone D · Coastal road",
+      "arrival_order": 4,
+      "severity": 7,
+      "vulnerability": 5,
+      "time_criticality": 9,
+      "activation_step": 0,
+      "population": 5600,
+      "demand": {
+        "medical_kits": 35,
+        "water_packs": 100,
+        "shelter_kits": 30,
+        "nutrition_packs": 55
+      }
+    },
+    {
+      "id": "zone-e",
+      "name": "Zone E · Hill monastery",
+      "arrival_order": 5,
+      "severity": 5,
+      "vulnerability": 9,
+      "time_criticality": 4,
+      "activation_step": 0,
+      "population": 1500,
+      "demand": {
+        "medical_kits": 25,
+        "water_packs": 60,
+        "shelter_kits": 25,
+        "nutrition_packs": 40
+      }
+    }
+  ]
+}

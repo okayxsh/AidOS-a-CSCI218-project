@@ -1,0 +1,51 @@
+{
+  "name": "aidos-web",
+  "private": true,
+  "version": "0.0.0",
+  "description": "AidOS frontend: landing page (/) and interactive dashboard (/dashboard). CSCI218 academic prototype.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/mona-sans": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "@gsap/react": "^2.1.2",
+    "@react-three/fiber": "^9.8.2",
+    "gsap": "^3.15.1",
+    "lucide-react": "^1.71.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^8.5.1",
+    "recharts": "^3.10.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.14.0",
+    "jsdom": "^31.0.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.7",
+    "vitest": "^5.1.0"
+  }
+}

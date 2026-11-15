@@ -1,0 +1,42 @@
+{
+  "run_id": "extended-20261112T100136Z",
+  "status": "complete",
+  "created_utc": "2026-11-12T10:01:36+00:00",
+  "finished_utc": "2026-11-12T10:06:15+00:00",
+  "duration_s": 278.72,
+  "preset": "extended",
+  "counts": {
+    "static_scenarios": 504,
+    "static_records": 2016,
+    "dynamic_scripts": 60,
+    "dynamic_steps": 420,
+    "dispatch_runs": 240,
+    "scaling_records": 600,
+    "failures": 0
+  },
+  "versions": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9"
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "executable": "python.exe"
+  },
+  "source_revision": "unavailable: the project folder is not a git repository",
+  "files": {
+    "config.json": "6f55a566eaeaf12a7e402a5705618210f23a6aa224e9db1fec39f84e2460e0fd",
+    "dispatch_zones.csv": "e804967dd33462d2d896ab1d828584407211105f9353e63d8bb20af1c703b1b7",
+    "dynamic_dispatch.csv": "dde6c89c98e8f2d1a3bc177de1f5b6450cc7ebfbf80f0fa28859b7d727e26d83",
+    "dynamic_recommendation.csv": "41f12180d74cca86cfa06f0c76b461d0d022d845789c32bc5f2a47d732d4adc3",
+    "failures.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "scaling.csv": "3563ba5179eca2f67f28ff627143ef50546199f9d7e6bca19c22f48bef257cea",
+    "static_records.csv": "a733c02d484c6dd2765c524208d48d55eacb3c2d7db196513eeef15570c6ef19",
+    "static_zones.csv": "9e2cda5903d4743e9d8cd407c939c7e5f9398ed0748a51af1ac1a6f39a56253d",
+    "summary.json": "84537afe2e313447dcb6bdcc70b546303ef86f6a5c4b5a052f1b26479463d88d"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "zero-stock",
+  "title": "Depot empty",
+  "description": "Requests arrive while the depot holds nothing. Every policy must return zero allocations and say why.",
+  "seed": 2182029,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {"id": "medical_kits", "label": "Medical kits", "unit": "kits"},
+    {"id": "water_packs", "label": "Water packs", "unit": "packs"},
+    {"id": "shelter_kits", "label": "Shelter kits", "unit": "kits"}
+  ],
+  "stock": {"medical_kits": 0, "water_packs": 0, "shelter_kits": 0},
+  "zones": [
+    {"id": "zone-a", "name": "Zone A · Valley hamlet", "arrival_order": 1, "severity": 8, "vulnerability": 7, "time_criticality": 8, "population": 1900, "demand": {"medical_kits": 20, "water_packs": 50, "shelter_kits": 15}},
+    {"id": "zone-b", "name": "Zone B · Lakeside camp", "arrival_order": 2, "severity": 6, "vulnerability": 6, "time_criticality": 6, "population": 2700, "demand": {"medical_kits": 15, "water_packs": 40, "shelter_kits": 20}},
+    {"id": "zone-c", "name": "Zone C · Hill clinic", "arrival_order": 3, "severity": 7, "vulnerability": 9, "time_criticality": 7, "population": 800, "demand": {"medical_kits": 25, "water_packs": 20, "shelter_kits": 5}}
+  ]
+}

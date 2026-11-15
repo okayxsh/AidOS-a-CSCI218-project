@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "coastal-storm-005",
+  "title": "Six-zone coastal storm",
+  "description": "Six zones and four resources under severe scarcity. Every resource is short and one zone is not yet active.",
+  "seed": 2182030,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {"id": "medical_kits", "label": "Medical kits", "unit": "kits"},
+    {"id": "water_packs", "label": "Water packs", "unit": "packs"},
+    {"id": "shelter_kits", "label": "Shelter kits", "unit": "kits"},
+    {"id": "nutrition_packs", "label": "Nutrition packs", "unit": "packs"}
+  ],
+  "stock": {"medical_kits": 120, "water_packs": 300, "shelter_kits": 90, "nutrition_packs": 210},
+  "zones": [
+    {"id": "zone-a", "name": "Zone A · Harbour front", "arrival_order": 1, "severity": 7, "vulnerability": 6, "time_criticality": 8, "population": 14800, "demand": {"medical_kits": 45, "water_packs": 120, "shelter_kits": 30, "nutrition_packs": 70}},
+    {"id": "zone-b", "name": "Zone B · Fishing village", "arrival_order": 2, "severity": 8, "vulnerability": 8, "time_criticality": 7, "population": 3100, "demand": {"medical_kits": 30, "water_packs": 70, "shelter_kits": 35, "nutrition_packs": 50}},
+    {"id": "zone-c", "name": "Zone C · Old town", "arrival_order": 3, "severity": 5, "vulnerability": 7, "time_criticality": 4, "population": 21000, "demand": {"medical_kits": 40, "water_packs": 110, "shelter_kits": 25, "nutrition_packs": 80}},
+    {"id": "zone-d", "name": "Zone D · Estuary farms", "arrival_order": 4, "severity": 6, "vulnerability": 5, "time_criticality": 6, "population": 2600, "demand": {"medical_kits": 20, "water_packs": 60, "shelter_kits": 20, "nutrition_packs": 40}},
+    {"id": "zone-e", "name": "Zone E · Airport road camp", "arrival_order": 5, "severity": 9, "vulnerability": 9, "time_criticality": 9, "population": 4400, "demand": {"medical_kits": 35, "water_packs": 80, "shelter_kits": 40, "nutrition_packs": 60}},
+    {"id": "zone-f", "name": "Zone F · Northern islands", "arrival_order": 6, "severity": 8, "vulnerability": 7, "time_criticality": 8, "activation_step": 1, "population": 1700, "demand": {"medical_kits": 25, "water_packs": 50, "shelter_kits": 15, "nutrition_packs": 30}}
+  ]
+}

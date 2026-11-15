@@ -1,0 +1,33 @@
+{
+  "run_id": "supplementary-dynamic-controlled-20261112T165434Z",
+  "experiment": "dynamic-controlled",
+  "status": "complete",
+  "classification": "supplementary / exploratory (Stage 5); not the frozen Stage 4 benchmark",
+  "created_utc": "2026-11-12T16:54:34+00:00",
+  "finished_utc": "2026-11-12T16:58:16+00:00",
+  "counts": {
+    "scripts": 120,
+    "recommendation_rows": 2400,
+    "dispatch_runs": 480
+  },
+  "notes": "Exploratory; corrects the Stage 4 late-urgent-zone design; Stage 4 data untouched.",
+  "environment": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 16,
+    "source_revision": "unavailable: no commit yet"
+  },
+  "files": {
+    "config.json": "1ed5aa4ea72eb4160b9ebee8f9fb785894e92564256b810a1f485aad6757db42",
+    "dispatch.csv": "3b0c0b8fcb302af6644cb0f0025af9f90f200fc63c738076533af8557658c0de",
+    "fig11_dynamic_controlled.png": "0a55819922d216033d3c63ec2e1e18f007be46a29d3a4d8d678751166602dfda",
+    "fig11_dynamic_controlled.svg": "e2ea17095127b6a162fd79ae9cd79d00fd343242dd66066fee3c442ea0c199d8",
+    "recommendation.csv": "6fd8918eaf96332412573fd6c8cfb188700936279021481b4b7e4c5041ed2198",
+    "summary.json": "156be427b38733a468b0a6a68995743d8eb63f2da5ba2dee3a6b31e89a5a001e"
+  }
+}

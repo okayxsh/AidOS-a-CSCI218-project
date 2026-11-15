@@ -1,0 +1,112 @@
+{
+  "version": "1.0",
+  "method": "sugeno-0-product-weighted-average",
+  "note": "Design assumptions for an academic simulation, not validated humanitarian or medical triage standards. Zero-order Sugeno (Takagi-Sugeno-Kang) inference: rule strength = product of antecedent degrees; score = strength-weighted average of the rule outputs. Chosen over Mamdani min/max after a measured monotonicity check; see docs/algorithms/fuzzy-logic.md.",
+  "inputs": {
+    "severity": {
+      "label": "Severity",
+      "range": [0, 10],
+      "terms": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [0, 0, 2, 5]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [2, 5, 8]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [5, 8, 10, 10]
+        }
+      }
+    },
+    "time_criticality": {
+      "label": "Time criticality",
+      "range": [0, 10],
+      "terms": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [0, 0, 2, 5]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [2, 5, 8]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [5, 8, 10, 10]
+        }
+      }
+    },
+    "vulnerability": {
+      "label": "Vulnerability",
+      "range": [0, 10],
+      "terms": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [0, 0, 2, 5]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [2, 5, 8]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [5, 8, 10, 10]
+        }
+      }
+    }
+  },
+  "output": {
+    "label": "Urgency",
+    "range": [0, 100],
+    "terms": {
+      "low": {
+        "value": 12.5,
+        "band": [0, 25]
+      },
+      "moderate": {
+        "value": 37.5,
+        "band": [25, 50]
+      },
+      "high": {
+        "value": 62.5,
+        "band": [50, 75]
+      },
+      "critical": {
+        "value": 87.5,
+        "band": [75, 100]
+      }
+    }
+  },
+  "rules": [
+    { "id": "R01", "if": { "severity": "low", "time_criticality": "low", "vulnerability": "low" }, "then": "low" },
+    { "id": "R02", "if": { "severity": "low", "time_criticality": "low", "vulnerability": "medium" }, "then": "low" },
+    { "id": "R03", "if": { "severity": "low", "time_criticality": "low", "vulnerability": "high" }, "then": "moderate" },
+    { "id": "R04", "if": { "severity": "low", "time_criticality": "medium", "vulnerability": "low" }, "then": "low" },
+    { "id": "R05", "if": { "severity": "low", "time_criticality": "medium", "vulnerability": "medium" }, "then": "low" },
+    { "id": "R06", "if": { "severity": "low", "time_criticality": "medium", "vulnerability": "high" }, "then": "moderate" },
+    { "id": "R07", "if": { "severity": "low", "time_criticality": "high", "vulnerability": "low" }, "then": "moderate" },
+    { "id": "R08", "if": { "severity": "low", "time_criticality": "high", "vulnerability": "medium" }, "then": "moderate" },
+    { "id": "R09", "if": { "severity": "low", "time_criticality": "high", "vulnerability": "high" }, "then": "high" },
+    { "id": "R10", "if": { "severity": "medium", "time_criticality": "low", "vulnerability": "low" }, "then": "low" },
+    { "id": "R11", "if": { "severity": "medium", "time_criticality": "low", "vulnerability": "medium" }, "then": "low" },
+    { "id": "R12", "if": { "severity": "medium", "time_criticality": "low", "vulnerability": "high" }, "then": "moderate" },
+    { "id": "R13", "if": { "severity": "medium", "time_criticality": "medium", "vulnerability": "low" }, "then": "moderate" },
+    { "id": "R14", "if": { "severity": "medium", "time_criticality": "medium", "vulnerability": "medium" }, "then": "moderate" },
+    { "id": "R15", "if": { "severity": "medium", "time_criticality": "medium", "vulnerability": "high" }, "then": "high" },
+    { "id": "R16", "if": { "severity": "medium", "time_criticality": "high", "vulnerability": "low" }, "then": "high" },
+    { "id": "R17", "if": { "severity": "medium", "time_criticality": "high", "vulnerability": "medium" }, "then": "high" },
+    { "id": "R18", "if": { "severity": "medium", "time_criticality": "high", "vulnerability": "high" }, "then": "critical" },
+    { "id": "R19", "if": { "severity": "high", "time_criticality": "low", "vulnerability": "low" }, "then": "moderate" },
+    { "id": "R20", "if": { "severity": "high", "time_criticality": "low", "vulnerability": "medium" }, "then": "moderate" },
+    { "id": "R21", "if": { "severity": "high", "time_criticality": "low", "vulnerability": "high" }, "then": "high" },
+    { "id": "R22", "if": { "severity": "high", "time_criticality": "medium", "vulnerability": "low" }, "then": "high" },
+    { "id": "R23", "if": { "severity": "high", "time_criticality": "medium", "vulnerability": "medium" }, "then": "high" },
+    { "id": "R24", "if": { "severity": "high", "time_criticality": "medium", "vulnerability": "high" }, "then": "critical" },
+    { "id": "R25", "if": { "severity": "high", "time_criticality": "high", "vulnerability": "low" }, "then": "critical" },
+    { "id": "R26", "if": { "severity": "high", "time_criticality": "high", "vulnerability": "medium" }, "then": "critical" },
+    { "id": "R27", "if": { "severity": "high", "time_criticality": "high", "vulnerability": "high" }, "then": "critical" }
+  ]
+}

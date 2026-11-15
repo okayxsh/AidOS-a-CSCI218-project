@@ -1,0 +1,30 @@
+{
+  "run_id": "supplementary-fuzzy-sensitivity-20261112T165230Z",
+  "experiment": "fuzzy-sensitivity",
+  "status": "complete",
+  "classification": "supplementary / exploratory (Stage 5); not the frozen Stage 4 benchmark",
+  "created_utc": "2026-11-12T16:52:30+00:00",
+  "finished_utc": "2026-11-12T16:53:13+00:00",
+  "counts": {
+    "rows": 3080
+  },
+  "notes": "Exploratory; variants declared in advance; production rules untouched.",
+  "environment": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 16,
+    "source_revision": "unavailable: no commit yet"
+  },
+  "files": {
+    "config.json": "bb6d90a2711ad9382b6c9ee3dac79aea1fde0c632e4c781b42deb6a2abadac7c",
+    "fig10_fuzzy_sensitivity.png": "a32d1c24a3b67dbb581875b750cc2e39e73dbcd108fa5af7032b726e02d0dcd6",
+    "fig10_fuzzy_sensitivity.svg": "b27f7d4962aff2394902eb0a7f6a93fafe3d8338c9e0c82b42483011a1f94761",
+    "fuzzy_sensitivity.csv": "fee8a3b6f31dd21ca79f149e02cab0de0bb8a99ccc335ceaf821bbb0a65d8c48",
+    "summary.json": "b155b6aa53baa437668ce58c01ae2afc8220b2446d9d23a5e266cb322a34ae72"
+  }
+}

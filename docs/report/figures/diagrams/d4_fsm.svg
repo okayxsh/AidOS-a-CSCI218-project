@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1010" viewBox="0 0 1600 1010" font-family="Calibri, 'Segoe UI', Arial, sans-serif">
+<defs><marker id="ah-teal" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#087F84"/></marker><marker id="ah-teal-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#087F84"/></marker><marker id="ah-navy" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#13283B"/></marker><marker id="ah-navy-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#13283B"/></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7791F"/></marker><marker id="ah-amber-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7791F"/></marker><marker id="ah-muted" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7A"/></marker><marker id="ah-muted-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#5B6B7A"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1010" fill="#FFFFFF"/>
+<circle cx="46" cy="308" r="13" fill="#13283B"/>
+<path d="M59,308 L190,308" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<text x="124" y="294" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="middle" style="white-space:pre">create</text>
+<text x="124" y="338" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="21" fill="#5B6B7A" font-weight="400" text-anchor="middle" style="white-space:pre">version 1</text>
+<path d="M460,286 L700,286" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<text x="580.0" y="274" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#087F84" font-weight="700" text-anchor="middle" style="white-space:pre">start</text>
+<path d="M700,332 L460,332" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<text x="580.0" y="364" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">reset</text>
+<path d="M970,286 L1300,286" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<text x="1135.0" y="274" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">pause</text>
+<path d="M1300,332 L970,332" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<text x="1135.0" y="364" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">resume</text>
+<path d="M780,250 C780,158 890,158 890,250" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<text x="835" y="150" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#087F84" font-weight="700" text-anchor="middle" style="white-space:pre">apply_event</text>
+<path d="M835.0,366 L835.0,600" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<text x="851.0" y="480" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#087F84" font-weight="700" text-anchor="start" style="white-space:pre">complete</text>
+<path d="M960,366 L1330,600" fill="none" stroke="#B7791F" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-amber)"/>
+<text x="1190" y="418" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#B7791F" font-weight="700" text-anchor="start" style="white-space:pre">fail</text>
+<text x="1190" y="446" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="21" fill="#5B6B7A" font-weight="400" text-anchor="start" style="white-space:pre">internal: a plan failed</text>
+<text x="1190" y="471" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="21" fill="#5B6B7A" font-weight="400" text-anchor="start" style="white-space:pre">the validator</text>
+<path d="M1435.0,250 L1435.0,60 L390,60 L390,250" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<rect x="958.6" y="41" width="82.8" height="32" fill="#FFFFFF" opacity="0.92"/>
+<text x="1000" y="67" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">reset</text>
+<path d="M230,250 C230,166 330,166 330,250" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<text x="280" y="158" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">reset</text>
+<path d="M700,658 L390,658 L390,366" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<rect x="458.6" y="641" width="82.8" height="32" fill="#FFFFFF" opacity="0.92"/>
+<text x="500" y="667" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">reset</text>
+<path d="M1435.0,716 L1435.0,790 L260,790 L260,366" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#ah-navy)"/>
+<rect x="958.6" y="773" width="82.8" height="32" fill="#FFFFFF" opacity="0.92"/>
+<text x="1000" y="799" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#13283B" font-weight="400" text-anchor="middle" style="white-space:pre">reset</text>
+<rect x="190" y="250" width="270" height="116" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="2.5"/>
+<text x="325.0" y="298" font-family="Consolas, 'Courier New', monospace" font-size="28" fill="#13283B" font-weight="700" text-anchor="middle" style="white-space:pre">READY</text>
+<text x="325.0" y="338" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="middle" style="white-space:pre">step 0 scored</text>
+<rect x="700" y="250" width="270" height="116" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="2.5"/>
+<text x="835.0" y="298" font-family="Consolas, 'Courier New', monospace" font-size="28" fill="#13283B" font-weight="700" text-anchor="middle" style="white-space:pre">ACTIVE</text>
+<text x="835.0" y="338" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="middle" style="white-space:pre">accepts events</text>
+<rect x="1300" y="250" width="270" height="116" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="2.5"/>
+<text x="1435.0" y="298" font-family="Consolas, 'Courier New', monospace" font-size="28" fill="#13283B" font-weight="700" text-anchor="middle" style="white-space:pre">PAUSED</text>
+<text x="1435.0" y="338" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="middle" style="white-space:pre">events refused</text>
+<rect x="700" y="600" width="270" height="116" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="2.5"/>
+<text x="835.0" y="648" font-family="Consolas, 'Courier New', monospace" font-size="28" fill="#13283B" font-weight="700" text-anchor="middle" style="white-space:pre">COMPLETED</text>
+<text x="835.0" y="688" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="middle" style="white-space:pre">read-only</text>
+<rect x="1300" y="600" width="270" height="116" rx="6" ry="6" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.5"/>
+<text x="1435.0" y="648" font-family="Consolas, 'Courier New', monospace" font-size="28" fill="#B7791F" font-weight="700" text-anchor="middle" style="white-space:pre">ERROR</text>
+<text x="1435.0" y="688" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="middle" style="white-space:pre">read-only</text>
+<rect x="20" y="838" width="1560" height="156" rx="6" ry="6" fill="#EEF4F6" stroke="#D5DDE3" stroke-width="1.5"/>
+<text x="48" y="884" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Each accepted action stores <tspan font-family="Consolas, 'Courier New', monospace">version + 1</tspan>.</text>
+<text x="48" y="924" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Any pair not drawn: 409 <tspan font-family="Consolas, 'Courier New', monospace">invalid_transition</tspan>.</text>
+<text x="48" y="964" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Reads are allowed in every state.</text>
+<text x="830" y="884" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Actions: POST <tspan font-family="Consolas, 'Courier New', monospace">…/sessions/{id}/{action}</tspan></text>
+<text x="830" y="924" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-family="Consolas, 'Courier New', monospace">reset</tspan> restores step 0 and clears history.</text>
+<text x="830" y="964" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">At most 200 events per session.</text>
+</svg>

@@ -1,0 +1,157 @@
+{
+  "format": "aidos-simulation",
+  "format_version": "1.0",
+  "engine_version": "0.3.0",
+  "fuzzy_version": "1.0",
+  "scenario_id": "triage-demo-001",
+  "initial_snapshot_hash": "f24844f53c2320e2ccd806916539b84c354eadb5d47e283a270d13a67b645a5e",
+  "initial_scenario": {
+    "schema_version": "1.0",
+    "scenario_id": "triage-demo-001",
+    "title": "Three-zone shortage",
+    "description": "Three zones request more medical kits, water packs and shelter kits than the depot holds. The default demo scenario.",
+    "seed": 2182026,
+    "synthetic": true,
+    "step": 0,
+    "resources": [
+      {
+        "id": "medical_kits",
+        "label": "Medical kits",
+        "unit": "kits"
+      },
+      {
+        "id": "water_packs",
+        "label": "Water packs",
+        "unit": "packs"
+      },
+      {
+        "id": "shelter_kits",
+        "label": "Shelter kits",
+        "unit": "kits"
+      }
+    ],
+    "stock": {
+      "medical_kits": 90,
+      "water_packs": 180,
+      "shelter_kits": 60
+    },
+    "zones": [
+      {
+        "id": "zone-a",
+        "name": "Zone A · Northern floodplain",
+        "arrival_order": 1,
+        "severity": 9.0,
+        "vulnerability": 8.0,
+        "time_criticality": 9.0,
+        "activation_step": 0,
+        "population": 12400,
+        "demand": {
+          "medical_kits": 75,
+          "water_packs": 100,
+          "shelter_kits": 30
+        }
+      },
+      {
+        "id": "zone-b",
+        "name": "Zone B · Market district",
+        "arrival_order": 2,
+        "severity": 6.0,
+        "vulnerability": 7.0,
+        "time_criticality": 5.0,
+        "activation_step": 0,
+        "population": 18900,
+        "demand": {
+          "medical_kits": 45,
+          "water_packs": 130,
+          "shelter_kits": 50
+        }
+      },
+      {
+        "id": "zone-c",
+        "name": "Zone C · Hillside camp",
+        "arrival_order": 3,
+        "severity": 7.0,
+        "vulnerability": 5.0,
+        "time_criticality": 7.0,
+        "activation_step": 0,
+        "population": 6300,
+        "demand": {
+          "medical_kits": 30,
+          "water_packs": 60,
+          "shelter_kits": 40
+        }
+      }
+    ]
+  },
+  "config": {
+    "policy": "aidos",
+    "epsilon": 1.0,
+    "resource_weights": {},
+    "min_coverage": 0.25,
+    "time_limit_s": 5.0
+  },
+  "events": [
+    {
+      "seq": 1,
+      "event_id": "e001-6cc0a746",
+      "event": {
+        "type": "urgency_changed",
+        "zone_id": "zone-b",
+        "severity": 9.0,
+        "vulnerability": null,
+        "time_criticality": null
+      }
+    },
+    {
+      "seq": 2,
+      "event_id": "e002-d7d8bcf5",
+      "event": {
+        "type": "zone_added",
+        "zone": {
+          "id": "zone-d",
+          "name": "Zone D · Riverside clinic",
+          "severity": 8.0,
+          "vulnerability": 9.0,
+          "time_criticality": 9.0,
+          "population": 2400,
+          "demand": {
+            "medical_kits": 40,
+            "water_packs": 50,
+            "shelter_kits": 10
+          }
+        }
+      }
+    },
+    {
+      "seq": 3,
+      "event_id": "e003-c79dc657",
+      "event": {
+        "type": "supply_lost",
+        "resource_id": "medical_kits",
+        "quantity": 30
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "seq": 0,
+      "snapshot_hash": "f24844f53c2320e2ccd806916539b84c354eadb5d47e283a270d13a67b645a5e",
+      "outcome_hash": "491347451f10447f99ca83a16fc78faaf61ade45b26a91bca940fe9479072f1f"
+    },
+    {
+      "seq": 1,
+      "snapshot_hash": "cc0ac162737dcc38056bd2618574bd23405dd57d0035fe3ebee8c05926ae9a46",
+      "outcome_hash": "5cbedce6d2e084162ee0d1bea1c15fa2793f2620a9108f1e1e3507f6c72fec2b"
+    },
+    {
+      "seq": 2,
+      "snapshot_hash": "4707e70785cfbcfe4ea4835acc15a23a1d0344f1fae0487cc09bf02fd7f06805",
+      "outcome_hash": "6b360d7e2e6b1842f34fe93c5e6baffeea461f0170c830346a5b740ef774fcc4"
+    },
+    {
+      "seq": 3,
+      "snapshot_hash": "7fd6ccb9c7f6656a1b6c305e2488b92791408fae635e7615f9c63096d0ce391b",
+      "outcome_hash": "8dacbf0b02b2033e192aca8e710a282a3938c076a8b895200dd282afe9efad7c"
+    }
+  ]
+}

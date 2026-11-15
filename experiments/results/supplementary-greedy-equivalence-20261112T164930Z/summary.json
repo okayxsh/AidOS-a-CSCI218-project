@@ -1,0 +1,48 @@
+{
+  "E1": {
+    "instances": 24576,
+    "greedy_equals_bruteforce_optimum": 24576,
+    "unique_optimum": 24576,
+    "cpsat_checked": 615,
+    "cpsat_equals_greedy": 615
+  },
+  "E2": {
+    "instances": 11664,
+    "greedy_equals_bruteforce_optimum": 11664,
+    "unique_optimum": 11664,
+    "cpsat_checked": 292,
+    "cpsat_equals_greedy": 292
+  },
+  "random": {
+    "instances": 700,
+    "identical": 700,
+    "with_tied_scores": 550,
+    "identical_with_tied_scores": 550,
+    "statuses": {
+      "OPTIMAL": 700
+    },
+    "aidos_ms_median": 11.9465,
+    "solver_ms_median": 8.100000000000001,
+    "greedy_ms_median": 0.1182,
+    "solver_share_of_aidos_time_median": 0.6866930537821421
+  },
+  "counterexample_proposed_extension": {
+    "status": "OPTIMAL",
+    "greedy_plan": {
+      "A/water": 10,
+      "A/medical": 0,
+      "B/water": 0,
+      "B/medical": 0
+    },
+    "cpsat_plan": {
+      "A/water": 0,
+      "A/medical": 10,
+      "B/water": 10,
+      "B/medical": 0
+    },
+    "greedy_objective": 8850000,
+    "cpsat_objective": 30400000,
+    "greedy_units": 10,
+    "cpsat_units": 20
+  }
+}

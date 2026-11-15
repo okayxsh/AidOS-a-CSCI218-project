@@ -1,0 +1,26 @@
+{
+  "run_id": "supplementary-stage4-audit-20261112T170734Z",
+  "experiment": "stage4-audit",
+  "status": "complete",
+  "classification": "supplementary / exploratory (Stage 5); not the frozen Stage 4 benchmark",
+  "created_utc": "2026-11-12T17:07:34+00:00",
+  "finished_utc": "2026-11-12T17:07:34+00:00",
+  "counts": {
+    "checks": 21
+  },
+  "notes": "Independent recomputation; the Stage 4 run is read, never written.",
+  "environment": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 16,
+    "source_revision": "HEAD"
+  },
+  "files": {
+    "audit.json": "44f5feba6615163f829399ba283c251432b9b91064483e3ba723bef296809eff"
+  }
+}

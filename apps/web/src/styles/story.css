@@ -1,0 +1,352 @@
+/* Resource-network story (pinned) and the closing dashboard reveal. Same Aurora Ridge world. */
+
+.story {
+  padding-top: clamp(80px, 10vw, 136px);
+}
+
+.story__intro {
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.story__body {
+  position: relative;
+}
+
+/* The stage is a framed window like the hero, held in place while the chapters scroll. */
+.story__stage {
+  --stage-h: calc(100svh - var(--frame-inset) * 2);
+  position: sticky;
+  top: var(--frame-inset);
+  height: var(--stage-h);
+  margin: 0 var(--frame-inset);
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line-strong);
+  isolation: isolate;
+  /* The hero's night sky: navy above, a horizon glow where the grid recedes, dark ground. */
+  background: linear-gradient(
+    180deg,
+    var(--ink-950) 0%,
+    var(--sky-mid) 34%,
+    var(--stage-horizon) 52%,
+    var(--scene-fog) 62%,
+    var(--sky-top) 78%,
+    var(--stage-floor) 100%
+  );
+}
+
+.story__aurora {
+  position: absolute;
+  z-index: -1;
+  top: 6%;
+  left: 20%;
+  width: 70%;
+  height: 140px;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.32;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(111, 182, 255, 0.5),
+    rgba(63, 208, 201, 0.4),
+    transparent
+  );
+  transform: rotate(-6deg);
+  pointer-events: none;
+}
+
+.story__canvas {
+  position: absolute !important;
+  inset: 0;
+}
+
+.story__poster {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 36%;
+  width: 64%;
+  height: 100%;
+}
+
+.story__poster-label {
+  fill: var(--text-2);
+  font-family: var(--font-sans);
+  font-size: 0.23px;
+  font-variant-numeric: tabular-nums;
+  paint-order: stroke;
+  stroke: var(--stage-floor);
+  stroke-width: 0.08px;
+}
+
+.story__labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.story__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-strong);
+  background: rgba(6, 12, 23, 0.84);
+  color: var(--text-2);
+  font-size: var(--fs-13);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  opacity: 0; /* the scene positions and reveals labels */
+  will-change: transform, opacity;
+}
+
+.story__label--depot {
+  color: var(--text);
+  border-color: rgba(232, 238, 247, 0.3);
+}
+
+/* Chapters scroll over the stage; each one owns a viewport-tall slot. */
+.story__steps {
+  position: relative;
+  margin-top: calc(var(--frame-inset) * 2 - 100svh);
+}
+
+.story__step {
+  display: flex;
+  align-items: center;
+  min-height: 86svh;
+  padding: 0 calc(var(--frame-inset) + clamp(20px, 3vw, 44px));
+}
+
+.story__step:last-child {
+  min-height: 100svh;
+}
+
+.story__panel {
+  width: min(430px, 36vw);
+  padding: 26px 28px 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-strong);
+  background: rgba(7, 13, 24, 0.92);
+  box-shadow: var(--shadow-raised);
+  opacity: calc(0.28 + 0.72 * var(--focus, 1));
+  transition: opacity var(--dur-base) ease;
+}
+
+.story__step:first-child .story__panel {
+  --focus: 1;
+}
+
+.story__title {
+  font-size: clamp(1.375rem, 1.1rem + 0.8vw, 1.75rem);
+  letter-spacing: -0.025em;
+}
+
+.story__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 12px;
+  font-size: var(--fs-13);
+  color: var(--text-3);
+}
+
+.story__text {
+  margin-top: 14px;
+  font-size: var(--fs-16);
+  color: var(--text-2);
+}
+
+.story__bars {
+  display: grid;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.story__bar-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: var(--fs-14);
+  font-weight: 500;
+}
+
+.story__short {
+  color: var(--amber-text);
+  font-size: var(--fs-13);
+}
+
+.story__ratings {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  font-size: var(--fs-13);
+}
+
+.story__ratings th,
+.story__ratings td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+}
+
+.story__ratings thead th {
+  font-weight: 500;
+  color: var(--text-3);
+}
+
+.story__ratings th:first-child {
+  padding-left: 0;
+  text-align: left;
+}
+
+.story__ratings tbody th {
+  font-weight: 500;
+}
+
+.story__pending {
+  color: var(--text-3);
+}
+
+.story__rules {
+  display: grid;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: var(--fs-13);
+  color: var(--text-2);
+}
+
+/* ---------- closing: dashboard reveal ---------- */
+
+.reveal {
+  padding: clamp(96px, 12vw, 152px) var(--frame-inset) clamp(56px, 8vw, 96px);
+}
+
+.reveal__frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(56px, 8vw, 96px) var(--gutter) 0;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(180deg, #0b1d33 0%, var(--sky-top) 100%);
+  text-align: center;
+}
+
+.reveal__aurora {
+  position: absolute;
+  z-index: -1;
+  top: -45%;
+  left: 15%;
+  right: 15%;
+  height: 70%;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.35;
+  background: linear-gradient(90deg, rgba(111, 182, 255, 0.55), rgba(63, 208, 201, 0.45));
+}
+
+.reveal__copy h2 {
+  font-size: var(--fs-display-2);
+  letter-spacing: -0.03em;
+}
+
+.reveal__copy h2 em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.12em;
+  letter-spacing: -0.01em;
+  color: #d4f1ee;
+}
+
+.reveal__copy p {
+  max-width: 54ch;
+  margin: 16px auto 30px;
+  color: var(--text-2);
+  text-wrap: balance;
+}
+
+.reveal__stage {
+  margin-top: clamp(40px, 6vw, 64px);
+  perspective: 1400px;
+  text-align: left;
+}
+
+.reveal__stage .preview {
+  margin: 0 auto;
+}
+
+/* The hero window's rise belongs to the hero; here GSAP owns the transform. */
+.reveal .preview__window {
+  animation: none;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 900px) {
+  .story__poster {
+    left: 0;
+    width: 100%;
+    height: 56%;
+  }
+
+  /* A slot as tall as the stage, so each panel sits at the stage bottom at its chapter. */
+  .story__step {
+    align-items: flex-end;
+    min-height: calc(100svh - var(--frame-inset) * 2);
+    padding: 0 calc(var(--frame-inset) + 10px) calc(var(--frame-inset) + 14px);
+  }
+
+  .story__panel {
+    width: 100%;
+    padding: 18px 18px 20px;
+  }
+
+  .story__label {
+    font-size: var(--fs-12);
+    padding: 4px 8px;
+  }
+
+  /* Compact evidence so the scene above the panel stays visible. */
+  .story__title {
+    font-size: var(--fs-19);
+  }
+
+  .story__text {
+    margin-top: 10px;
+    font-size: var(--fs-15);
+  }
+
+  .story__bars {
+    margin-top: 12px;
+  }
+
+  .story__bars .request-bar {
+    height: 24px;
+    margin-top: 6px;
+    margin-bottom: 22px;
+  }
+
+  .story__ratings {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .story__stage {
+    border-radius: 20px;
+  }
+
+  .story__ratings th:nth-child(5),
+  .story__ratings td:nth-child(5) {
+    display: none;
+  }
+
+  .reveal__frame {
+    border-radius: 20px;
+  }
+}

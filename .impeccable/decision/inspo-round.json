@@ -1,0 +1,43 @@
+{
+  "title": "AidOS landing: directions from your reference",
+  "question": "Three directions built from the 'Prepared' reference: dark atmospheric hero, centred sans headline with an italic serif accent, pill CTAs, the product peeking below. Pick one, or steer.",
+  "options": [
+    {
+      "id": "night-terrain",
+      "kind": "grounded",
+      "label": "Night Terrain",
+      "thesis": "The reference's night atmosphere becomes a dark topographic map of a fictional region, with the demo scenario's depot and zones pinned on it.",
+      "palette": ["#05080f", "#0b1626", "#e8eef7", "#3fd0c9", "#f5b042"],
+      "materials": ["contour-line terrain", "glowing zone pins", "framed hero", "live dashboard preview"],
+      "viewport": "Framed hero over a contour map; centred headline with 'every decision counts.' in italic serif; white and dark pill CTAs; the dashboard window rises from the bottom edge.",
+      "risk": "Contour lines must stay quiet, or the map competes with the headline.",
+      "html": ".impeccable/mocks/decision/inspo-terrain.html"
+    },
+    {
+      "id": "aurora-ridge",
+      "kind": "grounded",
+      "label": "Aurora Ridge",
+      "thesis": "Closest to the reference: a night sky with aurora light over a mountain ridge, a faint grid, and the dashboard emerging from the ridge line.",
+      "palette": ["#04070d", "#0e2a4a", "#6fb6ff", "#3fd0c9", "#e8eef7"],
+      "materials": ["sky gradient and aurora light", "authored mountain silhouette", "grid overlay", "framed hero"],
+      "viewport": "Rounded framed hero with sky and aurora; centred headline and pills; the mountain ridge cuts across, and the product window sits in front of it.",
+      "risk": "The most familiar of the three: atmosphere carries the look more than anything specific to AidOS.",
+      "html": ".impeccable/mocks/decision/inspo-aurora.html"
+    },
+    {
+      "id": "ops-horizon",
+      "kind": "grounded",
+      "label": "Ops Horizon",
+      "thesis": "Same dark world, bolder composition: a left-aligned headline over a wide terrain band, with live scenario panels (stock against requests) floating on the right.",
+      "palette": ["#05080f", "#101c2e", "#e8eef7", "#3fd0c9", "#f5b042", "#f0525a"],
+      "materials": ["contour terrain band", "floating data panels", "serif italic accent"],
+      "viewport": "Headline left over the dark terrain; a stack of three scenario panels at right showing medical, water and shelter stock against requests; CTA pills under the headline.",
+      "risk": "Close to the split-hero template if the panels look like generic cards.",
+      "html": ".impeccable/mocks/decision/inspo-horizon.html"
+    }
+  ],
+  "reroll": false,
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": false,
+  "steer": true
+}

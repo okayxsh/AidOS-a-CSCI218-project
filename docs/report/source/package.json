@@ -1,0 +1,9 @@
+{
+  "name": "aidos-report-builder",
+  "private": true,
+  "description": "Generates the first draft of the AidOS group report (docx). Not part of the application.",
+  "dependencies": {
+    "docx": "^9.15.3",
+    "jszip": "^3.10.2"
+  }
+}

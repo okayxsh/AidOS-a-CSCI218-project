@@ -1,0 +1,30 @@
+{
+  "run_id": "supplementary-floor-sweep-20261112T165054Z",
+  "experiment": "floor-sweep",
+  "status": "complete",
+  "classification": "supplementary / exploratory (Stage 5); not the frozen Stage 4 benchmark",
+  "created_utc": "2026-11-12T16:50:54+00:00",
+  "finished_utc": "2026-11-12T16:51:25+00:00",
+  "counts": {
+    "runs": 1680
+  },
+  "notes": "Pre-declared floors; scenarios outside the frozen benchmark; default not re-selected.",
+  "environment": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 16,
+    "source_revision": "unavailable: no commit yet"
+  },
+  "files": {
+    "config.json": "066de5388bdb589274f555309dab4be245ec333433a88efd2aeaf9fdd16f0bcb",
+    "fig9_floor_tradeoff.png": "d63a0ac65ddc9983b4d390a9260c46fa6ee2f112579e86fa23b9236723c63295",
+    "fig9_floor_tradeoff.svg": "3ec34444f5a0aab3470536dea1066208aee1a14ad1d1475dfb15c16ce8bf4707",
+    "floor_sweep.csv": "f31596992c2b4873d3c8fded135a5e6f5de7a05586a39b6300805a2f46d79c1f",
+    "summary.json": "b3f98420cb672d84ddf709ce08f97260d68d53a11ae259edd43bea0d2f54e54c"
+  }
+}

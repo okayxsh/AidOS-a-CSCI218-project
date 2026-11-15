@@ -1,0 +1,1431 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T06:44:50+00:00",
+  "title": "Design System: AidOS",
+  "extensions": {
+    "colorMeta": {
+      "ink-950": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#04070d",
+        "tonalRamp": [
+          "oklch(15% 0.008 258)",
+          "oklch(26% 0.010 258)",
+          "oklch(38% 0.013 258)",
+          "oklch(49% 0.015 258)",
+          "oklch(61% 0.015 258)",
+          "oklch(72% 0.013 258)",
+          "oklch(84% 0.010 258)",
+          "oklch(95% 0.008 258)"
+        ]
+      },
+      "ink-900": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#070d18",
+        "tonalRamp": [
+          "oklch(15% 0.013 261)",
+          "oklch(26% 0.016 261)",
+          "oklch(38% 0.020 261)",
+          "oklch(49% 0.024 261)",
+          "oklch(61% 0.024 261)",
+          "oklch(72% 0.020 261)",
+          "oklch(84% 0.016 261)",
+          "oklch(95% 0.013 261)"
+        ]
+      },
+      "ink-850": {
+        "role": "neutral",
+        "displayName": "Deep Ink 850",
+        "canonical": "#091120",
+        "tonalRamp": [
+          "oklch(15% 0.016 262)",
+          "oklch(26% 0.021 262)",
+          "oklch(38% 0.026 262)",
+          "oklch(49% 0.031 262)",
+          "oklch(61% 0.031 262)",
+          "oklch(72% 0.026 262)",
+          "oklch(84% 0.021 262)",
+          "oklch(95% 0.016 262)"
+        ]
+      },
+      "ink-800": {
+        "role": "neutral",
+        "displayName": "Landing Panel Navy",
+        "canonical": "#0c1626",
+        "tonalRamp": [
+          "oklch(15% 0.017 259)",
+          "oklch(26% 0.023 259)",
+          "oklch(38% 0.028 259)",
+          "oklch(49% 0.033 259)",
+          "oklch(61% 0.033 259)",
+          "oklch(72% 0.028 259)",
+          "oklch(84% 0.023 259)",
+          "oklch(95% 0.017 259)"
+        ]
+      },
+      "ink-750": {
+        "role": "neutral",
+        "displayName": "Landing Raised 750",
+        "canonical": "#101c2f",
+        "tonalRamp": [
+          "oklch(15% 0.020 259)",
+          "oklch(26% 0.026 259)",
+          "oklch(38% 0.032 259)",
+          "oklch(49% 0.038 259)",
+          "oklch(61% 0.038 259)",
+          "oklch(72% 0.032 259)",
+          "oklch(84% 0.026 259)",
+          "oklch(95% 0.020 259)"
+        ]
+      },
+      "ink-700": {
+        "role": "neutral",
+        "displayName": "Landing Raised 700",
+        "canonical": "#15243a",
+        "tonalRamp": [
+          "oklch(15% 0.023 258)",
+          "oklch(26% 0.030 258)",
+          "oklch(38% 0.036 258)",
+          "oklch(49% 0.043 258)",
+          "oklch(61% 0.043 258)",
+          "oklch(72% 0.036 258)",
+          "oklch(84% 0.030 258)",
+          "oklch(95% 0.023 258)"
+        ]
+      },
+      "ink-600": {
+        "role": "neutral",
+        "displayName": "Landing Raised 600",
+        "canonical": "#1d304b",
+        "tonalRamp": [
+          "oklch(15% 0.027 257)",
+          "oklch(26% 0.035 257)",
+          "oklch(38% 0.043 257)",
+          "oklch(49% 0.051 257)",
+          "oklch(61% 0.051 257)",
+          "oklch(72% 0.043 257)",
+          "oklch(84% 0.035 257)",
+          "oklch(95% 0.027 257)"
+        ]
+      },
+      "sky-top": {
+        "role": "neutral",
+        "displayName": "Sky Top",
+        "canonical": "#071324",
+        "tonalRamp": [
+          "oklch(15% 0.019 257)",
+          "oklch(26% 0.025 257)",
+          "oklch(38% 0.031 257)",
+          "oklch(49% 0.036 257)",
+          "oklch(61% 0.036 257)",
+          "oklch(72% 0.031 257)",
+          "oklch(84% 0.025 257)",
+          "oklch(95% 0.019 257)"
+        ]
+      },
+      "sky-mid": {
+        "role": "neutral",
+        "displayName": "Sky Mid",
+        "canonical": "#0d2543",
+        "tonalRamp": [
+          "oklch(15% 0.031 255)",
+          "oklch(26% 0.041 255)",
+          "oklch(38% 0.050 255)",
+          "oklch(49% 0.059 255)",
+          "oklch(61% 0.059 255)",
+          "oklch(72% 0.050 255)",
+          "oklch(84% 0.041 255)",
+          "oklch(95% 0.031 255)"
+        ]
+      },
+      "sky-horizon": {
+        "role": "neutral",
+        "displayName": "Sky Horizon",
+        "canonical": "#173f66",
+        "tonalRamp": [
+          "oklch(15% 0.040 251)",
+          "oklch(26% 0.052 251)",
+          "oklch(38% 0.063 251)",
+          "oklch(49% 0.075 251)",
+          "oklch(61% 0.075 251)",
+          "oklch(72% 0.063 251)",
+          "oklch(84% 0.052 251)",
+          "oklch(95% 0.040 251)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(170, 205, 245, 0.1)",
+        "tonalRamp": [
+          "oklch(15% 0.033 252)",
+          "oklch(26% 0.043 252)",
+          "oklch(38% 0.053 252)",
+          "oklch(49% 0.063 252)",
+          "oklch(61% 0.063 252)",
+          "oklch(72% 0.053 252)",
+          "oklch(84% 0.043 252)",
+          "oklch(95% 0.033 252)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "rgba(170, 205, 245, 0.18)",
+        "tonalRamp": [
+          "oklch(15% 0.033 252)",
+          "oklch(26% 0.043 252)",
+          "oklch(38% 0.053 252)",
+          "oklch(49% 0.063 252)",
+          "oklch(61% 0.063 252)",
+          "oklch(72% 0.053 252)",
+          "oklch(84% 0.043 252)",
+          "oklch(95% 0.033 252)"
+        ]
+      },
+      "line-focus": {
+        "role": "neutral",
+        "displayName": "Focus Mint",
+        "canonical": "#7fe3dc",
+        "tonalRamp": [
+          "oklch(15% 0.047 190)",
+          "oklch(26% 0.060 190)",
+          "oklch(38% 0.074 190)",
+          "oklch(49% 0.088 190)",
+          "oklch(61% 0.088 190)",
+          "oklch(72% 0.074 190)",
+          "oklch(84% 0.060 190)",
+          "oklch(95% 0.047 190)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Ice Text",
+        "canonical": "#e8eef7",
+        "tonalRamp": [
+          "oklch(15% 0.007 258)",
+          "oklch(26% 0.009 258)",
+          "oklch(38% 0.011 258)",
+          "oklch(49% 0.013 258)",
+          "oklch(61% 0.013 258)",
+          "oklch(72% 0.011 258)",
+          "oklch(84% 0.009 258)",
+          "oklch(95% 0.007 258)"
+        ]
+      },
+      "text-2": {
+        "role": "neutral",
+        "displayName": "Mist Text",
+        "canonical": "#b4c2d4",
+        "tonalRamp": [
+          "oklch(15% 0.015 255)",
+          "oklch(26% 0.019 255)",
+          "oklch(38% 0.023 255)",
+          "oklch(49% 0.028 255)",
+          "oklch(61% 0.028 255)",
+          "oklch(72% 0.023 255)",
+          "oklch(84% 0.019 255)",
+          "oklch(95% 0.015 255)"
+        ]
+      },
+      "text-3": {
+        "role": "neutral",
+        "displayName": "Dusk Text",
+        "canonical": "#8b9cb4",
+        "tonalRamp": [
+          "oklch(15% 0.020 257)",
+          "oklch(26% 0.026 257)",
+          "oklch(38% 0.032 257)",
+          "oklch(49% 0.037 257)",
+          "oklch(61% 0.037 257)",
+          "oklch(72% 0.032 257)",
+          "oklch(84% 0.026 257)",
+          "oklch(95% 0.020 257)"
+        ]
+      },
+      "text-inverse": {
+        "role": "neutral",
+        "displayName": "Inverse Ink",
+        "canonical": "#07101c",
+        "tonalRamp": [
+          "oklch(15% 0.014 255)",
+          "oklch(26% 0.018 255)",
+          "oklch(38% 0.023 255)",
+          "oklch(49% 0.027 255)",
+          "oklch(61% 0.027 255)",
+          "oklch(72% 0.023 255)",
+          "oklch(84% 0.018 255)",
+          "oklch(95% 0.014 255)"
+        ]
+      },
+      "frost-white": {
+        "role": "neutral",
+        "displayName": "Frost White",
+        "canonical": "#f4f7fb",
+        "tonalRamp": [
+          "oklch(15% 0.003 255)",
+          "oklch(26% 0.004 255)",
+          "oklch(38% 0.005 255)",
+          "oklch(49% 0.006 255)",
+          "oklch(61% 0.006 255)",
+          "oklch(72% 0.005 255)",
+          "oklch(84% 0.004 255)",
+          "oklch(95% 0.003 255)"
+        ]
+      },
+      "teal": {
+        "role": "primary",
+        "displayName": "Depot Teal",
+        "canonical": "#3fd0c9",
+        "tonalRamp": [
+          "oklch(15% 0.059 190)",
+          "oklch(26% 0.076 190)",
+          "oklch(38% 0.094 190)",
+          "oklch(49% 0.111 190)",
+          "oklch(61% 0.111 190)",
+          "oklch(72% 0.094 190)",
+          "oklch(84% 0.076 190)",
+          "oklch(95% 0.059 190)"
+        ]
+      },
+      "teal-strong": {
+        "role": "primary",
+        "displayName": "Deep Teal",
+        "canonical": "#23b2ab",
+        "tonalRamp": [
+          "oklch(15% 0.056 190)",
+          "oklch(26% 0.072 190)",
+          "oklch(38% 0.088 190)",
+          "oklch(49% 0.105 190)",
+          "oklch(61% 0.105 190)",
+          "oklch(72% 0.088 190)",
+          "oklch(84% 0.072 190)",
+          "oklch(95% 0.056 190)"
+        ]
+      },
+      "teal-text": {
+        "role": "primary",
+        "displayName": "Mint Readout",
+        "canonical": "#8ff0e9",
+        "tonalRamp": [
+          "oklch(15% 0.045 190)",
+          "oklch(26% 0.059 190)",
+          "oklch(38% 0.072 190)",
+          "oklch(49% 0.086 190)",
+          "oklch(61% 0.086 190)",
+          "oklch(72% 0.072 190)",
+          "oklch(84% 0.059 190)",
+          "oklch(95% 0.045 190)"
+        ]
+      },
+      "teal-soft": {
+        "role": "primary",
+        "displayName": "Teal Soft",
+        "canonical": "rgba(63, 208, 201, 0.14)",
+        "tonalRamp": [
+          "oklch(15% 0.059 190)",
+          "oklch(26% 0.076 190)",
+          "oklch(38% 0.094 190)",
+          "oklch(49% 0.111 190)",
+          "oklch(61% 0.111 190)",
+          "oklch(72% 0.094 190)",
+          "oklch(84% 0.076 190)",
+          "oklch(95% 0.059 190)"
+        ]
+      },
+      "accent-mist": {
+        "role": "neutral",
+        "displayName": "Accent Mist",
+        "canonical": "#d4f1ee",
+        "tonalRamp": [
+          "oklch(15% 0.015 189)",
+          "oklch(26% 0.019 189)",
+          "oklch(38% 0.024 189)",
+          "oklch(49% 0.028 189)",
+          "oklch(61% 0.028 189)",
+          "oklch(72% 0.024 189)",
+          "oklch(84% 0.019 189)",
+          "oklch(95% 0.015 189)"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Shortfall Amber",
+        "canonical": "#f5b042",
+        "tonalRamp": [
+          "oklch(15% 0.071 75)",
+          "oklch(26% 0.093 75)",
+          "oklch(38% 0.114 75)",
+          "oklch(49% 0.135 75)",
+          "oklch(61% 0.135 75)",
+          "oklch(72% 0.114 75)",
+          "oklch(84% 0.093 75)",
+          "oklch(95% 0.071 75)"
+        ]
+      },
+      "amber-text": {
+        "role": "secondary",
+        "displayName": "Amber Readout",
+        "canonical": "#f8c46f",
+        "tonalRamp": [
+          "oklch(15% 0.058 78)",
+          "oklch(26% 0.076 78)",
+          "oklch(38% 0.093 78)",
+          "oklch(49% 0.110 78)",
+          "oklch(61% 0.110 78)",
+          "oklch(72% 0.093 78)",
+          "oklch(84% 0.076 78)",
+          "oklch(95% 0.058 78)"
+        ]
+      },
+      "amber-soft": {
+        "role": "secondary",
+        "displayName": "Amber Soft",
+        "canonical": "rgba(245, 176, 66, 0.13)",
+        "tonalRamp": [
+          "oklch(15% 0.071 75)",
+          "oklch(26% 0.093 75)",
+          "oklch(38% 0.114 75)",
+          "oklch(49% 0.135 75)",
+          "oklch(61% 0.135 75)",
+          "oklch(72% 0.114 75)",
+          "oklch(84% 0.093 75)",
+          "oklch(95% 0.071 75)"
+        ]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Critical Red",
+        "canonical": "#f0626a",
+        "tonalRamp": [
+          "oklch(15% 0.086 20)",
+          "oklch(26% 0.111 20)",
+          "oklch(38% 0.137 20)",
+          "oklch(49% 0.162 20)",
+          "oklch(61% 0.162 20)",
+          "oklch(72% 0.137 20)",
+          "oklch(84% 0.111 20)",
+          "oklch(95% 0.086 20)"
+        ]
+      },
+      "red-text": {
+        "role": "tertiary",
+        "displayName": "Critical Red Text",
+        "canonical": "#ff8a90",
+        "tonalRamp": [
+          "oklch(15% 0.070 18)",
+          "oklch(26% 0.090 18)",
+          "oklch(38% 0.111 18)",
+          "oklch(49% 0.131 18)",
+          "oklch(61% 0.131 18)",
+          "oklch(72% 0.111 18)",
+          "oklch(84% 0.090 18)",
+          "oklch(95% 0.070 18)"
+        ]
+      },
+      "red-soft": {
+        "role": "tertiary",
+        "displayName": "Critical Red Soft",
+        "canonical": "rgba(240, 98, 106, 0.14)",
+        "tonalRamp": [
+          "oklch(15% 0.086 20)",
+          "oklch(26% 0.111 20)",
+          "oklch(38% 0.137 20)",
+          "oklch(49% 0.162 20)",
+          "oklch(61% 0.162 20)",
+          "oklch(72% 0.137 20)",
+          "oklch(84% 0.111 20)",
+          "oklch(95% 0.086 20)"
+        ]
+      },
+      "blue": {
+        "role": "tertiary",
+        "displayName": "Medical Blue",
+        "canonical": "#6fb6ff",
+        "tonalRamp": [
+          "oklch(15% 0.063 250)",
+          "oklch(26% 0.081 250)",
+          "oklch(38% 0.100 250)",
+          "oklch(49% 0.119 250)",
+          "oklch(61% 0.119 250)",
+          "oklch(72% 0.100 250)",
+          "oklch(84% 0.081 250)",
+          "oklch(95% 0.063 250)"
+        ]
+      },
+      "violet": {
+        "role": "tertiary",
+        "displayName": "Shelter Violet",
+        "canonical": "#b49cff",
+        "tonalRamp": [
+          "oklch(15% 0.069 294)",
+          "oklch(26% 0.090 294)",
+          "oklch(38% 0.110 294)",
+          "oklch(49% 0.131 294)",
+          "oklch(61% 0.131 294)",
+          "oklch(72% 0.110 294)",
+          "oklch(84% 0.090 294)",
+          "oklch(95% 0.069 294)"
+        ]
+      },
+      "green": {
+        "role": "tertiary",
+        "displayName": "Nutrition Green",
+        "canonical": "#9bd77a",
+        "tonalRamp": [
+          "oklch(15% 0.068 135)",
+          "oklch(26% 0.088 135)",
+          "oklch(38% 0.108 135)",
+          "oklch(49% 0.128 135)",
+          "oklch(61% 0.128 135)",
+          "oklch(72% 0.108 135)",
+          "oklch(84% 0.088 135)",
+          "oklch(95% 0.068 135)"
+        ]
+      },
+      "slate": {
+        "role": "tertiary",
+        "displayName": "Requested Slate",
+        "canonical": "#50678a",
+        "tonalRamp": [
+          "oklch(15% 0.031 259)",
+          "oklch(26% 0.040 259)",
+          "oklch(38% 0.049 259)",
+          "oklch(49% 0.058 259)",
+          "oklch(61% 0.058 259)",
+          "oklch(72% 0.049 259)",
+          "oklch(84% 0.040 259)",
+          "oklch(95% 0.031 259)"
+        ]
+      },
+      "stage-horizon": {
+        "role": "neutral",
+        "displayName": "Stage Horizon",
+        "canonical": "#143a5f",
+        "tonalRamp": [
+          "oklch(15% 0.043 251)",
+          "oklch(26% 0.058 251)",
+          "oklch(38% 0.070 251)",
+          "oklch(49% 0.077 251)",
+          "oklch(61% 0.077 251)",
+          "oklch(72% 0.070 251)",
+          "oklch(84% 0.058 251)",
+          "oklch(95% 0.043 251)"
+        ]
+      },
+      "dash-ground": {
+        "role": "neutral",
+        "displayName": "Mission Ground",
+        "canonical": "#080b10",
+        "tonalRamp": [
+          "oklch(15% 0.007 260)",
+          "oklch(26% 0.009 260)",
+          "oklch(38% 0.011 260)",
+          "oklch(49% 0.012 260)",
+          "oklch(61% 0.012 260)",
+          "oklch(72% 0.011 260)",
+          "oklch(84% 0.009 260)",
+          "oklch(95% 0.007 260)"
+        ]
+      },
+      "dash-sidebar": {
+        "role": "neutral",
+        "displayName": "Sidebar Ink",
+        "canonical": "#0b1017",
+        "tonalRamp": [
+          "oklch(15% 0.009 257)",
+          "oklch(26% 0.012 257)",
+          "oklch(38% 0.015 257)",
+          "oklch(49% 0.017 257)",
+          "oklch(61% 0.017 257)",
+          "oklch(72% 0.015 257)",
+          "oklch(84% 0.012 257)",
+          "oklch(95% 0.009 257)"
+        ]
+      },
+      "dash-panel": {
+        "role": "neutral",
+        "displayName": "Panel Ink",
+        "canonical": "#111821",
+        "tonalRamp": [
+          "oklch(15% 0.011 255)",
+          "oklch(26% 0.016 255)",
+          "oklch(38% 0.019 255)",
+          "oklch(49% 0.021 255)",
+          "oklch(61% 0.021 255)",
+          "oklch(72% 0.019 255)",
+          "oklch(84% 0.016 255)",
+          "oklch(95% 0.011 255)"
+        ]
+      },
+      "dash-hover": {
+        "role": "neutral",
+        "displayName": "Hover Ink",
+        "canonical": "#141c26",
+        "tonalRamp": [
+          "oklch(15% 0.013 254)",
+          "oklch(26% 0.017 254)",
+          "oklch(38% 0.021 254)",
+          "oklch(49% 0.023 254)",
+          "oklch(61% 0.023 254)",
+          "oklch(72% 0.021 254)",
+          "oklch(84% 0.017 254)",
+          "oklch(95% 0.013 254)"
+        ]
+      },
+      "dash-raised": {
+        "role": "neutral",
+        "displayName": "Raised Ink",
+        "canonical": "#17212c",
+        "tonalRamp": [
+          "oklch(15% 0.014 251)",
+          "oklch(26% 0.019 251)",
+          "oklch(38% 0.023 251)",
+          "oklch(49% 0.025 251)",
+          "oklch(61% 0.025 251)",
+          "oklch(72% 0.023 251)",
+          "oklch(84% 0.019 251)",
+          "oklch(95% 0.014 251)"
+        ]
+      },
+      "dash-checked": {
+        "role": "neutral",
+        "displayName": "Checked Ink",
+        "canonical": "#212c39",
+        "tonalRamp": [
+          "oklch(15% 0.016 253)",
+          "oklch(26% 0.021 253)",
+          "oklch(38% 0.026 253)",
+          "oklch(49% 0.028 253)",
+          "oklch(61% 0.028 253)",
+          "oklch(72% 0.026 253)",
+          "oklch(84% 0.021 253)",
+          "oklch(95% 0.016 253)"
+        ]
+      },
+      "dash-line": {
+        "role": "neutral",
+        "displayName": "Dashboard Hairline",
+        "canonical": "#1d2631",
+        "tonalRamp": [
+          "oklch(15% 0.013 254)",
+          "oklch(26% 0.018 254)",
+          "oklch(38% 0.022 254)",
+          "oklch(49% 0.024 254)",
+          "oklch(61% 0.024 254)",
+          "oklch(72% 0.022 254)",
+          "oklch(84% 0.018 254)",
+          "oklch(95% 0.013 254)"
+        ]
+      },
+      "dash-line-strong": {
+        "role": "neutral",
+        "displayName": "Dashboard Strong Hairline",
+        "canonical": "#2a3542",
+        "tonalRamp": [
+          "oklch(15% 0.015 253)",
+          "oklch(26% 0.021 253)",
+          "oklch(38% 0.025 253)",
+          "oklch(49% 0.027 253)",
+          "oklch(61% 0.027 253)",
+          "oklch(72% 0.025 253)",
+          "oklch(84% 0.021 253)",
+          "oklch(95% 0.015 253)"
+        ]
+      },
+      "dash-focus": {
+        "role": "neutral",
+        "displayName": "Dashboard Focus Mint",
+        "canonical": "#7fdcd5",
+        "tonalRamp": [
+          "oklch(15% 0.049 189)",
+          "oklch(26% 0.067 189)",
+          "oklch(38% 0.081 189)",
+          "oklch(49% 0.089 189)",
+          "oklch(61% 0.089 189)",
+          "oklch(72% 0.081 189)",
+          "oklch(84% 0.067 189)",
+          "oklch(95% 0.049 189)"
+        ]
+      },
+      "dash-text": {
+        "role": "neutral",
+        "displayName": "Dashboard Ice Text",
+        "canonical": "#eaf0f4",
+        "tonalRamp": [
+          "oklch(15% 0.005 237)",
+          "oklch(26% 0.006 237)",
+          "oklch(38% 0.008 237)",
+          "oklch(49% 0.008 237)",
+          "oklch(61% 0.008 237)",
+          "oklch(72% 0.008 237)",
+          "oklch(84% 0.006 237)",
+          "oklch(95% 0.005 237)"
+        ]
+      },
+      "dash-text-2": {
+        "role": "neutral",
+        "displayName": "Dashboard Mist Text",
+        "canonical": "#a2b0c0",
+        "tonalRamp": [
+          "oklch(15% 0.015 252)",
+          "oklch(26% 0.021 252)",
+          "oklch(38% 0.025 252)",
+          "oklch(49% 0.028 252)",
+          "oklch(61% 0.028 252)",
+          "oklch(72% 0.025 252)",
+          "oklch(84% 0.021 252)",
+          "oklch(95% 0.015 252)"
+        ]
+      },
+      "dash-text-3": {
+        "role": "neutral",
+        "displayName": "Dashboard Dusk Text",
+        "canonical": "#7d8a9b",
+        "tonalRamp": [
+          "oklch(15% 0.016 255)",
+          "oklch(26% 0.022 255)",
+          "oklch(38% 0.027 255)",
+          "oklch(49% 0.029 255)",
+          "oklch(61% 0.029 255)",
+          "oklch(72% 0.027 255)",
+          "oklch(84% 0.022 255)",
+          "oklch(95% 0.016 255)"
+        ]
+      },
+      "dash-teal": {
+        "role": "primary",
+        "displayName": "Dashboard Depot Teal",
+        "canonical": "#43c9c1",
+        "tonalRamp": [
+          "oklch(15% 0.063 189)",
+          "oklch(26% 0.085 189)",
+          "oklch(38% 0.103 189)",
+          "oklch(49% 0.113 189)",
+          "oklch(61% 0.113 189)",
+          "oklch(72% 0.103 189)",
+          "oklch(84% 0.085 189)",
+          "oklch(95% 0.063 189)"
+        ]
+      },
+      "dash-teal-strong": {
+        "role": "primary",
+        "displayName": "Dashboard Deep Teal",
+        "canonical": "#2fb0a8",
+        "tonalRamp": [
+          "oklch(15% 0.060 189)",
+          "oklch(26% 0.081 189)",
+          "oklch(38% 0.098 189)",
+          "oklch(49% 0.107 189)",
+          "oklch(61% 0.107 189)",
+          "oklch(72% 0.098 189)",
+          "oklch(84% 0.081 189)",
+          "oklch(95% 0.060 189)"
+        ]
+      },
+      "dash-teal-soft": {
+        "role": "primary",
+        "displayName": "Dashboard Teal Soft",
+        "canonical": "rgba(67, 201, 193, 0.12)",
+        "tonalRamp": [
+          "oklch(15% 0.063 189)",
+          "oklch(26% 0.085 189)",
+          "oklch(38% 0.103 189)",
+          "oklch(49% 0.113 189)",
+          "oklch(61% 0.113 189)",
+          "oklch(72% 0.103 189)",
+          "oklch(84% 0.085 189)",
+          "oklch(95% 0.063 189)"
+        ]
+      },
+      "dash-amber": {
+        "role": "secondary",
+        "displayName": "Dashboard Shortfall Amber",
+        "canonical": "#e9a84a",
+        "tonalRamp": [
+          "oklch(15% 0.073 73)",
+          "oklch(26% 0.099 73)",
+          "oklch(38% 0.120 73)",
+          "oklch(49% 0.131 73)",
+          "oklch(61% 0.131 73)",
+          "oklch(72% 0.120 73)",
+          "oklch(84% 0.099 73)",
+          "oklch(95% 0.073 73)"
+        ]
+      },
+      "dash-amber-text": {
+        "role": "secondary",
+        "displayName": "Dashboard Amber Readout",
+        "canonical": "#edb866",
+        "tonalRamp": [
+          "oklch(15% 0.064 77)",
+          "oklch(26% 0.087 77)",
+          "oklch(38% 0.106 77)",
+          "oklch(49% 0.116 77)",
+          "oklch(61% 0.116 77)",
+          "oklch(72% 0.106 77)",
+          "oklch(84% 0.087 77)",
+          "oklch(95% 0.064 77)"
+        ]
+      },
+      "dash-amber-soft": {
+        "role": "secondary",
+        "displayName": "Dashboard Amber Soft",
+        "canonical": "rgba(233, 168, 74, 0.12)",
+        "tonalRamp": [
+          "oklch(15% 0.073 73)",
+          "oklch(26% 0.099 73)",
+          "oklch(38% 0.120 73)",
+          "oklch(49% 0.131 73)",
+          "oklch(61% 0.131 73)",
+          "oklch(72% 0.120 73)",
+          "oklch(84% 0.099 73)",
+          "oklch(95% 0.073 73)"
+        ]
+      },
+      "dash-red": {
+        "role": "tertiary",
+        "displayName": "Dashboard Critical Red",
+        "canonical": "#e66b70",
+        "tonalRamp": [
+          "oklch(15% 0.084 20)",
+          "oklch(26% 0.114 20)",
+          "oklch(38% 0.138 20)",
+          "oklch(49% 0.151 20)",
+          "oklch(61% 0.151 20)",
+          "oklch(72% 0.138 20)",
+          "oklch(84% 0.114 20)",
+          "oklch(95% 0.084 20)"
+        ]
+      },
+      "dash-red-text": {
+        "role": "tertiary",
+        "displayName": "Dashboard Critical Red Text",
+        "canonical": "#f08e92",
+        "tonalRamp": [
+          "oklch(15% 0.066 18)",
+          "oklch(26% 0.089 18)",
+          "oklch(38% 0.107 18)",
+          "oklch(49% 0.118 18)",
+          "oklch(61% 0.118 18)",
+          "oklch(72% 0.107 18)",
+          "oklch(84% 0.089 18)",
+          "oklch(95% 0.066 18)"
+        ]
+      },
+      "dash-red-soft": {
+        "role": "tertiary",
+        "displayName": "Dashboard Critical Red Soft",
+        "canonical": "rgba(230, 107, 112, 0.13)",
+        "tonalRamp": [
+          "oklch(15% 0.084 20)",
+          "oklch(26% 0.114 20)",
+          "oklch(38% 0.138 20)",
+          "oklch(49% 0.151 20)",
+          "oklch(61% 0.151 20)",
+          "oklch(72% 0.138 20)",
+          "oklch(84% 0.114 20)",
+          "oklch(95% 0.084 20)"
+        ]
+      },
+      "dash-slate": {
+        "role": "tertiary",
+        "displayName": "Dashboard Slate",
+        "canonical": "#556578",
+        "tonalRamp": [
+          "oklch(15% 0.020 253)",
+          "oklch(26% 0.027 253)",
+          "oklch(38% 0.033 253)",
+          "oklch(49% 0.036 253)",
+          "oklch(61% 0.036 253)",
+          "oklch(72% 0.033 253)",
+          "oklch(84% 0.027 253)",
+          "oklch(95% 0.020 253)"
+        ]
+      },
+      "segment-slate-1": {
+        "role": "tertiary",
+        "displayName": "Segment Slate 1",
+        "canonical": "#3d4e66",
+        "tonalRamp": [
+          "oklch(15% 0.025 257)",
+          "oklch(26% 0.034 257)",
+          "oklch(38% 0.041 257)",
+          "oklch(49% 0.045 257)",
+          "oklch(61% 0.045 257)",
+          "oklch(72% 0.041 257)",
+          "oklch(84% 0.034 257)",
+          "oklch(95% 0.025 257)"
+        ]
+      },
+      "segment-slate-2": {
+        "role": "tertiary",
+        "displayName": "Segment Slate 2",
+        "canonical": "#34445b",
+        "tonalRamp": [
+          "oklch(15% 0.025 257)",
+          "oklch(26% 0.033 257)",
+          "oklch(38% 0.040 257)",
+          "oklch(49% 0.044 257)",
+          "oklch(61% 0.044 257)",
+          "oklch(72% 0.040 257)",
+          "oklch(84% 0.033 257)",
+          "oklch(95% 0.025 257)"
+        ]
+      },
+      "segment-slate-3": {
+        "role": "tertiary",
+        "displayName": "Segment Slate 3",
+        "canonical": "#2c3a4f",
+        "tonalRamp": [
+          "oklch(15% 0.023 258)",
+          "oklch(26% 0.031 258)",
+          "oklch(38% 0.037 258)",
+          "oklch(49% 0.041 258)",
+          "oklch(61% 0.041 258)",
+          "oklch(72% 0.037 258)",
+          "oklch(84% 0.031 258)",
+          "oklch(95% 0.023 258)"
+        ]
+      },
+      "segment-slate-4": {
+        "role": "tertiary",
+        "displayName": "Segment Slate 4",
+        "canonical": "#46586f",
+        "tonalRamp": [
+          "oklch(15% 0.024 255)",
+          "oklch(26% 0.033 255)",
+          "oklch(38% 0.040 255)",
+          "oklch(49% 0.043 255)",
+          "oklch(61% 0.043 255)",
+          "oklch(72% 0.040 255)",
+          "oklch(84% 0.033 255)",
+          "oklch(95% 0.024 255)"
+        ]
+      },
+      "segment-slate-5": {
+        "role": "tertiary",
+        "displayName": "Segment Slate 5",
+        "canonical": "#394a61",
+        "tonalRamp": [
+          "oklch(15% 0.025 256)",
+          "oklch(26% 0.033 256)",
+          "oklch(38% 0.040 256)",
+          "oklch(49% 0.044 256)",
+          "oklch(61% 0.044 256)",
+          "oklch(72% 0.040 256)",
+          "oklch(84% 0.033 256)",
+          "oklch(95% 0.025 256)"
+        ]
+      },
+      "segment-slate-6": {
+        "role": "tertiary",
+        "displayName": "Segment Slate 6",
+        "canonical": "#303f55",
+        "tonalRamp": [
+          "oklch(15% 0.024 258)",
+          "oklch(26% 0.032 258)",
+          "oklch(38% 0.039 258)",
+          "oklch(49% 0.043 258)",
+          "oklch(61% 0.043 258)",
+          "oklch(72% 0.039 258)",
+          "oklch(84% 0.032 258)",
+          "oklch(95% 0.024 258)"
+        ]
+      },
+      "scene-fog": {
+        "role": "neutral",
+        "displayName": "Scene Fog",
+        "canonical": "#0c2138",
+        "tonalRamp": [
+          "oklch(15% 0.028 253)",
+          "oklch(26% 0.039 253)",
+          "oklch(38% 0.047 253)",
+          "oklch(49% 0.051 253)",
+          "oklch(61% 0.051 253)",
+          "oklch(72% 0.047 253)",
+          "oklch(84% 0.039 253)",
+          "oklch(95% 0.028 253)"
+        ]
+      },
+      "scene-medical": {
+        "role": "tertiary",
+        "displayName": "Scene Medical",
+        "canonical": "#4f86c4",
+        "tonalRamp": [
+          "oklch(15% 0.061 253)",
+          "oklch(26% 0.083 253)",
+          "oklch(38% 0.101 253)",
+          "oklch(49% 0.110 253)",
+          "oklch(61% 0.110 253)",
+          "oklch(72% 0.101 253)",
+          "oklch(84% 0.083 253)",
+          "oklch(95% 0.061 253)"
+        ]
+      },
+      "scene-water": {
+        "role": "tertiary",
+        "displayName": "Scene Water",
+        "canonical": "#2b9c96",
+        "tonalRamp": [
+          "oklch(15% 0.054 190)",
+          "oklch(26% 0.073 190)",
+          "oklch(38% 0.088 190)",
+          "oklch(49% 0.097 190)",
+          "oklch(61% 0.097 190)",
+          "oklch(72% 0.088 190)",
+          "oklch(84% 0.073 190)",
+          "oklch(95% 0.054 190)"
+        ]
+      },
+      "scene-shelter": {
+        "role": "tertiary",
+        "displayName": "Scene Shelter",
+        "canonical": "#8774c2",
+        "tonalRamp": [
+          "oklch(15% 0.064 294)",
+          "oklch(26% 0.087 294)",
+          "oklch(38% 0.105 294)",
+          "oklch(49% 0.116 294)",
+          "oklch(61% 0.116 294)",
+          "oklch(72% 0.105 294)",
+          "oklch(84% 0.087 294)",
+          "oklch(95% 0.064 294)"
+        ]
+      },
+      "scene-route": {
+        "role": "tertiary",
+        "displayName": "Scene Route",
+        "canonical": "#7088a8",
+        "tonalRamp": [
+          "oklch(15% 0.031 256)",
+          "oklch(26% 0.042 256)",
+          "oklch(38% 0.051 256)",
+          "oklch(49% 0.055 256)",
+          "oklch(61% 0.055 256)",
+          "oklch(72% 0.051 256)",
+          "oklch(84% 0.042 256)",
+          "oklch(95% 0.031 256)"
+        ]
+      },
+      "scene-grid": {
+        "role": "tertiary",
+        "displayName": "Scene Grid / Severity Stem",
+        "canonical": "#a9c8ee",
+        "tonalRamp": [
+          "oklch(15% 0.035 254)",
+          "oklch(26% 0.047 254)",
+          "oklch(38% 0.057 254)",
+          "oklch(49% 0.063 254)",
+          "oklch(61% 0.063 254)",
+          "oklch(72% 0.057 254)",
+          "oklch(84% 0.047 254)",
+          "oklch(95% 0.035 254)"
+        ]
+      },
+      "scene-input-2": {
+        "role": "tertiary",
+        "displayName": "Vulnerability Stem",
+        "canonical": "#86ade0",
+        "tonalRamp": [
+          "oklch(15% 0.047 255)",
+          "oklch(26% 0.064 255)",
+          "oklch(38% 0.077 255)",
+          "oklch(49% 0.085 255)",
+          "oklch(61% 0.085 255)",
+          "oklch(72% 0.077 255)",
+          "oklch(84% 0.064 255)",
+          "oklch(95% 0.047 255)"
+        ]
+      },
+      "scene-input-3": {
+        "role": "tertiary",
+        "displayName": "Time-criticality Stem",
+        "canonical": "#6690cc",
+        "tonalRamp": [
+          "oklch(15% 0.056 257)",
+          "oklch(26% 0.076 257)",
+          "oklch(38% 0.092 257)",
+          "oklch(49% 0.101 257)",
+          "oklch(61% 0.101 257)",
+          "oklch(72% 0.092 257)",
+          "oklch(84% 0.076 257)",
+          "oklch(95% 0.056 257)"
+        ]
+      },
+      "scene-zone-disc": {
+        "role": "neutral",
+        "displayName": "Scene Zone Disc",
+        "canonical": "#16304f",
+        "tonalRamp": [
+          "oklch(15% 0.036 254)",
+          "oklch(26% 0.048 254)",
+          "oklch(38% 0.058 254)",
+          "oklch(49% 0.064 254)",
+          "oklch(61% 0.064 254)",
+          "oklch(72% 0.058 254)",
+          "oklch(84% 0.048 254)",
+          "oklch(95% 0.036 254)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; second line is the serif accent."
+      },
+      "display-accent": {
+        "displayName": "Serif Accent",
+        "purpose": "One italic phrase per heading, placed last; never body, UI or numbers."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Landing section headings, story intro and the closing reveal."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Dashboard page titles."
+      },
+      "title-sm": {
+        "displayName": "Panel Title",
+        "purpose": "Panel titles (feature panels step up to 22px)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; landing ledes 17px at 62ch."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Panel descriptions, metric labels, story status lines, 3D scene labels, captions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Badges, legends, nav groups, stage tags; sentence case."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Ids, hashes, seeds, formulas, constraint expressions, FSM state names, ridge place labels."
+      },
+      "story-title": {
+        "displayName": "Story Title",
+        "purpose": "Chapter headings in story reading panels; 19px under 900px."
+      },
+      "metric-value": {
+        "displayName": "Metric Value",
+        "purpose": "Dashboard figures; word values step down to 22px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-raised",
+        "value": "0 18px 50px -20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.25)",
+        "purpose": "Floating layers only: mobile nav, chart tooltip, off-canvas sidebar, story reading panels over the 3D stage."
+      },
+      {
+        "name": "shadow-window",
+        "value": "0 -24px 80px -10px rgba(0, 0, 0, 0.55)",
+        "purpose": "Hero dashboard window casting upward onto the ridge."
+      },
+      {
+        "name": "surface-lift",
+        "value": "inset 0 1px 0 rgba(255, 255, 255, 0.03)",
+        "purpose": "Every dashboard panel and metric tile: a top highlight, never a cast shadow."
+      },
+      {
+        "name": "hairline-ring",
+        "value": "inset 0 0 0 1px var(--line-strong)",
+        "purpose": "Selected state (active nav row, checked policy tab) without lift."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "CSS curve for entrances and state shifts."
+      },
+      {
+        "name": "gsap-ease-out",
+        "value": "expo.out (lib/motion.ts EASE_OUT)",
+        "purpose": "GSAP equivalent of ease-out for one-shot tweens (workflow stagger)."
+      },
+      {
+        "name": "dur-fast",
+        "value": "140ms",
+        "purpose": "Hover colour and border changes, button press."
+      },
+      {
+        "name": "dur-base",
+        "value": "220ms",
+        "purpose": "Icon-disc rotation, stale-gate fade, story panel focus opacity."
+      },
+      {
+        "name": "preview-rise",
+        "value": "translateY(36px) to 0, 1100ms ease-out, 120ms delay",
+        "purpose": "Hero dashboard window entrance; transform only; off under reduced motion and in the reveal."
+      },
+      {
+        "name": "hero-parallax",
+        "value": "scrub 0.6 over the hero frame: stars/aurora yPercent 14; hero copy y -64 and fade by 58%; ridge --ridge-y 26px; preview y -36 scale 1.035 (wide only)",
+        "purpose": "Hero recedes as scrolling begins; native scroll; reduced motion gets none."
+      },
+      {
+        "name": "workflow-stagger",
+        "value": "from y 14 and autoAlpha 0, 0.6s expo.out, stagger 0.07, once at top 85%",
+        "purpose": "The five workflow steps arrive as a list."
+      },
+      {
+        "name": "reveal-tilt",
+        "value": "rotateX 16deg (8deg narrow) and scale 0.94 to 0deg/1, scrub 0.6, top bottom to center 55%",
+        "purpose": "Closing preview squares up to the viewer."
+      },
+      {
+        "name": "story-conductor",
+        "value": "one ScrollTrigger: chapter = (scroll - start) / step height; damp lambda 4.2; --focus = 1 - min(1, |c - i| * 1.4)",
+        "purpose": "Drives the 3D world state, camera and reading-panel opacity from native scroll; reduced motion rounds to the nearest chapter and leaves panels opaque."
+      },
+      {
+        "name": "dash-rise",
+        "value": "opacity 0 and translateY(6px) to rest, 320ms ease-out, +30ms per child capped at 120ms",
+        "purpose": "Dashboard page sections; replays on snapshot-hash change as the crossfade."
+      },
+      {
+        "name": "value-changed",
+        "value": "teal-soft wash and 4px ring to transparent, 350ms ease-out",
+        "purpose": "Metric figure differs from the previous scenario."
+      },
+      {
+        "name": "stale-gate",
+        "value": "opacity 0.55, pointer-events none, 220ms",
+        "purpose": "Previous scenario while the next loads."
+      },
+      {
+        "name": "panel-in",
+        "value": "translateY(6px) to 0, 380ms ease-out",
+        "purpose": "Feature explorer panel swap on tab change."
+      },
+      {
+        "name": "pulse",
+        "value": "opacity 1 to 0.55, 1.6s ease-in-out infinite",
+        "purpose": "First-load skeletons only."
+      },
+      {
+        "name": "spin",
+        "value": "rotate 360deg, 900ms linear infinite",
+        "purpose": "Loader icon inside the engine-run button only; never for data loads."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "dash-lg",
+        "value": "1280px"
+      },
+      {
+        "name": "landing-ridge",
+        "value": "1180px"
+      },
+      {
+        "name": "landing-lg",
+        "value": "1080px"
+      },
+      {
+        "name": "dash-drawer",
+        "value": "1024px"
+      },
+      {
+        "name": "landing-md-story-stack",
+        "value": "900px"
+      },
+      {
+        "name": "sm",
+        "value": "720px"
+      },
+      {
+        "name": "xs",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Frost white pill with a dark icon disc; the main call to action (Launch Dashboard).",
+      "html": "<button class=\"ds-btn-primary\">Launch Dashboard <span class=\"ds-btn-primary__icon\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7\"/><path d=\"M7 7h10v10\"/></svg></span></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 6px 0 20px;border-radius:999px;border:1px solid transparent;background:#f4f7fb;color:#07101c;font-family:'Mona Sans Variable',system-ui,sans-serif;font-size:0.9375rem;font-weight:500;line-height:1;cursor:pointer;transition:background-color 140ms ease,transform 140ms ease;} .ds-btn-primary:hover{background:#fff;} .ds-btn-primary:active{transform:translateY(1px);} .ds-btn-primary:focus-visible{outline:2px solid #7fe3dc;outline-offset:3px;} .ds-btn-primary__icon{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#070d18;color:#fff;transition:transform 220ms cubic-bezier(0.16,1,0.3,1);} .ds-btn-primary:hover .ds-btn-primary__icon{transform:rotate(45deg);}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Night-glass pill with a strong hairline; the companion action (Explore how it works).",
+      "html": "<button class=\"ds-btn-secondary\">Explore how it works</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid rgba(170,205,245,0.18);background:rgba(7,13,24,0.72);color:#e8eef7;font-family:'Mona Sans Variable',system-ui,sans-serif;font-size:0.9375rem;font-weight:500;line-height:1;cursor:pointer;transition:background-color 140ms ease,border-color 140ms ease,transform 140ms ease;} .ds-btn-secondary:hover{background:#101c2f;border-color:rgba(170,205,245,0.3);} .ds-btn-secondary:active{transform:translateY(1px);} .ds-btn-secondary:focus-visible{outline:2px solid #7fe3dc;outline-offset:3px;}"
+    },
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "Teal pill reserved for running an engine action on a snapshot.",
+      "html": "<button class=\"ds-btn-accent\">Run FCFS on this snapshot</button>",
+      "css": ".ds-btn-accent{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid transparent;background:#43c9c1;color:#07101c;font-family:'Mona Sans Variable',system-ui,sans-serif;font-size:0.9375rem;font-weight:600;line-height:1;cursor:pointer;transition:background-color 140ms ease,transform 140ms ease;} .ds-btn-accent:hover{background:#2fb0a8;} .ds-btn-accent:active{transform:translateY(1px);} .ds-btn-accent:focus-visible{outline:2px solid #7fdcd5;outline-offset:3px;} .ds-btn-accent:disabled{opacity:0.5;cursor:not-allowed;}"
+    },
+    {
+      "name": "Status Badges",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Pill badges for build and supply status; planned is the dashed outline.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge ds-badge--built\"><i></i>Validated by engine</span><span class=\"ds-badge ds-badge--warn\"><i></i>Synthetic data</span><span class=\"ds-badge ds-badge--critical\"><i></i>Depot empty</span><span class=\"ds-badge ds-badge--planned\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></svg>Planned · Stage 2</span></div>",
+      "css": ".ds-badges{display:flex;flex-wrap:wrap;gap:8px;padding:16px;background:#0c1626;} .ds-badge{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;border:1px solid rgba(170,205,245,0.18);font-family:'Mona Sans Variable',system-ui,sans-serif;font-size:0.75rem;font-weight:500;line-height:1;white-space:nowrap;color:#b4c2d4;} .ds-badge i{width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-badge--built{color:#8ff0e9;border-color:rgba(63,208,201,0.4);background:rgba(63,208,201,0.14);} .ds-badge--warn{color:#f8c46f;border-color:rgba(245,176,66,0.38);background:rgba(245,176,66,0.13);} .ds-badge--critical{color:#ff8a90;border-color:rgba(240,98,106,0.42);background:rgba(240,98,106,0.14);} .ds-badge--planned{border-style:dashed;}"
+    },
+    {
+      "name": "Scenario Select",
+      "kind": "input",
+      "refersTo": "panel",
+      "description": "Top-bar scenario picker: a Panel Navy field with a hairline and a custom chevron.",
+      "html": "<label class=\"ds-select\"><span>Scenario</span><span class=\"ds-select__ctl\"><select><option>Three-zone shortage · triage-demo-001</option></select><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></label>",
+      "css": ".ds-select{display:flex;align-items:center;gap:10px;padding:16px;background:#080b10;font-family:'Mona Sans Variable',system-ui,sans-serif;font-size:0.8125rem;color:#7d8a9b;} .ds-select__ctl{position:relative;} .ds-select select{appearance:none;height:40px;padding:0 38px 0 14px;border-radius:10px;border:1px solid #2a3542;background:#111821;color:#eaf0f4;font:inherit;font-size:0.875rem;cursor:pointer;} .ds-select select:hover{border-color:#3a4757;} .ds-select select:focus-visible{outline:2px solid #7fdcd5;outline-offset:3px;} .ds-select svg{position:absolute;top:50%;right:12px;transform:translateY(-50%);color:#7d8a9b;pointer-events:none;}"
+    },
+    {
+      "name": "Dashboard Side Nav",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Sidebar rows; the active row is raised ink with a hairline ring, and planned routes carry a dashed stage tag.",
+      "html": "<nav class=\"ds-nav\"><a class=\"is-active\" href=\"#\">Overview</a><a href=\"#\">Resource inventory</a><a class=\"is-planned\" href=\"#\">Simulation <span>Stage 3</span></a></nav>",
+      "css": ".ds-nav{display:grid;gap:2px;width:236px;padding:14px;background:#0b1017;font-family:'Mona Sans Variable',system-ui,sans-serif;} .ds-nav a{display:flex;align-items:center;gap:12px;min-height:42px;padding:8px 12px;border-radius:10px;color:#a2b0c0;font-size:0.875rem;text-decoration:none;transition:background-color 140ms ease,color 140ms ease;} .ds-nav a:hover{background:#141c26;color:#eaf0f4;} .ds-nav a:focus-visible{outline:2px solid #7fdcd5;outline-offset:3px;} .ds-nav a.is-active{background:#17212c;box-shadow:inset 0 0 0 1px #2a3542;color:#eaf0f4;} .ds-nav a.is-planned{color:#7d8a9b;} .ds-nav a span{margin-left:auto;padding:1px 8px;border-radius:999px;border:1px dashed #2a3542;font-size:0.75rem;}"
+    },
+    {
+      "name": "Panel with Hairline Rows",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Flat Panel Ink container (14px radius, surface lift) whose interior is structured by hairline-divided rows, never nested cards.",
+      "html": "<section class=\"ds-panel\"><h3>Resource inventory</h3><p>Depot stock against requests from active zones.</p><div class=\"ds-panel__row\"><span>Medical kits</span><b>90</b><b>150</b><em>60 short</em></div><div class=\"ds-panel__row\"><span>Water packs</span><b>180</b><b>290</b><em>110 short</em></div></section>",
+      "css": ".ds-panel{max-width:440px;padding:20px 22px;border-radius:14px;border:1px solid #1d2631;background:#111821;box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);color:#eaf0f4;font-family:'Mona Sans Variable',system-ui,sans-serif;} .ds-panel h3{margin:0;font-size:1rem;font-weight:600;letter-spacing:-0.01em;} .ds-panel p{margin:4px 0 12px;font-size:0.8125rem;color:#7d8a9b;} .ds-panel__row{display:grid;grid-template-columns:1fr 60px 60px 80px;align-items:center;padding:12px 0;border-top:1px solid #1d2631;font-size:0.875rem;font-variant-numeric:tabular-nums;} .ds-panel__row b{font-weight:500;text-align:right;} .ds-panel__row em{font-style:normal;text-align:right;color:#edb866;font-weight:500;}"
+    },
+    {
+      "name": "Metric Tile",
+      "kind": "card",
+      "refersTo": "metric",
+      "description": "Dashboard figure tile; warn tiles take a faint amber wash, and a changed value flashes teal once.",
+      "html": "<div class=\"ds-metrics\"><div class=\"ds-metric\"><span>Total stock</span><b class=\"is-changed\">420</b></div><div class=\"ds-metric ds-metric--warn\"><span>Shortfall</span><b>230 <small>units</small></b></div></div>",
+      "css": ".ds-metrics{display:flex;gap:12px;padding:16px;background:#080b10;font-family:'Mona Sans Variable',system-ui,sans-serif;} .ds-metric{display:grid;gap:6px;min-width:160px;padding:16px 18px;border-radius:14px;border:1px solid #1d2631;background:#111821;box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);} .ds-metric span{font-size:0.8125rem;color:#7d8a9b;} .ds-metric b{font-size:1.875rem;font-weight:600;letter-spacing:-0.02em;line-height:1.1;color:#eaf0f4;font-variant-numeric:tabular-nums;} .ds-metric b small{font-size:0.8125rem;font-weight:400;color:#7d8a9b;} .ds-metric b.is-changed{border-radius:4px;animation:ds-changed 350ms cubic-bezier(0.16,1,0.3,1);} @keyframes ds-changed{from{background:rgba(67,201,193,0.12);box-shadow:0 0 0 4px rgba(67,201,193,0.12);}to{background:transparent;box-shadow:0 0 0 4px transparent;}} .ds-metric--warn{border-color:color-mix(in srgb,#e9a84a 24%,#1d2631);background:color-mix(in srgb,#e9a84a 5%,#111821);} .ds-metric--warn b{color:#e9a84a;}"
+    },
+    {
+      "name": "Request Bar",
+      "kind": "custom",
+      "refersTo": "request-bar",
+      "description": "Signature demand-versus-stock bar: slate zone segments, a labelled teal stock marker, and an amber outline over the part no plan can serve.",
+      "html": "<div class=\"ds-rbar\"><span class=\"ds-rbar__seg\" style=\"flex:70;background:#3d4e66\"><i>A</i>70</span><span class=\"ds-rbar__seg\" style=\"flex:45;background:#34445b\"><i>B</i>45</span><span class=\"ds-rbar__seg\" style=\"flex:35;background:#2c3a4f\"><i>C</i>35</span><span class=\"ds-rbar__over\" style=\"left:60%\"></span><span class=\"ds-rbar__stock\" style=\"left:60%\"><span>90 in stock</span></span></div>",
+      "css": ".ds-rbar{position:relative;display:flex;gap:2px;height:34px;margin:16px 16px 40px;font-family:'Mona Sans Variable',system-ui,sans-serif;} .ds-rbar__seg{display:flex;align-items:center;gap:5px;padding:0 9px;border-radius:5px;color:#e8eef7;font-size:0.75rem;font-weight:600;font-variant-numeric:tabular-nums;} .ds-rbar__seg i{font-style:normal;font-weight:500;color:#8b9cb4;} .ds-rbar__over{position:absolute;top:0;right:0;bottom:0;border:1px solid rgba(245,176,66,0.75);border-radius:0 5px 5px 0;pointer-events:none;} .ds-rbar__stock{position:absolute;top:-7px;bottom:-7px;width:2px;margin-left:-1px;border-radius:2px;background:#3fd0c9;box-shadow:0 0 0 3px #070d18;} .ds-rbar__stock span{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);font-size:0.75rem;font-weight:500;color:#3fd0c9;white-space:nowrap;}"
+    },
+    {
+      "name": "Story Reading Panel",
+      "kind": "custom",
+      "refersTo": "story-panel",
+      "description": "Glass panel floating over the 3D stage: chapter title, honesty badge with its line, and body text; a projected scene label pill.",
+      "html": "<div class=\"ds-story\"><div class=\"ds-story__panel\"><h3>First, how urgent is each zone?</h3><p class=\"ds-story__status\"><span class=\"ds-story__badge\">Concept</span><span>Fuzzy logic · conceptual demonstration · scoring engine planned for Stage 2</span></p><p class=\"ds-story__text\">Field ratings are imprecise. Fuzzy logic turns severity, vulnerability and time-criticality into one priority score.</p></div><span class=\"ds-story__label\">Depot · 420 units in stock</span></div>",
+      "css": ".ds-story{position:relative;padding:32px;border-radius:28px;border:1px solid rgba(170,205,245,0.18);background:linear-gradient(180deg,#04070d 0%,#0d2543 34%,#143a5f 52%,#0c2138 62%,#071324 78%,#060c17 100%);font-family:'Mona Sans Variable',system-ui,sans-serif;} .ds-story__panel{width:min(430px,100%);padding:26px 28px 28px;border-radius:18px;border:1px solid rgba(170,205,245,0.18);background:rgba(7,13,24,0.92);box-shadow:0 18px 50px -20px rgba(0,0,0,0.6),0 2px 6px rgba(0,0,0,0.25);} .ds-story__panel h3{margin:0;font-size:1.5rem;font-weight:600;letter-spacing:-0.025em;line-height:1.12;color:#e8eef7;} .ds-story__status{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:12px 0 0;font-size:0.8125rem;color:#8b9cb4;} .ds-story__badge{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;border:1px dashed rgba(170,205,245,0.18);font-size:0.75rem;font-weight:500;color:#b4c2d4;} .ds-story__text{margin:14px 0 0;font-size:1rem;line-height:1.55;color:#b4c2d4;} .ds-story__label{position:absolute;top:24px;right:24px;padding:5px 10px;border-radius:999px;border:1px solid rgba(232,238,247,0.3);background:rgba(6,12,23,0.84);color:#e8eef7;font-size:0.8125rem;font-variant-numeric:tabular-nums;white-space:nowrap;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Watch Over the Ridge",
+    "overview": "AidOS lives in one dark world with two rooms. The landing page (Persuade) is the Aurora Ridge: a fictional relief landscape at night, under a navy sky that brightens toward the horizon, with faint aurora bands and a ridge holding a depot, tents, a water tower and sparse zone lights. Below the hero, the same night sky becomes a framed stage where a single resource network (one depot, three zones, supply routes) is built chapter by chapter as the visitor scrolls. The dashboard (Operate) is the mission-control room inside that world. It uses a near-black palette (`.dash-palette`) where hierarchy comes from surface steps rather than brighter borders. The landing page's picture of the dashboard uses that same palette, so the preview and the real product match.\n\nThe mood is calm emergency-operations tooling. It is quiet and exact, and it never dramatises a catastrophe. Colour carries meaning, never decoration: teal is stock, amber is shortfall, red is critical. Honesty is part of the visual system. Planned work gets a dashed outline and a \"Planned · Stage N\" label. Uncommitted results say \"Candidate plan · not committed\". Every story chapter that is not plain scenario data carries a status badge: Synthetic data, Concept, Partly built or Illustration.\n\nMotion is native and measured. The scroll story and hero parallax are driven by native scroll with no scroll-jacking, and the dashboard settles in once and then stays still. Under reduced motion all of it falls back to a static state that is still complete. Rejected in the build: the split hero (copy beside a screenshot), the feature-card wall, spinners for data loading, counting-number animations, and gamified disaster imagery.",
+    "keyCharacteristics": [
+      "One dark world with two palettes: navy for the landing atmosphere, near-black for the dashboard. There is no light mode (`color-scheme: dark`).",
+      "Semantic signal colours, always paired with a text label.",
+      "A white and a near-black pill as the two button voices.",
+      "Flat in-flow panels. Shadows are reserved for layers that float above the page or the stage.",
+      "Dashed outlines mean \"planned\" or \"not yet real\".",
+      "One persistent 3D scene, conducted by native scroll and backed by an SVG poster.",
+      "Short, single-play dashboard motion with no spinners on data loads, and none of it under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Signal Grammar Rule",
+        "body": "Teal means stock, amber means shortfall, and red means critical, and nothing else. If an element is not stating one of those facts, it uses neutrals. This includes the 3D scene: caps are teal, unmet demand and stale routes are amber.",
+        "section": "colors"
+      },
+      {
+        "name": "The Spoken Colour Rule",
+        "body": "Colour never carries meaning alone. Every dot, bar or tinted value sits beside text that says the same thing (\"60 short\", \"Depot empty\", \"Engine online\").",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Rooms Rule",
+        "body": "Anything that depicts or is the dashboard (`.dash`, `.preview__window`) takes the `.dash-palette` overrides. Landing atmosphere, story panels and section boards stay on the navy palette. Never mix the two inside one surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dusk Floor Rule",
+        "body": "Dusk Text stops at Raised Ink (4.63:1). It never sits on Checked Ink (4.03:1) or anything brighter.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Accent Phrase Rule",
+        "body": "Each heading gets at most one italic serif phrase, and it always comes last. The serif never appears in body, UI, buttons, numbers or the 3D labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Machine Voice Rule",
+        "body": "Mono is for things a machine produced or reads: ids, hashes, formulas, constraint expressions and state names. The ridge's map labels are the world's one mono exception. Quantities stay in the sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "A heading carries its own weight. No small label or kicker sits above it. Story status badges sit below the chapter title, never above it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Column Rule",
+        "body": "Inside a panel, structure comes from hairline-divided rows and columns. A panel never contains another card.",
+        "section": "layout"
+      },
+      {
+        "name": "The Native Scroll Rule",
+        "body": "Scroll position is the only conductor. GSAP ScrollTrigger measures it and turns it into a fractional chapter value, a `--focus` value per step and scrubbed tweens. Nothing intercepts the wheel, snaps the page or hides content before the script runs.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Panel Rule",
+        "body": "In-flow panels, metrics and boards never cast a shadow. Their edge is a hairline, and the only addition is the inset top highlight from Surface lift.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Lit-Not-Shadowed Rule",
+        "body": "The 3D world has no shadows, no bloom and no glow. Fog and two lights are its whole lighting kit.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Dashed Promise Rule",
+        "body": "A dashed hairline means \"planned\" or \"nothing here yet\". Use it for planned-stage badges and tags, planned workflow nodes and connectors, empty request bars, unbuilt parts of the preview, and stale routes in the 3D adapt chapter. A solid border never means planned, and a dashed border is never decorative.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep both rooms in one world: the navy palette for the landing atmosphere and story, and the `.dash-palette` near-black for anything that is or depicts the dashboard.",
+      "Do pair every signal colour with words: teal for stock, amber for shortfall, red only for critical states such as \"Depot empty\".",
+      "Do label unbuilt work as \"Planned · Stage N\" with a dashed outline, mark uncommitted results \"Candidate plan · not committed\", and give every non-data story chapter a Synthetic data, Concept, Partly built or Illustration badge with a line saying what is real.",
+      "Do show numbers only when the backend or the synthetic fixture supplied them, in tabular sans figures.",
+      "Do limit each heading to one italic Instrument Serif phrase, placed last.",
+      "Do use mono only for ids, hashes, seeds, formulas, constraint expressions and state names.",
+      "Do drive landing motion from native scroll through one shared GSAP setup (`lib/motion.ts`, `expo.out`), guarded by `gsap.matchMedia` with a `prefers-reduced-motion: no-preference` condition.",
+      "Do make reduced motion complete, not empty: the 3D scene snaps to the nearest chapter, story panels stay fully opaque, and CSS animations collapse to 0.01ms.",
+      "Do keep text out of WebGL and keep the SVG poster as a working fallback for every 3D state.",
+      "Do keep dashboard motion to single-play transform and opacity at 320–350ms on the ease-out curve (cubic-bezier(0.16, 1, 0.3, 1))."
+    ],
+    "donts": [
+      "Don't put copy beside a screenshot in a split hero, or build a wall of feature cards.",
+      "Don't nest cards inside panels or cast shadows from in-flow panels.",
+      "Don't use red for emphasis, branding or anything short of critical.",
+      "Don't put a small label or kicker above a heading, or use uppercase tracked labels.",
+      "Don't scroll-jack: no wheel interception, scroll snapping, smooth-scroll libraries or JavaScript pinning. The story stage is pinned with CSS sticky.",
+      "Don't add a second 3D canvas, shadow maps, bloom or a DPR above 1.5.",
+      "Don't use spinners for data loading or animate numbers counting up.",
+      "Don't put Dusk Text on Checked Ink or brighter (4.03:1).",
+      "Don't scale the ridge with the viewport, or show its markers and labels below 1180px.",
+      "Don't use a dashed border for decoration. It means \"planned\".",
+      "Don't show placeholder metrics as if they were real."
+    ]
+  }
+}

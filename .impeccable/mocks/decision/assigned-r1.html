@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Emergency Wayfinding sketch</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;background:#f3f5f4;color:#0e2238;font-family:"Overpass","Arial",sans-serif;overflow:hidden}
+nav{height:64px;display:flex;align-items:center;gap:30px;padding:0 56px;border-bottom:2px solid #0e2238}
+.mark{font:800 26px Overpass,sans-serif;display:flex;gap:10px;align-items:center}.mark i{width:28px;height:28px;background:#00806e;display:inline-block}
+.l{font:700 15px Overpass;text-transform:uppercase;letter-spacing:.06em}
+.go{margin-left:auto;background:#00806e;color:#fff;font:800 16px Overpass;padding:12px 18px;text-transform:uppercase}
+.sign{margin:40px 56px 0;background:#0e2238;color:#fff;display:grid;grid-template-columns:1.25fr 1fr}
+.sign .h{padding:44px 48px;border-right:3px solid #f3f5f4}
+.kick{display:inline-flex;gap:8px;align-items:center;background:#f2a900;color:#0e2238;font:800 13px Overpass;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px}
+h1{font:800 76px/1 Overpass,sans-serif;margin:22px 0 18px;letter-spacing:-.015em}
+p{font-size:20px;line-height:1.45;color:#d5dde6;width:600px}
+.dir{padding:30px 34px}.dir h2{font:800 14px Overpass;letter-spacing:.12em;text-transform:uppercase;color:#9fb0c2;margin-bottom:14px}
+.row{display:grid;grid-template-columns:44px 1fr 90px 90px;gap:12px;align-items:center;padding:12px 0;border-top:1px solid #2b415a;font:700 20px Overpass}
+.row b{background:#fff;color:#0e2238;text-align:center;padding:6px 0;font-weight:800}.row .s{color:#f2a900}
+.acts{display:flex;gap:0;margin:0 56px}
+.a1{background:#00806e;color:#fff;font:800 24px Overpass;padding:22px 30px;text-transform:uppercase;display:flex;gap:16px}
+.a2{background:#fff;border:3px solid #0e2238;font:800 20px Overpass;padding:19px 26px;text-transform:uppercase}
+</style></head><body>
+<nav><span class="mark"><i></i>AidOS</span><span class="l">How it works</span><span class="l">Features</span><span class="l">Technology</span><span class="l">About</span><span class="go">Launch Dashboard →</span></nav>
+<section class="sign"><div class="h"><span class="kick">▲ Academic prototype · synthetic data</span>
+<h1>When every resource matters, every decision counts.</h1>
+<p>An explainable simulator for splitting scarce relief supplies between crisis zones, unit by unit, within hard stock limits.</p></div>
+<div class="dir"><h2>Demo scenario · medical kits</h2>
+<div class="row"><b>A</b><span>Zone A</span><span>75</span><span></span></div>
+<div class="row"><b>B</b><span>Zone B</span><span>45</span><span></span></div>
+<div class="row"><b>C</b><span>Zone C</span><span>30</span><span></span></div>
+<div class="row"><b>∑</b><span>Requested / in stock</span><span>150</span><span>90</span></div>
+<div class="row"><b class="s">!</b><span class="s">Short</span><span class="s">60</span><span></span></div></div></section>
+<div class="acts"><span class="a1">Launch Dashboard →</span><span class="a2">↓ How it works</span></div>
+</body></html>

@@ -1,0 +1,28 @@
+// Verified references (verification log: docs/report/references-verification.md).
+// Rendered in IEEE style, numbered in order of first citation by the builder.
+module.exports = {
+  zadeh: 'L. A. Zadeh, "Fuzzy sets," *Information and Control*, vol. 8, no. 3, pp. 338–353, Jun. 1965, doi: 10.1016/S0019-9958(65)90241-X.',
+  takagi: 'T. Takagi and M. Sugeno, "Fuzzy identification of systems and its applications to modeling and control," *IEEE Transactions on Systems, Man, and Cybernetics*, vol. SMC-15, no. 1, pp. 116–132, Jan. 1985, doi: 10.1109/TSMC.1985.6313399.',
+  mamdani: 'E. H. Mamdani and S. Assilian, "An experiment in linguistic synthesis with a fuzzy logic controller," *International Journal of Man-Machine Studies*, vol. 7, no. 1, pp. 1–13, Jan. 1975, doi: 10.1016/S0020-7373(75)80002-2.',
+  ruspini: 'E. H. Ruspini, "A new approach to clustering," *Information and Control*, vol. 15, no. 1, pp. 22–32, Jul. 1969, doi: 10.1016/S0019-9958(69)90591-9.',
+  klir: 'G. J. Klir and B. Yuan, *Fuzzy Sets and Fuzzy Logic: Theory and Applications*. Upper Saddle River, NJ, USA: Prentice Hall PTR, 1995.',
+  aima: 'S. Russell and P. Norvig, *Artificial Intelligence: A Modern Approach*, 4th ed. Hoboken, NJ, USA: Pearson, 2021.',
+  rossi: 'F. Rossi, P. van Beek, and T. Walsh, Eds., *Handbook of Constraint Programming* (Foundations of Artificial Intelligence). Amsterdam, The Netherlands: Elsevier, 2006.',
+  ortools: 'L. Perron and V. Furnon, "OR-Tools," version 9.15, Google. [Online]. Available: https://developers.google.com/optimization/ (accessed 13 Nov. 2026).',
+  cpsat: 'L. Perron and F. Didier, "CP-SAT," OR-Tools version 9.15, Google. [Online]. Available: https://developers.google.com/optimization/cp/cp_solver (accessed 13 Nov. 2026).',
+  cpsatlp: 'L. Perron, F. Didier, and S. Gay, "The CP-SAT-LP solver," in *Proc. 29th Int. Conf. Principles and Practice of Constraint Programming (CP 2023)*, R. H. C. Yap, Ed., Leibniz International Proceedings in Informatics (LIPIcs), vol. 280. Dagstuhl, Germany: Schloss Dagstuhl – Leibniz-Zentrum für Informatik, 2023, pp. 3:1–3:2, doi: 10.4230/LIPIcs.CP.2023.3.',
+  dantzig: 'G. B. Dantzig, "Discrete-variable extremum problems," *Operations Research*, vol. 5, no. 2, pp. 266–288, Apr. 1957, doi: 10.1287/opre.5.2.266.',
+  kellerer: 'H. Kellerer, U. Pferschy, and D. Pisinger, *Knapsack Problems*. Berlin, Germany: Springer, 2004, doi: 10.1007/978-3-540-24777-7.',
+  jain: 'R. Jain, D. Chiu, and W. Hawe, "A quantitative measure of fairness and discrimination for resource allocation in shared computer systems," Digital Equipment Corp., DEC Research Report TR-301, Sep. 1984. [Online]. Available: https://arxiv.org/abs/cs/9809099',
+  vanwass: 'L. N. Van Wassenhove, "Humanitarian aid logistics: supply chain management in high gear," *Journal of the Operational Research Society*, vol. 57, no. 5, pp. 475–489, May 2006, doi: 10.1057/palgrave.jors.2602125.',
+  altay: 'N. Altay and W. G. Green, "OR/MS research in disaster operations management," *European Journal of Operational Research*, vol. 175, no. 1, pp. 475–493, Nov. 2006, doi: 10.1016/j.ejor.2005.05.016.',
+  holguin: 'J. Holguín-Veras, N. Pérez, M. Jaller, L. N. Van Wassenhove, and F. Aros-Vera, "On the appropriate objective function for post-disaster humanitarian logistics models," *Journal of Operations Management*, vol. 31, no. 5, pp. 262–280, Jul. 2013, doi: 10.1016/j.jom.2013.06.002.',
+  huang: 'M. Huang, K. Smilowitz, and B. Balcik, "Models for relief routing: Equity, efficiency and efficacy," *Transportation Research Part E: Logistics and Transportation Review*, vol. 48, no. 1, pp. 2–18, Jan. 2012, doi: 10.1016/j.tre.2011.05.004.',
+  holm: 'S. Holm, "A simple sequentially rejective multiple test procedure," *Scandinavian Journal of Statistics*, vol. 6, pp. 65–70, 1979.',
+  efron: 'B. Efron and R. J. Tibshirani, *An Introduction to the Bootstrap*. New York, NY, USA: Chapman & Hall, 1993.',
+  lakens: 'D. Lakens, "Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs," *Frontiers in Psychology*, vol. 4, Art. no. 863, Nov. 2013, doi: 10.3389/fpsyg.2013.00863.',
+  fastapi: '"FastAPI," FastAPI documentation. [Online]. Available: https://fastapi.tiangolo.com/ (accessed 13 Nov. 2026).',
+  react: 'Meta Platforms, Inc., "React," React documentation. [Online]. Available: https://react.dev/ (accessed 13 Nov. 2026).',
+  guidelines: 'University of Wollongong in Dubai, "CSCI218 Foundations of Artificial Intelligence: Group Project Guidelines and Grading Criteria," Autumn 2026, supplied course document.',
+  dhproj: 'Dubai Humanitarian and UOWD, "Proposed CSCI218 AI student projects," supplied spreadsheet (Project C: Emergency Resource Allocation Simulation), Autumn 2026.',
+};

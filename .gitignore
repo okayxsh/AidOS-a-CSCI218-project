@@ -1,0 +1,46 @@
+# --- Dependencies / environments ---
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Build output ---
+apps/web/dist/
+*.tsbuildinfo
+*.egg-info/
+build/
+
+# --- Tool caches ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.eslintcache
+
+# --- Experiment results ---
+# The reported evidence IS versioned: the Stage 4 runs (standard-*, extended-*) and the Stage 5
+# supplementary-* runs are small CSV/JSON files with manifests and checksums (about 7 MB in total).
+# Throwaway pipeline checks (smoke-* presets) are not.
+experiments/results/smoke-*/
+
+# --- Tool state ---
+.impeccable/hook.cache.json
+
+# --- Temporary / OS / editor files ---
+*.log
+*.tmp
+tmp/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.idea/
+.vscode/*
+!.vscode/extensions.json

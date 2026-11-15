@@ -1,0 +1,5664 @@
+{
+  "manifest": {
+    "run": "stage2-smoke",
+    "purpose": "correctness smoke check, not a performance comparison",
+    "created_utc": "2026-11-11T07:43:59+00:00",
+    "scenarios": 25,
+    "seeds": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "classes": [
+      "none",
+      "mild",
+      "severe",
+      "zero"
+    ],
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "engine_version": "0.2.0",
+    "fuzzy_version": "1.0",
+    "ortools_version": "9.15.6755"
+  },
+  "records": [
+    {
+      "scenario_id": "coastal-storm-005",
+      "snapshot_hash": "bd76c030d5bd4a3284a21cb465644875bda0c8af531b00ee2ef0eb1aa3c22574",
+      "seed": 2182030,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.10060000931844115,
+      "metrics": {
+        "unit_coverage": 0.6792452830188679,
+        "coverage_by_resource": {
+          "medical_kits": 0.7058823529411765,
+          "water_packs": 0.6818181818181818,
+          "shelter_kits": 0.6,
+          "nutrition_packs": 0.7
+        },
+        "coverage_by_zone": {
+          "zone-a": 1.0,
+          "zone-b": 1.0,
+          "zone-c": 1.0,
+          "zone-d": 0.10714285714285714,
+          "zone-e": 0.0
+        },
+        "allocated_units": 720,
+        "unmet_units": 340,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 120,
+          "water_packs": 300,
+          "shelter_kits": 90,
+          "nutrition_packs": 210
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6633155404069947,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.6411689961880559,
+        "unmet_high_urgency": 340
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "coastal-storm-005",
+      "snapshot_hash": "bd76c030d5bd4a3284a21cb465644875bda0c8af531b00ee2ef0eb1aa3c22574",
+      "seed": 2182030,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.0953000271692872,
+      "metrics": {
+        "unit_coverage": 0.6792452830188679,
+        "coverage_by_resource": {
+          "medical_kits": 0.7058823529411765,
+          "water_packs": 0.6818181818181818,
+          "shelter_kits": 0.6,
+          "nutrition_packs": 0.7
+        },
+        "coverage_by_zone": {
+          "zone-b": 1.0,
+          "zone-e": 1.0,
+          "zone-a": 0.9433962264150944,
+          "zone-d": 0.5,
+          "zone-c": 0.0
+        },
+        "allocated_units": 720,
+        "unmet_units": 340,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 120,
+          "water_packs": 300,
+          "shelter_kits": 90,
+          "nutrition_packs": 210
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.7801133695571972,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.755222357642924,
+        "unmet_high_urgency": 85
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "coastal-storm-005",
+      "snapshot_hash": "bd76c030d5bd4a3284a21cb465644875bda0c8af531b00ee2ef0eb1aa3c22574",
+      "seed": 2182030,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 11.39790000161156,
+      "metrics": {
+        "unit_coverage": 0.6792452830188679,
+        "coverage_by_resource": {
+          "medical_kits": 0.7058823529411765,
+          "water_packs": 0.6818181818181818,
+          "shelter_kits": 0.6,
+          "nutrition_packs": 0.7
+        },
+        "coverage_by_zone": {
+          "zone-b": 1.0,
+          "zone-e": 1.0,
+          "zone-a": 0.9433962264150944,
+          "zone-d": 0.5,
+          "zone-c": 0.0
+        },
+        "allocated_units": 720,
+        "unmet_units": 340,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 120,
+          "water_packs": 300,
+          "shelter_kits": 90,
+          "nutrition_packs": 210
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.7801133695571975,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.755222357642924,
+        "unmet_high_urgency": 85
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "coastal-storm-005",
+      "snapshot_hash": "bd76c030d5bd4a3284a21cb465644875bda0c8af531b00ee2ef0eb1aa3c22574",
+      "seed": 2182030,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 8.534500026144087,
+      "metrics": {
+        "unit_coverage": 0.6792452830188679,
+        "coverage_by_resource": {
+          "medical_kits": 0.7058823529411765,
+          "water_packs": 0.6818181818181818,
+          "shelter_kits": 0.6,
+          "nutrition_packs": 0.7
+        },
+        "coverage_by_zone": {
+          "zone-b": 1.0,
+          "zone-e": 0.9767441860465116,
+          "zone-a": 0.8490566037735849,
+          "zone-d": 0.25,
+          "zone-c": 0.2549019607843137
+        },
+        "allocated_units": 720,
+        "unmet_units": 340,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 120,
+          "water_packs": 300,
+          "shelter_kits": 90,
+          "nutrition_packs": 210
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.7616523604637642,
+        "min_zone_coverage": 0.25,
+        "jain_fairness": 0.7917196363113059,
+        "unmet_high_urgency": 150
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "late-critical-arrival",
+      "snapshot_hash": "e2e2b658200657410d232b013295da55d49cdcb1855f9ad8ad8a7b8c594fcc96",
+      "seed": 2182028,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.05929998587816954,
+      "metrics": {
+        "unit_coverage": 0.7785234899328859,
+        "coverage_by_resource": {
+          "medical_kits": 0.6666666666666666,
+          "water_packs": 0.8,
+          "shelter_kits": 0.7272727272727273,
+          "nutrition_packs": 0.8648648648648649
+        },
+        "coverage_by_zone": {
+          "zone-a": 1.0,
+          "zone-b": 1.0,
+          "zone-c": 1.0,
+          "zone-d": 0.3125
+        },
+        "allocated_units": 580,
+        "unmet_units": 165,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 100,
+          "water_packs": 240,
+          "shelter_kits": 80,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5865978975550219,
+        "min_zone_coverage": 0.3125,
+        "jain_fairness": 0.8855611601513241,
+        "unmet_high_urgency": 165
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "late-critical-arrival",
+      "snapshot_hash": "e2e2b658200657410d232b013295da55d49cdcb1855f9ad8ad8a7b8c594fcc96",
+      "seed": 2182028,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06499997107312083,
+      "metrics": {
+        "unit_coverage": 0.7785234899328859,
+        "coverage_by_resource": {
+          "medical_kits": 0.6666666666666666,
+          "water_packs": 0.8,
+          "shelter_kits": 0.7272727272727273,
+          "nutrition_packs": 0.8648648648648649
+        },
+        "coverage_by_zone": {
+          "zone-d": 1.0,
+          "zone-c": 1.0,
+          "zone-b": 0.8529411764705882,
+          "zone-a": 0.24324324324324326
+        },
+        "allocated_units": 580,
+        "unmet_units": 165,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 100,
+          "water_packs": 240,
+          "shelter_kits": 80,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9067407378243239,
+        "min_zone_coverage": 0.24324324324324326,
+        "jain_fairness": 0.8600172944198685,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "late-critical-arrival",
+      "snapshot_hash": "e2e2b658200657410d232b013295da55d49cdcb1855f9ad8ad8a7b8c594fcc96",
+      "seed": 2182028,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 7.020699966233224,
+      "metrics": {
+        "unit_coverage": 0.7785234899328859,
+        "coverage_by_resource": {
+          "medical_kits": 0.6666666666666666,
+          "water_packs": 0.8,
+          "shelter_kits": 0.7272727272727273,
+          "nutrition_packs": 0.8648648648648649
+        },
+        "coverage_by_zone": {
+          "zone-d": 1.0,
+          "zone-c": 1.0,
+          "zone-b": 0.8529411764705882,
+          "zone-a": 0.24324324324324326
+        },
+        "allocated_units": 580,
+        "unmet_units": 165,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 100,
+          "water_packs": 240,
+          "shelter_kits": 80,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9067407378243239,
+        "min_zone_coverage": 0.24324324324324326,
+        "jain_fairness": 0.8600172944198685,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "late-critical-arrival",
+      "snapshot_hash": "e2e2b658200657410d232b013295da55d49cdcb1855f9ad8ad8a7b8c594fcc96",
+      "seed": 2182028,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 8.411700022406876,
+      "metrics": {
+        "unit_coverage": 0.7785234899328859,
+        "coverage_by_resource": {
+          "medical_kits": 0.6666666666666666,
+          "water_packs": 0.8,
+          "shelter_kits": 0.7272727272727273,
+          "nutrition_packs": 0.8648648648648649
+        },
+        "coverage_by_zone": {
+          "zone-d": 1.0,
+          "zone-c": 0.9866666666666667,
+          "zone-b": 0.7823529411764706,
+          "zone-a": 0.31891891891891894
+        },
+        "allocated_units": 580,
+        "unmet_units": 165,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 100,
+          "water_packs": 240,
+          "shelter_kits": 80,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9018093482563737,
+        "min_zone_coverage": 0.31891891891891894,
+        "jain_fairness": 0.8870778029727949,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "no-scarcity",
+      "snapshot_hash": "85b6091b229bcbc36d80acde93abd47b459b63013114ae60d3b17d2b84e81e76",
+      "seed": 2182027,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04409998655319214,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-a": 1.0,
+          "zone-b": 1.0,
+          "zone-c": 1.0
+        },
+        "allocated_units": 640,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 270,
+          "shelter_kits": 85,
+          "nutrition_packs": 190
+        },
+        "remaining_by_resource": {
+          "medical_kits": 105,
+          "water_packs": 130,
+          "shelter_kits": 65,
+          "nutrition_packs": 110
+        },
+        "stock_utilization": 0.6095238095238096,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "no-scarcity",
+      "snapshot_hash": "85b6091b229bcbc36d80acde93abd47b459b63013114ae60d3b17d2b84e81e76",
+      "seed": 2182027,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.043000036384910345,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-b": 1.0,
+          "zone-a": 1.0,
+          "zone-c": 1.0
+        },
+        "allocated_units": 640,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 270,
+          "shelter_kits": 85,
+          "nutrition_packs": 190
+        },
+        "remaining_by_resource": {
+          "medical_kits": 105,
+          "water_packs": 130,
+          "shelter_kits": 65,
+          "nutrition_packs": 110
+        },
+        "stock_utilization": 0.6095238095238096,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "no-scarcity",
+      "snapshot_hash": "85b6091b229bcbc36d80acde93abd47b459b63013114ae60d3b17d2b84e81e76",
+      "seed": 2182027,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 2.4025000166147947,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-b": 1.0,
+          "zone-a": 1.0,
+          "zone-c": 1.0
+        },
+        "allocated_units": 640,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 270,
+          "shelter_kits": 85,
+          "nutrition_packs": 190
+        },
+        "remaining_by_resource": {
+          "medical_kits": 105,
+          "water_packs": 130,
+          "shelter_kits": 65,
+          "nutrition_packs": 110
+        },
+        "stock_utilization": 0.6095238095238096,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "no-scarcity",
+      "snapshot_hash": "85b6091b229bcbc36d80acde93abd47b459b63013114ae60d3b17d2b84e81e76",
+      "seed": 2182027,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 4.524500051047653,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-b": 1.0,
+          "zone-a": 1.0,
+          "zone-c": 1.0
+        },
+        "allocated_units": 640,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 270,
+          "shelter_kits": 85,
+          "nutrition_packs": 190
+        },
+        "remaining_by_resource": {
+          "medical_kits": 105,
+          "water_packs": 130,
+          "shelter_kits": 65,
+          "nutrition_packs": 110
+        },
+        "stock_utilization": 0.6095238095238096,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "triage-demo-001",
+      "snapshot_hash": "f24844f53c2320e2ccd806916539b84c354eadb5d47e283a270d13a67b645a5e",
+      "seed": 2182026,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04199997056275606,
+      "metrics": {
+        "unit_coverage": 0.5892857142857143,
+        "coverage_by_resource": {
+          "medical_kits": 0.6,
+          "water_packs": 0.6206896551724138,
+          "shelter_kits": 0.5
+        },
+        "coverage_by_zone": {
+          "zone-a": 1.0,
+          "zone-b": 0.5555555555555556,
+          "zone-c": 0.0
+        },
+        "allocated_units": 330,
+        "unmet_units": 230,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 180,
+          "shelter_kits": 60
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6248736754164431,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.6163522012578616,
+        "unmet_high_urgency": 230
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "triage-demo-001",
+      "snapshot_hash": "f24844f53c2320e2ccd806916539b84c354eadb5d47e283a270d13a67b645a5e",
+      "seed": 2182026,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04190002800896764,
+      "metrics": {
+        "unit_coverage": 0.5892857142857143,
+        "coverage_by_resource": {
+          "medical_kits": 0.6,
+          "water_packs": 0.6206896551724138,
+          "shelter_kits": 0.5
+        },
+        "coverage_by_zone": {
+          "zone-a": 1.0,
+          "zone-c": 0.8076923076923077,
+          "zone-b": 0.08888888888888889
+        },
+        "allocated_units": 330,
+        "unmet_units": 230,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 180,
+          "shelter_kits": 60
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6461071619768907,
+        "min_zone_coverage": 0.08888888888888889,
+        "jain_fairness": 0.7221765847200948,
+        "unmet_high_urgency": 230
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "triage-demo-001",
+      "snapshot_hash": "f24844f53c2320e2ccd806916539b84c354eadb5d47e283a270d13a67b645a5e",
+      "seed": 2182026,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 6.9148000329732895,
+      "metrics": {
+        "unit_coverage": 0.5892857142857143,
+        "coverage_by_resource": {
+          "medical_kits": 0.6,
+          "water_packs": 0.6206896551724138,
+          "shelter_kits": 0.5
+        },
+        "coverage_by_zone": {
+          "zone-a": 1.0,
+          "zone-c": 0.8076923076923077,
+          "zone-b": 0.08888888888888889
+        },
+        "allocated_units": 330,
+        "unmet_units": 230,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 180,
+          "shelter_kits": 60
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6461071619768907,
+        "min_zone_coverage": 0.08888888888888889,
+        "jain_fairness": 0.7221765847200948,
+        "unmet_high_urgency": 230
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "triage-demo-001",
+      "snapshot_hash": "f24844f53c2320e2ccd806916539b84c354eadb5d47e283a270d13a67b645a5e",
+      "seed": 2182026,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 7.419600035063922,
+      "metrics": {
+        "unit_coverage": 0.5892857142857143,
+        "coverage_by_resource": {
+          "medical_kits": 0.6,
+          "water_packs": 0.6206896551724138,
+          "shelter_kits": 0.5
+        },
+        "coverage_by_zone": {
+          "zone-a": 0.975609756097561,
+          "zone-c": 0.5538461538461539,
+          "zone-b": 0.2577777777777778
+        },
+        "allocated_units": 330,
+        "unmet_units": 230,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 180,
+          "shelter_kits": 60
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6364004131300737,
+        "min_zone_coverage": 0.2577777777777778,
+        "jain_fairness": 0.8035677323406439,
+        "unmet_high_urgency": 230
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "zero-stock",
+      "snapshot_hash": "66eb86a8d835cb945b15ebd1bcd2e7b498049d940d898f7dae6885114adc2a61",
+      "seed": 2182029,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.03880000440403819,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-a": 0.0,
+          "zone-b": 0.0,
+          "zone-c": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 210,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 210
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "zero-stock",
+      "snapshot_hash": "66eb86a8d835cb945b15ebd1bcd2e7b498049d940d898f7dae6885114adc2a61",
+      "seed": 2182029,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04429998807609081,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-a": 0.0,
+          "zone-c": 0.0,
+          "zone-b": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 210,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 210
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "zero-stock",
+      "snapshot_hash": "66eb86a8d835cb945b15ebd1bcd2e7b498049d940d898f7dae6885114adc2a61",
+      "seed": 2182029,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.332600018940866,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-a": 0.0,
+          "zone-c": 0.0,
+          "zone-b": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 210,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 210
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "zero-stock",
+      "snapshot_hash": "66eb86a8d835cb945b15ebd1bcd2e7b498049d940d898f7dae6885114adc2a61",
+      "seed": 2182029,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.4125999878160655,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-a": 0.0,
+          "zone-c": 0.0,
+          "zone-b": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 210,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 210
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-11",
+      "snapshot_hash": "1b03f36f64a6356bbe6f4a8d3bb0a1260e12a6e801127882312510252d0f722b",
+      "seed": 11,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06849999772384763,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 1.0
+        },
+        "allocated_units": 1121,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 284,
+          "water_packs": 317,
+          "shelter_kits": 265,
+          "nutrition_packs": 255
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 31,
+          "shelter_kits": 48,
+          "nutrition_packs": 118
+        },
+        "stock_utilization": 0.7773925104022191,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-11",
+      "snapshot_hash": "1b03f36f64a6356bbe6f4a8d3bb0a1260e12a6e801127882312510252d0f722b",
+      "seed": 11,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07020001066848636,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0,
+          "zone-01": 1.0,
+          "zone-06": 1.0,
+          "zone-05": 1.0
+        },
+        "allocated_units": 1121,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 284,
+          "water_packs": 317,
+          "shelter_kits": 265,
+          "nutrition_packs": 255
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 31,
+          "shelter_kits": 48,
+          "nutrition_packs": 118
+        },
+        "stock_utilization": 0.7773925104022191,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-11",
+      "snapshot_hash": "1b03f36f64a6356bbe6f4a8d3bb0a1260e12a6e801127882312510252d0f722b",
+      "seed": 11,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 2.588600036688149,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0,
+          "zone-01": 1.0,
+          "zone-06": 1.0,
+          "zone-05": 1.0
+        },
+        "allocated_units": 1121,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 284,
+          "water_packs": 317,
+          "shelter_kits": 265,
+          "nutrition_packs": 255
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 31,
+          "shelter_kits": 48,
+          "nutrition_packs": 118
+        },
+        "stock_utilization": 0.7773925104022191,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-11",
+      "snapshot_hash": "1b03f36f64a6356bbe6f4a8d3bb0a1260e12a6e801127882312510252d0f722b",
+      "seed": 11,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 5.144599999766797,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0,
+          "zone-01": 1.0,
+          "zone-06": 1.0,
+          "zone-05": 1.0
+        },
+        "allocated_units": 1121,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 284,
+          "water_packs": 317,
+          "shelter_kits": 265,
+          "nutrition_packs": 255
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 31,
+          "shelter_kits": 48,
+          "nutrition_packs": 118
+        },
+        "stock_utilization": 0.7773925104022191,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-12",
+      "snapshot_hash": "8b1acc42ba2cc0ba5e499f141eb1506aad17b652f6b75dd3235ef1dadce6ee8a",
+      "seed": 12,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06849999772384763,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 1.0
+        },
+        "allocated_units": 1058,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 261,
+          "water_packs": 370,
+          "shelter_kits": 220,
+          "nutrition_packs": 207
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 165,
+          "shelter_kits": 55,
+          "nutrition_packs": 46
+        },
+        "stock_utilization": 0.7306629834254144,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-12",
+      "snapshot_hash": "8b1acc42ba2cc0ba5e499f141eb1506aad17b652f6b75dd3235ef1dadce6ee8a",
+      "seed": 12,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06960000609979033,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 1058,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 261,
+          "water_packs": 370,
+          "shelter_kits": 220,
+          "nutrition_packs": 207
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 165,
+          "shelter_kits": 55,
+          "nutrition_packs": 46
+        },
+        "stock_utilization": 0.7306629834254144,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-12",
+      "snapshot_hash": "8b1acc42ba2cc0ba5e499f141eb1506aad17b652f6b75dd3235ef1dadce6ee8a",
+      "seed": 12,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 3.6078999983146787,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 1058,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 261,
+          "water_packs": 370,
+          "shelter_kits": 220,
+          "nutrition_packs": 207
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 165,
+          "shelter_kits": 55,
+          "nutrition_packs": 46
+        },
+        "stock_utilization": 0.7306629834254144,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-12",
+      "snapshot_hash": "8b1acc42ba2cc0ba5e499f141eb1506aad17b652f6b75dd3235ef1dadce6ee8a",
+      "seed": 12,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 5.647600046359003,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 1058,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 261,
+          "water_packs": 370,
+          "shelter_kits": 220,
+          "nutrition_packs": 207
+        },
+        "remaining_by_resource": {
+          "medical_kits": 124,
+          "water_packs": 165,
+          "shelter_kits": 55,
+          "nutrition_packs": 46
+        },
+        "stock_utilization": 0.7306629834254144,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-13",
+      "snapshot_hash": "3ab37aeea8c8259ae59da17ab94c83b0f91bab1eee7d91182957f5f6285ab891",
+      "seed": 13,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.059699988923966885,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0
+        },
+        "allocated_units": 1447,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 243,
+          "water_packs": 514,
+          "shelter_kits": 209,
+          "nutrition_packs": 481
+        },
+        "remaining_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 142,
+          "shelter_kits": 35,
+          "nutrition_packs": 87
+        },
+        "stock_utilization": 0.8034425319267073,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-13",
+      "snapshot_hash": "3ab37aeea8c8259ae59da17ab94c83b0f91bab1eee7d91182957f5f6285ab891",
+      "seed": 13,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.061400001868605614,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 1.0,
+          "zone-02": 1.0,
+          "zone-01": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 1447,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 243,
+          "water_packs": 514,
+          "shelter_kits": 209,
+          "nutrition_packs": 481
+        },
+        "remaining_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 142,
+          "shelter_kits": 35,
+          "nutrition_packs": 87
+        },
+        "stock_utilization": 0.8034425319267073,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-13",
+      "snapshot_hash": "3ab37aeea8c8259ae59da17ab94c83b0f91bab1eee7d91182957f5f6285ab891",
+      "seed": 13,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 2.6410999707877636,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 1.0,
+          "zone-02": 1.0,
+          "zone-01": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 1447,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 243,
+          "water_packs": 514,
+          "shelter_kits": 209,
+          "nutrition_packs": 481
+        },
+        "remaining_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 142,
+          "shelter_kits": 35,
+          "nutrition_packs": 87
+        },
+        "stock_utilization": 0.8034425319267073,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-13",
+      "snapshot_hash": "3ab37aeea8c8259ae59da17ab94c83b0f91bab1eee7d91182957f5f6285ab891",
+      "seed": 13,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 5.158499989192933,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0,
+          "nutrition_packs": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 1.0,
+          "zone-02": 1.0,
+          "zone-01": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 1447,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 243,
+          "water_packs": 514,
+          "shelter_kits": 209,
+          "nutrition_packs": 481
+        },
+        "remaining_by_resource": {
+          "medical_kits": 90,
+          "water_packs": 142,
+          "shelter_kits": 35,
+          "nutrition_packs": 87
+        },
+        "stock_utilization": 0.8034425319267073,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-14",
+      "snapshot_hash": "2d5dfdc5625ba54c32d683251ad49fa31080646bc9e79505310d8667abd49ac9",
+      "seed": 14,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.037299992982298136,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 456,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 231,
+          "water_packs": 60,
+          "shelter_kits": 165
+        },
+        "remaining_by_resource": {
+          "medical_kits": 83,
+          "water_packs": 8,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.7794871794871795,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-14",
+      "snapshot_hash": "2d5dfdc5625ba54c32d683251ad49fa31080646bc9e79505310d8667abd49ac9",
+      "seed": 14,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.03479997394606471,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 456,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 231,
+          "water_packs": 60,
+          "shelter_kits": 165
+        },
+        "remaining_by_resource": {
+          "medical_kits": 83,
+          "water_packs": 8,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.7794871794871795,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-14",
+      "snapshot_hash": "2d5dfdc5625ba54c32d683251ad49fa31080646bc9e79505310d8667abd49ac9",
+      "seed": 14,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 2.487200021278113,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 456,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 231,
+          "water_packs": 60,
+          "shelter_kits": 165
+        },
+        "remaining_by_resource": {
+          "medical_kits": 83,
+          "water_packs": 8,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.7794871794871795,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-14",
+      "snapshot_hash": "2d5dfdc5625ba54c32d683251ad49fa31080646bc9e79505310d8667abd49ac9",
+      "seed": 14,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 3.665299969725311,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0
+        },
+        "allocated_units": 456,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 231,
+          "water_packs": 60,
+          "shelter_kits": 165
+        },
+        "remaining_by_resource": {
+          "medical_kits": 83,
+          "water_packs": 8,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.7794871794871795,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-15",
+      "snapshot_hash": "4ff9d2fb994c8d92f92878fca504a9873e69c4e78295c2353abcf7980add66e2",
+      "seed": 15,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.042700034100562334,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 1.0
+        },
+        "allocated_units": 530,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 206,
+          "water_packs": 177,
+          "shelter_kits": 147
+        },
+        "remaining_by_resource": {
+          "medical_kits": 97,
+          "water_packs": 63,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.728021978021978,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-15",
+      "snapshot_hash": "4ff9d2fb994c8d92f92878fca504a9873e69c4e78295c2353abcf7980add66e2",
+      "seed": 15,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04269997589290142,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 1.0,
+          "zone-01": 1.0,
+          "zone-02": 1.0
+        },
+        "allocated_units": 530,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 206,
+          "water_packs": 177,
+          "shelter_kits": 147
+        },
+        "remaining_by_resource": {
+          "medical_kits": 97,
+          "water_packs": 63,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.728021978021978,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-15",
+      "snapshot_hash": "4ff9d2fb994c8d92f92878fca504a9873e69c4e78295c2353abcf7980add66e2",
+      "seed": 15,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 2.3640000144951046,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 1.0,
+          "zone-01": 1.0,
+          "zone-02": 1.0
+        },
+        "allocated_units": 530,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 206,
+          "water_packs": 177,
+          "shelter_kits": 147
+        },
+        "remaining_by_resource": {
+          "medical_kits": 97,
+          "water_packs": 63,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.728021978021978,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-none-15",
+      "snapshot_hash": "4ff9d2fb994c8d92f92878fca504a9873e69c4e78295c2353abcf7980add66e2",
+      "seed": 15,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 3.8732000393792987,
+      "metrics": {
+        "unit_coverage": 1.0,
+        "coverage_by_resource": {
+          "medical_kits": 1.0,
+          "water_packs": 1.0,
+          "shelter_kits": 1.0
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 1.0,
+          "zone-01": 1.0,
+          "zone-02": 1.0
+        },
+        "allocated_units": 530,
+        "unmet_units": 0,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 206,
+          "water_packs": 177,
+          "shelter_kits": 147
+        },
+        "remaining_by_resource": {
+          "medical_kits": 97,
+          "water_packs": 63,
+          "shelter_kits": 38
+        },
+        "stock_utilization": 0.728021978021978,
+        "urgency_weighted_coverage": 1.0,
+        "min_zone_coverage": 1.0,
+        "jain_fairness": 1.0,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-11",
+      "snapshot_hash": "903180584f4c3ee9710b031ada356d0dfdaec267b71a668d948949fffd00499f",
+      "seed": 11,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07509998977184296,
+      "metrics": {
+        "unit_coverage": 0.8153434433541481,
+        "coverage_by_resource": {
+          "medical_kits": 0.9084507042253521,
+          "water_packs": 0.6971608832807571,
+          "shelter_kits": 0.7509433962264151,
+          "nutrition_packs": 0.9254901960784314
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 0.8975409836065574,
+          "zone-05": 0.5023255813953489,
+          "zone-06": 0.20212765957446807
+        },
+        "allocated_units": 914,
+        "unmet_units": 207,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 258,
+          "water_packs": 221,
+          "shelter_kits": 199,
+          "nutrition_packs": 236
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8968482168495153,
+        "min_zone_coverage": 0.20212765957446807,
+        "jain_fairness": 0.8611676777797513,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-11",
+      "snapshot_hash": "903180584f4c3ee9710b031ada356d0dfdaec267b71a668d948949fffd00499f",
+      "seed": 11,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.14620000729337335,
+      "metrics": {
+        "unit_coverage": 0.8153434433541481,
+        "coverage_by_resource": {
+          "medical_kits": 0.9084507042253521,
+          "water_packs": 0.6971608832807571,
+          "shelter_kits": 0.7509433962264151,
+          "nutrition_packs": 0.9254901960784314
+        },
+        "coverage_by_zone": {
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 0.9959016393442623,
+          "zone-01": 0.9191919191919192,
+          "zone-06": 0.7978723404255319,
+          "zone-05": 0.24186046511627907
+        },
+        "allocated_units": 914,
+        "unmet_units": 207,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 258,
+          "water_packs": 221,
+          "shelter_kits": 199,
+          "nutrition_packs": 236
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9051235099074998,
+        "min_zone_coverage": 0.24186046511627907,
+        "jain_fairness": 0.9028840064760554,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-11",
+      "snapshot_hash": "903180584f4c3ee9710b031ada356d0dfdaec267b71a668d948949fffd00499f",
+      "seed": 11,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 7.221499981824309,
+      "metrics": {
+        "unit_coverage": 0.8153434433541481,
+        "coverage_by_resource": {
+          "medical_kits": 0.9084507042253521,
+          "water_packs": 0.6971608832807571,
+          "shelter_kits": 0.7509433962264151,
+          "nutrition_packs": 0.9254901960784314
+        },
+        "coverage_by_zone": {
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 0.9959016393442623,
+          "zone-01": 0.9191919191919192,
+          "zone-06": 0.7978723404255319,
+          "zone-05": 0.24186046511627907
+        },
+        "allocated_units": 914,
+        "unmet_units": 207,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 258,
+          "water_packs": 221,
+          "shelter_kits": 199,
+          "nutrition_packs": 236
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9051235099074997,
+        "min_zone_coverage": 0.24186046511627907,
+        "jain_fairness": 0.9028840064760554,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-11",
+      "snapshot_hash": "903180584f4c3ee9710b031ada356d0dfdaec267b71a668d948949fffd00499f",
+      "seed": 11,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 8.653400000184774,
+      "metrics": {
+        "unit_coverage": 0.8153434433541481,
+        "coverage_by_resource": {
+          "medical_kits": 0.9084507042253521,
+          "water_packs": 0.6971608832807571,
+          "shelter_kits": 0.7509433962264151,
+          "nutrition_packs": 0.9254901960784314
+        },
+        "coverage_by_zone": {
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 0.8975409836065574,
+          "zone-01": 0.9393939393939394,
+          "zone-06": 0.7978723404255319,
+          "zone-05": 0.32558139534883723
+        },
+        "allocated_units": 914,
+        "unmet_units": 207,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 258,
+          "water_packs": 221,
+          "shelter_kits": 199,
+          "nutrition_packs": 236
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8958136934991908,
+        "min_zone_coverage": 0.32558139534883723,
+        "jain_fairness": 0.925578536659344,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-12",
+      "snapshot_hash": "9240f5988db2785f5f0b5b88d004a1e89396ced1c321359cc2fc618b27b64442",
+      "seed": 12,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07340003503486514,
+      "metrics": {
+        "unit_coverage": 0.8676748582230623,
+        "coverage_by_resource": {
+          "medical_kits": 0.9348659003831418,
+          "water_packs": 0.9162162162162162,
+          "shelter_kits": 0.7954545454545454,
+          "nutrition_packs": 0.7729468599033816
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 0.9776536312849162,
+          "zone-04": 0.82,
+          "zone-05": 0.8314606741573034,
+          "zone-06": 0.535031847133758
+        },
+        "allocated_units": 918,
+        "unmet_units": 140,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 244,
+          "water_packs": 339,
+          "shelter_kits": 175,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8580518157711865,
+        "min_zone_coverage": 0.535031847133758,
+        "jain_fairness": 0.9650313592057604,
+        "unmet_high_urgency": 136
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-12",
+      "snapshot_hash": "9240f5988db2785f5f0b5b88d004a1e89396ced1c321359cc2fc618b27b64442",
+      "seed": 12,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07730000652372837,
+      "metrics": {
+        "unit_coverage": 0.8676748582230623,
+        "coverage_by_resource": {
+          "medical_kits": 0.9348659003831418,
+          "water_packs": 0.9162162162162162,
+          "shelter_kits": 0.7954545454545454,
+          "nutrition_packs": 0.7729468599033816
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 0.9617834394904459,
+          "zone-02": 0.8043478260869565,
+          "zone-03": 0.45251396648044695
+        },
+        "allocated_units": 918,
+        "unmet_units": 140,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 244,
+          "water_packs": 339,
+          "shelter_kits": 175,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9208699775289569,
+        "min_zone_coverage": 0.45251396648044695,
+        "jain_fairness": 0.9502323525310582,
+        "unmet_high_urgency": 6
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-12",
+      "snapshot_hash": "9240f5988db2785f5f0b5b88d004a1e89396ced1c321359cc2fc618b27b64442",
+      "seed": 12,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 7.1915999869816005,
+      "metrics": {
+        "unit_coverage": 0.8676748582230623,
+        "coverage_by_resource": {
+          "medical_kits": 0.9348659003831418,
+          "water_packs": 0.9162162162162162,
+          "shelter_kits": 0.7954545454545454,
+          "nutrition_packs": 0.7729468599033816
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 0.9617834394904459,
+          "zone-02": 0.8043478260869565,
+          "zone-03": 0.45251396648044695
+        },
+        "allocated_units": 918,
+        "unmet_units": 140,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 244,
+          "water_packs": 339,
+          "shelter_kits": 175,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9208699775289569,
+        "min_zone_coverage": 0.45251396648044695,
+        "jain_fairness": 0.9502323525310582,
+        "unmet_high_urgency": 6
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-12",
+      "snapshot_hash": "9240f5988db2785f5f0b5b88d004a1e89396ced1c321359cc2fc618b27b64442",
+      "seed": 12,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 8.909100026357919,
+      "metrics": {
+        "unit_coverage": 0.8676748582230623,
+        "coverage_by_resource": {
+          "medical_kits": 0.9348659003831418,
+          "water_packs": 0.9162162162162162,
+          "shelter_kits": 0.7954545454545454,
+          "nutrition_packs": 0.7729468599033816
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 1.0,
+          "zone-06": 0.9363057324840764,
+          "zone-02": 0.7608695652173914,
+          "zone-03": 0.5195530726256983
+        },
+        "allocated_units": 918,
+        "unmet_units": 140,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 244,
+          "water_packs": 339,
+          "shelter_kits": 175,
+          "nutrition_packs": 160
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9185562373967365,
+        "min_zone_coverage": 0.5195530726256983,
+        "jain_fairness": 0.9598315289614259,
+        "unmet_high_urgency": 10
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-13",
+      "snapshot_hash": "1b3cf0d0841e65a7edb5434400eb842a789d82bbdef8b63cdd6b578d6cb27715",
+      "seed": 13,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06660004146397114,
+      "metrics": {
+        "unit_coverage": 0.7899101589495507,
+        "coverage_by_resource": {
+          "medical_kits": 0.8683127572016461,
+          "water_packs": 0.8093385214007782,
+          "shelter_kits": 0.7416267942583732,
+          "nutrition_packs": 0.7505197505197505
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 0.7668918918918919,
+          "zone-05": 0.07114624505928854
+        },
+        "allocated_units": 1143,
+        "unmet_units": 304,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 211,
+          "water_packs": 416,
+          "shelter_kits": 155,
+          "nutrition_packs": 361
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.7056950095673133,
+        "min_zone_coverage": 0.07114624505928854,
+        "jain_fairness": 0.8199153061325709,
+        "unmet_high_urgency": 304
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-13",
+      "snapshot_hash": "1b3cf0d0841e65a7edb5434400eb842a789d82bbdef8b63cdd6b578d6cb27715",
+      "seed": 13,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.0706000137142837,
+      "metrics": {
+        "unit_coverage": 0.7899101589495507,
+        "coverage_by_resource": {
+          "medical_kits": 0.8683127572016461,
+          "water_packs": 0.8093385214007782,
+          "shelter_kits": 0.7416267942583732,
+          "nutrition_packs": 0.7505197505197505
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 1.0,
+          "zone-02": 1.0,
+          "zone-01": 0.811046511627907,
+          "zone-03": 0.024489795918367346
+        },
+        "allocated_units": 1143,
+        "unmet_units": 304,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 211,
+          "water_packs": 416,
+          "shelter_kits": 155,
+          "nutrition_packs": 361
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8571801588933874,
+        "min_zone_coverage": 0.024489795918367346,
+        "jain_fairness": 0.8042507145682488,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-13",
+      "snapshot_hash": "1b3cf0d0841e65a7edb5434400eb842a789d82bbdef8b63cdd6b578d6cb27715",
+      "seed": 13,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 8.183500031009316,
+      "metrics": {
+        "unit_coverage": 0.7899101589495507,
+        "coverage_by_resource": {
+          "medical_kits": 0.8683127572016461,
+          "water_packs": 0.8093385214007782,
+          "shelter_kits": 0.7416267942583732,
+          "nutrition_packs": 0.7505197505197505
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 1.0,
+          "zone-02": 1.0,
+          "zone-01": 0.811046511627907,
+          "zone-03": 0.024489795918367346
+        },
+        "allocated_units": 1143,
+        "unmet_units": 304,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 211,
+          "water_packs": 416,
+          "shelter_kits": 155,
+          "nutrition_packs": 361
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8571801588933874,
+        "min_zone_coverage": 0.024489795918367346,
+        "jain_fairness": 0.8042507145682488,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-13",
+      "snapshot_hash": "1b3cf0d0841e65a7edb5434400eb842a789d82bbdef8b63cdd6b578d6cb27715",
+      "seed": 13,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 9.988399979192764,
+      "metrics": {
+        "unit_coverage": 0.7899101589495507,
+        "coverage_by_resource": {
+          "medical_kits": 0.8683127572016461,
+          "water_packs": 0.8093385214007782,
+          "shelter_kits": 0.7416267942583732,
+          "nutrition_packs": 0.7505197505197505
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 1.0,
+          "zone-02": 0.9773462783171522,
+          "zone-01": 0.6686046511627907,
+          "zone-03": 0.2530612244897959
+        },
+        "allocated_units": 1143,
+        "unmet_units": 304,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 211,
+          "water_packs": 416,
+          "shelter_kits": 155,
+          "nutrition_packs": 361
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8557185494091417,
+        "min_zone_coverage": 0.2530612244897959,
+        "jain_fairness": 0.8771538906416892,
+        "unmet_high_urgency": 7
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-14",
+      "snapshot_hash": "3e55a4d17a90e7cc66d115e781bb8debd91bbd3ec6a24e256dcd260a7907a035",
+      "seed": 14,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.037999998312443495,
+      "metrics": {
+        "unit_coverage": 0.8135964912280702,
+        "coverage_by_resource": {
+          "medical_kits": 0.8614718614718615,
+          "water_packs": 0.7166666666666667,
+          "shelter_kits": 0.7818181818181819
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 0.5454545454545454
+        },
+        "allocated_units": 371,
+        "unmet_units": 85,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 199,
+          "water_packs": 43,
+          "shelter_kits": 129
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.933880711020137,
+        "min_zone_coverage": 0.5454545454545454,
+        "jain_fairness": 0.9400479616306955,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-14",
+      "snapshot_hash": "3e55a4d17a90e7cc66d115e781bb8debd91bbd3ec6a24e256dcd260a7907a035",
+      "seed": 14,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.037699996028095484,
+      "metrics": {
+        "unit_coverage": 0.8135964912280702,
+        "coverage_by_resource": {
+          "medical_kits": 0.8614718614718615,
+          "water_packs": 0.7166666666666667,
+          "shelter_kits": 0.7818181818181819
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 0.5454545454545454
+        },
+        "allocated_units": 371,
+        "unmet_units": 85,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 199,
+          "water_packs": 43,
+          "shelter_kits": 129
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.933880711020137,
+        "min_zone_coverage": 0.5454545454545454,
+        "jain_fairness": 0.9400479616306955,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-14",
+      "snapshot_hash": "3e55a4d17a90e7cc66d115e781bb8debd91bbd3ec6a24e256dcd260a7907a035",
+      "seed": 14,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 3.624199947807938,
+      "metrics": {
+        "unit_coverage": 0.8135964912280702,
+        "coverage_by_resource": {
+          "medical_kits": 0.8614718614718615,
+          "water_packs": 0.7166666666666667,
+          "shelter_kits": 0.7818181818181819
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 0.5454545454545454
+        },
+        "allocated_units": 371,
+        "unmet_units": 85,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 199,
+          "water_packs": 43,
+          "shelter_kits": 129
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.933880711020137,
+        "min_zone_coverage": 0.5454545454545454,
+        "jain_fairness": 0.9400479616306955,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-14",
+      "snapshot_hash": "3e55a4d17a90e7cc66d115e781bb8debd91bbd3ec6a24e256dcd260a7907a035",
+      "seed": 14,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 6.19470002129674,
+      "metrics": {
+        "unit_coverage": 0.8135964912280702,
+        "coverage_by_resource": {
+          "medical_kits": 0.8614718614718615,
+          "water_packs": 0.7166666666666667,
+          "shelter_kits": 0.7818181818181819
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.9893048128342246,
+          "zone-03": 0.5561497326203209
+        },
+        "allocated_units": 371,
+        "unmet_units": 85,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 199,
+          "water_packs": 43,
+          "shelter_kits": 129
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9307692150681435,
+        "min_zone_coverage": 0.5561497326203209,
+        "jain_fairness": 0.9439486730825313,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-15",
+      "snapshot_hash": "b42800adc2236696beaf1d1f69acdb2028fd2c2ccd223e99a6f72b91379b530d",
+      "seed": 15,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.046200002543628216,
+      "metrics": {
+        "unit_coverage": 0.869811320754717,
+        "coverage_by_resource": {
+          "medical_kits": 0.9320388349514563,
+          "water_packs": 0.8587570621468926,
+          "shelter_kits": 0.7959183673469388
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 1.0,
+          "zone-03": 1.0,
+          "zone-04": 0.5714285714285714
+        },
+        "allocated_units": 461,
+        "unmet_units": 69,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 192,
+          "water_packs": 152,
+          "shelter_kits": 117
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.8313174492914064,
+        "min_zone_coverage": 0.5714285714285714,
+        "jain_fairness": 0.9585889570552146,
+        "unmet_high_urgency": 69
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-15",
+      "snapshot_hash": "b42800adc2236696beaf1d1f69acdb2028fd2c2ccd223e99a6f72b91379b530d",
+      "seed": 15,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.049799971748143435,
+      "metrics": {
+        "unit_coverage": 0.869811320754717,
+        "coverage_by_resource": {
+          "medical_kits": 0.9320388349514563,
+          "water_packs": 0.8587570621468926,
+          "shelter_kits": 0.7959183673469388
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 1.0,
+          "zone-01": 1.0,
+          "zone-02": 0.4435483870967742
+        },
+        "allocated_units": 461,
+        "unmet_units": 69,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 192,
+          "water_packs": 152,
+          "shelter_kits": 117
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9556099447914673,
+        "min_zone_coverage": 0.4435483870967742,
+        "jain_fairness": 0.9273543832522937,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-15",
+      "snapshot_hash": "b42800adc2236696beaf1d1f69acdb2028fd2c2ccd223e99a6f72b91379b530d",
+      "seed": 15,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 12.305999989621341,
+      "metrics": {
+        "unit_coverage": 0.869811320754717,
+        "coverage_by_resource": {
+          "medical_kits": 0.9320388349514563,
+          "water_packs": 0.8587570621468926,
+          "shelter_kits": 0.7959183673469388
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 1.0,
+          "zone-01": 1.0,
+          "zone-02": 0.4435483870967742
+        },
+        "allocated_units": 461,
+        "unmet_units": 69,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 192,
+          "water_packs": 152,
+          "shelter_kits": 117
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9556099447914671,
+        "min_zone_coverage": 0.4435483870967742,
+        "jain_fairness": 0.9273543832522937,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-mild-15",
+      "snapshot_hash": "b42800adc2236696beaf1d1f69acdb2028fd2c2ccd223e99a6f72b91379b530d",
+      "seed": 15,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 9.904000035021454,
+      "metrics": {
+        "unit_coverage": 0.869811320754717,
+        "coverage_by_resource": {
+          "medical_kits": 0.9320388349514563,
+          "water_packs": 0.8587570621468926,
+          "shelter_kits": 0.7959183673469388
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 0.9760765550239234,
+          "zone-01": 1.0,
+          "zone-02": 0.4838709677419355
+        },
+        "allocated_units": 461,
+        "unmet_units": 69,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 192,
+          "water_packs": 152,
+          "shelter_kits": 117
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.9478899228379483,
+        "min_zone_coverage": 0.4838709677419355,
+        "jain_fairness": 0.9391101117080847,
+        "unmet_high_urgency": 5
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-11",
+      "snapshot_hash": "ada95bdb57502339354a1291de5ee7661b009da84e8914a5b7f7233791125a03",
+      "seed": 11,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.09660003706812859,
+      "metrics": {
+        "unit_coverage": 0.3666369313113292,
+        "coverage_by_resource": {
+          "medical_kits": 0.4612676056338028,
+          "water_packs": 0.24921135646687698,
+          "shelter_kits": 0.3018867924528302,
+          "nutrition_packs": 0.4745098039215686
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.5027322404371585,
+          "zone-03": 0.19318181818181818,
+          "zone-04": 0.020491803278688523,
+          "zone-05": 0.0,
+          "zone-06": 0.0
+        },
+        "allocated_units": 411,
+        "unmet_units": 710,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 131,
+          "water_packs": 79,
+          "shelter_kits": 80,
+          "nutrition_packs": 121
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.40817851401603694,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.3804852643458643,
+        "unmet_high_urgency": 91
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-11",
+      "snapshot_hash": "ada95bdb57502339354a1291de5ee7661b009da84e8914a5b7f7233791125a03",
+      "seed": 11,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.08630001684650779,
+      "metrics": {
+        "unit_coverage": 0.3666369313113292,
+        "coverage_by_resource": {
+          "medical_kits": 0.4612676056338028,
+          "water_packs": 0.24921135646687698,
+          "shelter_kits": 0.3018867924528302,
+          "nutrition_packs": 0.4745098039215686
+        },
+        "coverage_by_zone": {
+          "zone-02": 0.8087431693989071,
+          "zone-03": 1.0,
+          "zone-04": 0.5450819672131147,
+          "zone-01": 0.1414141414141414,
+          "zone-06": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 411,
+        "unmet_units": 710,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 131,
+          "water_packs": 79,
+          "shelter_kits": 80,
+          "nutrition_packs": 121
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5228057172777503,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5264381340489124,
+        "unmet_high_urgency": 35
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-11",
+      "snapshot_hash": "ada95bdb57502339354a1291de5ee7661b009da84e8914a5b7f7233791125a03",
+      "seed": 11,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 5.2198999910615385,
+      "metrics": {
+        "unit_coverage": 0.3666369313113292,
+        "coverage_by_resource": {
+          "medical_kits": 0.4612676056338028,
+          "water_packs": 0.24921135646687698,
+          "shelter_kits": 0.3018867924528302,
+          "nutrition_packs": 0.4745098039215686
+        },
+        "coverage_by_zone": {
+          "zone-02": 0.8087431693989071,
+          "zone-03": 1.0,
+          "zone-04": 0.5450819672131147,
+          "zone-01": 0.1414141414141414,
+          "zone-06": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 411,
+        "unmet_units": 710,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 131,
+          "water_packs": 79,
+          "shelter_kits": 80,
+          "nutrition_packs": 121
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5228057172777504,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5264381340489124,
+        "unmet_high_urgency": 35
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-11",
+      "snapshot_hash": "ada95bdb57502339354a1291de5ee7661b009da84e8914a5b7f7233791125a03",
+      "seed": 11,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 12.5343999825418,
+      "metrics": {
+        "unit_coverage": 0.3666369313113292,
+        "coverage_by_resource": {
+          "medical_kits": 0.4612676056338028,
+          "water_packs": 0.24921135646687698,
+          "shelter_kits": 0.3018867924528302,
+          "nutrition_packs": 0.4745098039215686
+        },
+        "coverage_by_zone": {
+          "zone-02": 0.5300546448087432,
+          "zone-03": 0.8863636363636364,
+          "zone-04": 0.3360655737704918,
+          "zone-01": 0.2558922558922559,
+          "zone-06": 0.2553191489361702,
+          "zone-05": 0.25116279069767444
+        },
+        "allocated_units": 411,
+        "unmet_units": 710,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 131,
+          "water_packs": 79,
+          "shelter_kits": 80,
+          "nutrition_packs": 121
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.4231129142905133,
+        "min_zone_coverage": 0.25116279069767444,
+        "jain_fairness": 0.7675619892640372,
+        "unmet_high_urgency": 86
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-12",
+      "snapshot_hash": "b4101210650336b665b79d5a754c29886bfcbadb64e1e0f80120ae8eef6250fa",
+      "seed": 12,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07880001794546843,
+      "metrics": {
+        "unit_coverage": 0.4168241965973535,
+        "coverage_by_resource": {
+          "medical_kits": 0.4827586206896552,
+          "water_packs": 0.4648648648648649,
+          "shelter_kits": 0.34545454545454546,
+          "nutrition_packs": 0.32367149758454106
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.5380434782608695,
+          "zone-03": 0.7932960893854749,
+          "zone-04": 0.12,
+          "zone-05": 0.06367041198501873,
+          "zone-06": 0.0
+        },
+        "allocated_units": 441,
+        "unmet_units": 617,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 126,
+          "water_packs": 172,
+          "shelter_kits": 76,
+          "nutrition_packs": 67
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.3798588481693791,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5441761495507388,
+        "unmet_high_urgency": 495
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-12",
+      "snapshot_hash": "b4101210650336b665b79d5a754c29886bfcbadb64e1e0f80120ae8eef6250fa",
+      "seed": 12,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.08139997953549027,
+      "metrics": {
+        "unit_coverage": 0.4168241965973535,
+        "coverage_by_resource": {
+          "medical_kits": 0.4827586206896552,
+          "water_packs": 0.4648648648648649,
+          "shelter_kits": 0.34545454545454546,
+          "nutrition_packs": 0.32367149758454106
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 0.5880149812734082,
+          "zone-06": 0.08280254777070063,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 441,
+        "unmet_units": 617,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 126,
+          "water_packs": 172,
+          "shelter_kits": 76,
+          "nutrition_packs": 67
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5311777407388729,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5053424622366921,
+        "unmet_high_urgency": 254
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-12",
+      "snapshot_hash": "b4101210650336b665b79d5a754c29886bfcbadb64e1e0f80120ae8eef6250fa",
+      "seed": 12,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 11.211099976208061,
+      "metrics": {
+        "unit_coverage": 0.4168241965973535,
+        "coverage_by_resource": {
+          "medical_kits": 0.4827586206896552,
+          "water_packs": 0.4648648648648649,
+          "shelter_kits": 0.34545454545454546,
+          "nutrition_packs": 0.32367149758454106
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-04": 1.0,
+          "zone-05": 0.5880149812734082,
+          "zone-06": 0.08280254777070063,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 441,
+        "unmet_units": 617,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 126,
+          "water_packs": 172,
+          "shelter_kits": 76,
+          "nutrition_packs": 67
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5311777407388729,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5053424622366921,
+        "unmet_high_urgency": 254
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-12",
+      "snapshot_hash": "b4101210650336b665b79d5a754c29886bfcbadb64e1e0f80120ae8eef6250fa",
+      "seed": 12,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 10.935200029052794,
+      "metrics": {
+        "unit_coverage": 0.4168241965973535,
+        "coverage_by_resource": {
+          "medical_kits": 0.4827586206896552,
+          "water_packs": 0.4648648648648649,
+          "shelter_kits": 0.34545454545454546,
+          "nutrition_packs": 0.32367149758454106
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.8888888888888888,
+          "zone-04": 0.78,
+          "zone-05": 0.2883895131086142,
+          "zone-06": 0.2611464968152866,
+          "zone-02": 0.2554347826086957,
+          "zone-03": 0.2569832402234637
+        },
+        "allocated_units": 441,
+        "unmet_units": 617,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 126,
+          "water_packs": 172,
+          "shelter_kits": 76,
+          "nutrition_packs": 67
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.4623438399219188,
+        "min_zone_coverage": 0.2554347826086957,
+        "jain_fairness": 0.7393137924341416,
+        "unmet_high_urgency": 347
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-13",
+      "snapshot_hash": "2838854c7e0526981b98d19bcdea840a8a66cc3401008e6029d3e4c335cf99dd",
+      "seed": 13,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07539999205619097,
+      "metrics": {
+        "unit_coverage": 0.33932273669661367,
+        "coverage_by_resource": {
+          "medical_kits": 0.4156378600823045,
+          "water_packs": 0.35992217898832685,
+          "shelter_kits": 0.291866028708134,
+          "nutrition_packs": 0.2993762993762994
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.47572815533980584,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 491,
+        "unmet_units": 956,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 101,
+          "water_packs": 185,
+          "shelter_kits": 61,
+          "nutrition_packs": 144
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.26136663464069537,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.35517294388931586,
+        "unmet_high_urgency": 711
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-13",
+      "snapshot_hash": "2838854c7e0526981b98d19bcdea840a8a66cc3401008e6029d3e4c335cf99dd",
+      "seed": 13,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07479998748749495,
+      "metrics": {
+        "unit_coverage": 0.33932273669661367,
+        "coverage_by_resource": {
+          "medical_kits": 0.4156378600823045,
+          "water_packs": 0.35992217898832685,
+          "shelter_kits": 0.291866028708134,
+          "nutrition_packs": 0.2993762993762994
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 0.7162162162162162,
+          "zone-02": 0.08414239482200647,
+          "zone-01": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 491,
+        "unmet_units": 956,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 101,
+          "water_packs": 185,
+          "shelter_kits": 61,
+          "nutrition_packs": 144
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.4566998780676859,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.42647287751519325,
+        "unmet_high_urgency": 367
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-13",
+      "snapshot_hash": "2838854c7e0526981b98d19bcdea840a8a66cc3401008e6029d3e4c335cf99dd",
+      "seed": 13,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 4.699499986600131,
+      "metrics": {
+        "unit_coverage": 0.33932273669661367,
+        "coverage_by_resource": {
+          "medical_kits": 0.4156378600823045,
+          "water_packs": 0.35992217898832685,
+          "shelter_kits": 0.291866028708134,
+          "nutrition_packs": 0.2993762993762994
+        },
+        "coverage_by_zone": {
+          "zone-05": 1.0,
+          "zone-04": 0.7162162162162162,
+          "zone-02": 0.08414239482200647,
+          "zone-01": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 491,
+        "unmet_units": 956,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 101,
+          "water_packs": 185,
+          "shelter_kits": 61,
+          "nutrition_packs": 144
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.4566998780676859,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.42647287751519325,
+        "unmet_high_urgency": 367
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-13",
+      "snapshot_hash": "2838854c7e0526981b98d19bcdea840a8a66cc3401008e6029d3e4c335cf99dd",
+      "seed": 13,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 7.980099995620549,
+      "metrics": {
+        "unit_coverage": 0.33932273669661367,
+        "coverage_by_resource": {
+          "medical_kits": 0.4156378600823045,
+          "water_packs": 0.35992217898832685,
+          "shelter_kits": 0.291866028708134,
+          "nutrition_packs": 0.2993762993762994
+        },
+        "coverage_by_zone": {
+          "zone-05": 0.7233201581027668,
+          "zone-04": 0.27364864864864863,
+          "zone-02": 0.2524271844660194,
+          "zone-01": 0.25290697674418605,
+          "zone-03": 0.2530612244897959
+        },
+        "allocated_units": 491,
+        "unmet_units": 956,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 101,
+          "water_packs": 185,
+          "shelter_kits": 61,
+          "nutrition_packs": 144
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.3763115643999056,
+        "min_zone_coverage": 0.2524271844660194,
+        "jain_fairness": 0.7802772847255307,
+        "unmet_high_urgency": 516
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-14",
+      "snapshot_hash": "662e05e80ae373719e80c123413cf00307c54b769965d5d26f000b761988f695",
+      "seed": 14,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.0420999713242054,
+      "metrics": {
+        "unit_coverage": 0.36403508771929827,
+        "coverage_by_resource": {
+          "medical_kits": 0.41125541125541126,
+          "water_packs": 0.26666666666666666,
+          "shelter_kits": 0.3333333333333333
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.44919786096256686,
+          "zone-03": 0.0
+        },
+        "allocated_units": 166,
+        "unmet_units": 290,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 16,
+          "shelter_kits": 55
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6141745019527998,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5825183422565934,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-14",
+      "snapshot_hash": "662e05e80ae373719e80c123413cf00307c54b769965d5d26f000b761988f695",
+      "seed": 14,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04380004247650504,
+      "metrics": {
+        "unit_coverage": 0.36403508771929827,
+        "coverage_by_resource": {
+          "medical_kits": 0.41125541125541126,
+          "water_packs": 0.26666666666666666,
+          "shelter_kits": 0.3333333333333333
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.44919786096256686,
+          "zone-03": 0.0
+        },
+        "allocated_units": 166,
+        "unmet_units": 290,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 16,
+          "shelter_kits": 55
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6141745019527998,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5825183422565934,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-14",
+      "snapshot_hash": "662e05e80ae373719e80c123413cf00307c54b769965d5d26f000b761988f695",
+      "seed": 14,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 4.7419999609701335,
+      "metrics": {
+        "unit_coverage": 0.36403508771929827,
+        "coverage_by_resource": {
+          "medical_kits": 0.41125541125541126,
+          "water_packs": 0.26666666666666666,
+          "shelter_kits": 0.3333333333333333
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.44919786096256686,
+          "zone-03": 0.0
+        },
+        "allocated_units": 166,
+        "unmet_units": 290,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 16,
+          "shelter_kits": 55
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.6141745019527998,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.5825183422565934,
+        "unmet_high_urgency": 0
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-14",
+      "snapshot_hash": "662e05e80ae373719e80c123413cf00307c54b769965d5d26f000b761988f695",
+      "seed": 14,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 8.136599964927882,
+      "metrics": {
+        "unit_coverage": 0.36403508771929827,
+        "coverage_by_resource": {
+          "medical_kits": 0.41125541125541126,
+          "water_packs": 0.26666666666666666,
+          "shelter_kits": 0.3333333333333333
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.7073170731707317,
+          "zone-02": 0.3155080213903743,
+          "zone-03": 0.2620320855614973
+        },
+        "allocated_units": 166,
+        "unmet_units": 290,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 95,
+          "water_packs": 16,
+          "shelter_kits": 55
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.47156433719834234,
+        "min_zone_coverage": 0.2620320855614973,
+        "jain_fairness": 0.823160889364452,
+        "unmet_high_urgency": 24
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-15",
+      "snapshot_hash": "5b23b060ce06f51c81b6f4265232fb2162b933c1d0b73ad745a66540d2602a8f",
+      "seed": 15,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04799995804205537,
+      "metrics": {
+        "unit_coverage": 0.4188679245283019,
+        "coverage_by_resource": {
+          "medical_kits": 0.48058252427184467,
+          "water_packs": 0.4067796610169492,
+          "shelter_kits": 0.3469387755102041
+        },
+        "coverage_by_zone": {
+          "zone-01": 1.0,
+          "zone-02": 0.9596774193548387,
+          "zone-03": 0.32057416267942584,
+          "zone-04": 0.0
+        },
+        "allocated_units": 222,
+        "unmet_units": 308,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 99,
+          "water_packs": 72,
+          "shelter_kits": 51
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.29258864058182826,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.6423163706975695,
+        "unmet_high_urgency": 303
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-15",
+      "snapshot_hash": "5b23b060ce06f51c81b6f4265232fb2162b933c1d0b73ad745a66540d2602a8f",
+      "seed": 15,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.048600020818412304,
+      "metrics": {
+        "unit_coverage": 0.4188679245283019,
+        "coverage_by_resource": {
+          "medical_kits": 0.48058252427184467,
+          "water_packs": 0.4067796610169492,
+          "shelter_kits": 0.3469387755102041
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 0.291866028708134,
+          "zone-01": 0.0,
+          "zone-02": 0.0
+        },
+        "allocated_units": 222,
+        "unmet_units": 308,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 99,
+          "water_packs": 72,
+          "shelter_kits": 51
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5270202682938613,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.38447744820893637,
+        "unmet_high_urgency": 184
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-15",
+      "snapshot_hash": "5b23b060ce06f51c81b6f4265232fb2162b933c1d0b73ad745a66540d2602a8f",
+      "seed": 15,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 5.399199959356338,
+      "metrics": {
+        "unit_coverage": 0.4188679245283019,
+        "coverage_by_resource": {
+          "medical_kits": 0.48058252427184467,
+          "water_packs": 0.4067796610169492,
+          "shelter_kits": 0.3469387755102041
+        },
+        "coverage_by_zone": {
+          "zone-04": 1.0,
+          "zone-03": 0.291866028708134,
+          "zone-01": 0.0,
+          "zone-02": 0.0
+        },
+        "allocated_units": 222,
+        "unmet_units": 308,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 99,
+          "water_packs": 72,
+          "shelter_kits": 51
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.5270202682938612,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": 0.38447744820893637,
+        "unmet_high_urgency": 184
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-severe-15",
+      "snapshot_hash": "5b23b060ce06f51c81b6f4265232fb2162b933c1d0b73ad745a66540d2602a8f",
+      "seed": 15,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 6.195099966134876,
+      "metrics": {
+        "unit_coverage": 0.4188679245283019,
+        "coverage_by_resource": {
+          "medical_kits": 0.48058252427184467,
+          "water_packs": 0.4067796610169492,
+          "shelter_kits": 0.3469387755102041
+        },
+        "coverage_by_zone": {
+          "zone-04": 0.7515527950310559,
+          "zone-03": 0.2822966507177033,
+          "zone-01": 0.2777777777777778,
+          "zone-02": 0.25806451612903225
+        },
+        "allocated_units": 222,
+        "unmet_units": 308,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 99,
+          "water_packs": 72,
+          "shelter_kits": 51
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": 1.0,
+        "urgency_weighted_coverage": 0.46474535248193577,
+        "min_zone_coverage": 0.25806451612903225,
+        "jain_fairness": 0.7814259162334839,
+        "unmet_high_urgency": 216
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-11",
+      "snapshot_hash": "4a59051cf811331c4d0cd2cafc8216c87ca312386bd1851d5532701de154cee8",
+      "seed": 11,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.08269998943433166,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0,
+          "zone-06": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1121,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 183
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-11",
+      "snapshot_hash": "4a59051cf811331c4d0cd2cafc8216c87ca312386bd1851d5532701de154cee8",
+      "seed": 11,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.08760002674534917,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-01": 0.0,
+          "zone-06": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1121,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 183
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-11",
+      "snapshot_hash": "4a59051cf811331c4d0cd2cafc8216c87ca312386bd1851d5532701de154cee8",
+      "seed": 11,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.2664999812841415,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-01": 0.0,
+          "zone-06": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1121,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 183
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-11",
+      "snapshot_hash": "4a59051cf811331c4d0cd2cafc8216c87ca312386bd1851d5532701de154cee8",
+      "seed": 11,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.400000008288771,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-01": 0.0,
+          "zone-06": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1121,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 183
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-12",
+      "snapshot_hash": "52920779442dc5b7f5433391adef75791cd3177b486ab719202c74987579edda",
+      "seed": 12,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07619999814778566,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0,
+          "zone-06": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1058,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 695
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-12",
+      "snapshot_hash": "52920779442dc5b7f5433391adef75791cd3177b486ab719202c74987579edda",
+      "seed": 12,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.07390003884211183,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0,
+          "zone-06": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1058,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 695
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-12",
+      "snapshot_hash": "52920779442dc5b7f5433391adef75791cd3177b486ab719202c74987579edda",
+      "seed": 12,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.1220999876968563,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0,
+          "zone-06": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1058,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 695
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-12",
+      "snapshot_hash": "52920779442dc5b7f5433391adef75791cd3177b486ab719202c74987579edda",
+      "seed": 12,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 2.355300006456673,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0,
+          "zone-06": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1058,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 695
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-13",
+      "snapshot_hash": "69149ae1473ecb65d73581649229ec81457e8315c3ad9683b8a04cd9828fbea5",
+      "seed": 13,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06340001709759235,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0,
+          "zone-05": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1447,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 858
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-13",
+      "snapshot_hash": "69149ae1473ecb65d73581649229ec81457e8315c3ad9683b8a04cd9828fbea5",
+      "seed": 13,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.06629998097196221,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-05": 0.0,
+          "zone-04": 0.0,
+          "zone-02": 0.0,
+          "zone-01": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1447,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 858
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-13",
+      "snapshot_hash": "69149ae1473ecb65d73581649229ec81457e8315c3ad9683b8a04cd9828fbea5",
+      "seed": 13,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.1451999889686704,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-05": 0.0,
+          "zone-04": 0.0,
+          "zone-02": 0.0,
+          "zone-01": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1447,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 858
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-13",
+      "snapshot_hash": "69149ae1473ecb65d73581649229ec81457e8315c3ad9683b8a04cd9828fbea5",
+      "seed": 13,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.422200002707541,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0,
+          "nutrition_packs": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-05": 0.0,
+          "zone-04": 0.0,
+          "zone-02": 0.0,
+          "zone-01": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 1447,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0,
+          "nutrition_packs": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 858
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-14",
+      "snapshot_hash": "f99199b5493526c317366f21adecbafa6fb62ff014966dee45049ee3f52a28f3",
+      "seed": 14,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.037699996028095484,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 456,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 82
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-14",
+      "snapshot_hash": "f99199b5493526c317366f21adecbafa6fb62ff014966dee45049ee3f52a28f3",
+      "seed": 14,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.03809999907389283,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 456,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 82
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-14",
+      "snapshot_hash": "f99199b5493526c317366f21adecbafa6fb62ff014966dee45049ee3f52a28f3",
+      "seed": 14,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.3777000131085515,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 456,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 82
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-14",
+      "snapshot_hash": "f99199b5493526c317366f21adecbafa6fb62ff014966dee45049ee3f52a28f3",
+      "seed": 14,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.8969000084325671,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 456,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 82
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-15",
+      "snapshot_hash": "c030426ee1530d9f4e1e359d82dd89532213270c4bc70bf2ad3eb90a8be36f3c",
+      "seed": 15,
+      "policy_id": "fcfs",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.0447999918833375,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-01": 0.0,
+          "zone-02": 0.0,
+          "zone-03": 0.0,
+          "zone-04": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 530,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 406
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-15",
+      "snapshot_hash": "c030426ee1530d9f4e1e359d82dd89532213270c4bc70bf2ad3eb90a8be36f3c",
+      "seed": 15,
+      "policy_id": "greedy",
+      "status": "COMPLETE",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 0.04700000863522291,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-04": 0.0,
+          "zone-03": 0.0,
+          "zone-01": 0.0,
+          "zone-02": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 530,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 406
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-15",
+      "snapshot_hash": "c030426ee1530d9f4e1e359d82dd89532213270c4bc70bf2ad3eb90a8be36f3c",
+      "seed": 15,
+      "policy_id": "aidos",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.0179000091739,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-04": 0.0,
+          "zone-03": 0.0,
+          "zone-01": 0.0,
+          "zone-02": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 530,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 406
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    },
+    {
+      "scenario_id": "gen-zero-15",
+      "snapshot_hash": "c030426ee1530d9f4e1e359d82dd89532213270c4bc70bf2ad3eb90a8be36f3c",
+      "seed": 15,
+      "policy_id": "aidos_balanced",
+      "status": "OPTIMAL",
+      "has_plan": true,
+      "valid": true,
+      "violations": 0,
+      "runtime_ms": 1.3136999914422631,
+      "metrics": {
+        "unit_coverage": 0.0,
+        "coverage_by_resource": {
+          "medical_kits": 0.0,
+          "water_packs": 0.0,
+          "shelter_kits": 0.0
+        },
+        "coverage_by_zone": {
+          "zone-04": 0.0,
+          "zone-03": 0.0,
+          "zone-01": 0.0,
+          "zone-02": 0.0
+        },
+        "allocated_units": 0,
+        "unmet_units": 530,
+        "feasibility_violations": 0,
+        "allocated_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "remaining_by_resource": {
+          "medical_kits": 0,
+          "water_packs": 0,
+          "shelter_kits": 0
+        },
+        "stock_utilization": null,
+        "urgency_weighted_coverage": 0.0,
+        "min_zone_coverage": 0.0,
+        "jain_fairness": null,
+        "unmet_high_urgency": 406
+      },
+      "config": {
+        "epsilon": 1.0,
+        "resource_weights": {},
+        "min_coverage": 0.25,
+        "time_limit_s": 5.0,
+        "random_seed": 0,
+        "workers": 1
+      },
+      "engine_version": "0.2.0",
+      "fuzzy_version": "1.0",
+      "ortools_version": "9.15.6755"
+    }
+  ]
+}

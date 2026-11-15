@@ -1,0 +1,151 @@
+/*
+ * AidOS design tokens. One dark world shared by the landing page and the dashboard.
+ * Semantic colour: teal = stock / available, amber = shortfall / caution,
+ * red = critical only. Colour never carries meaning on its own; text does too.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Ground and surfaces (night navy) */
+  --ink-950: #04070d;
+  --ink-900: #070d18;
+  --ink-850: #091120;
+  --ink-800: #0c1626;
+  --ink-750: #101c2f;
+  --ink-700: #15243a;
+  --ink-600: #1d304b;
+
+  /* Horizon tones used by the landing atmosphere */
+  --sky-top: #071324;
+  --sky-mid: #0d2543;
+  --sky-horizon: #173f66;
+  /* Story stage (landing): the sky band behind the 3D network and its fog. */
+  --stage-horizon: #143a5f;
+  --scene-fog: #0c2138; /* also the WebGL fog colour in NetworkScene.tsx */
+  --stage-floor: #060c17;
+  --ground-deep: #050b14; /* hero ground below the ridge */
+  /* Surface of the dashboard preview window that rises out of the hero. */
+  --surface-window: rgba(7, 13, 24, 0.95);
+
+  /* Lines */
+  --line: rgba(170, 205, 245, 0.1);
+  --line-strong: rgba(170, 205, 245, 0.18);
+  --line-focus: #7fe3dc;
+
+  /* Text */
+  --text: #e8eef7;
+  --text-2: #b4c2d4;
+  --text-3: #8b9cb4;
+  --text-inverse: #07101c;
+
+  /* Signal */
+  --teal: #3fd0c9;
+  --teal-strong: #23b2ab;
+  --teal-soft: rgba(63, 208, 201, 0.14);
+  --teal-text: #8ff0e9; /* teal for text and links on dark grounds */
+  --amber: #f5b042;
+  --amber-text: #f8c46f;
+  --amber-soft: rgba(245, 176, 66, 0.13);
+  --red: #f0626a;
+  --red-text: #ff8a90;
+  --red-soft: rgba(240, 98, 106, 0.14);
+  --blue: #6fb6ff;
+  --violet: #b49cff;
+  --green: #9bd77a;
+  --slate: #50678a;
+
+  /* Resource identity (always paired with a text label) */
+  --res-medical: var(--blue);
+  --res-water: var(--teal);
+  --res-shelter: var(--violet);
+  --res-nutrition: var(--green);
+
+  /* Type */
+  --font-sans: 'Mona Sans Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'Cascadia Mono', monospace;
+
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-17: 1.0625rem;
+  --fs-19: 1.1875rem;
+  --fs-22: 1.375rem;
+  --fs-28: 1.75rem;
+  --fs-display-2: clamp(2rem, 1.2rem + 2.6vw, 3rem);
+  --fs-display-1: clamp(2.5rem, 1.1rem + 4.4vw, 4.6rem);
+
+  /* Space (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-28: 112px;
+
+  /* Shape and depth */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  --shadow-raised: 0 18px 50px -20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-window: 0 -24px 80px -10px rgba(0, 0, 0, 0.55);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 700ms;
+
+  /* Layout */
+  --container: 1200px;
+  /* Reading measure for body copy: Mona Sans is narrow, so 62ch renders about 75-80 characters. */
+  --measure: 62ch;
+  --gutter: clamp(16px, 4vw, 40px);
+}
+
+/*
+ * Mission-control palette for the dashboard (and the landing page's picture of it).
+ * Near-black rather than navy; hierarchy comes from surface steps, not brighter borders.
+ * Contrast (WCAG, computed): text-2 8.1:1 and text-3 5.1:1 on panels; text-3 4.6:1 on raised.
+ */
+.dash-palette {
+  --ink-950: #05070a;
+  --ink-900: #0b1017; /* sidebar */
+  --ink-850: #080b10; /* application ground */
+  --ink-800: #111821; /* panels, tiles */
+  --ink-750: #141c26; /* hover */
+  --ink-700: #17212c; /* raised: active nav, tray */
+  --ink-600: #212c39; /* checked tab, scrollbar */
+
+  --line: #1d2631;
+  --line-strong: #2a3542;
+  --line-focus: #7fdcd5;
+
+  --text: #eaf0f4;
+  --text-2: #a2b0c0;
+  --text-3: #7d8a9b;
+
+  --teal: #43c9c1;
+  --teal-strong: #2fb0a8;
+  --teal-soft: rgba(67, 201, 193, 0.12);
+  --amber: #e9a84a;
+  --amber-text: #edb866;
+  --amber-soft: rgba(233, 168, 74, 0.12);
+  --red: #e66b70;
+  --red-text: #f08e92;
+  --red-soft: rgba(230, 107, 112, 0.13);
+  --slate: #556578;
+
+  --surface-lift: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --radius-panel: 14px;
+}

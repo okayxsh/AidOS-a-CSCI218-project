@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "apps/web/src/**"
+        ],
+        "createdAt": "2026-11-10T16:52:32.670Z",
+        "reason": "Pinned by the user's reference image (sans headline with italic serif accent) and their written direction asking for an elegant italic serif accent"
+      }
+    ]
+  }
+}

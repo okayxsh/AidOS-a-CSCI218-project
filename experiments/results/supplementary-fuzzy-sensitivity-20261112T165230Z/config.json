@@ -1,0 +1,743 @@
+{
+  "variants": {
+    "P0 production": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P1 shift-down": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            1,
+            4
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            1,
+            4,
+            7
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            4,
+            7,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P2 shift-up": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            3,
+            6
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            3,
+            6,
+            9
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            6,
+            9,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P3 narrow-medium": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            3,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            3,
+            5,
+            7
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            7,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P4 wide-medium": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            1,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            1,
+            5,
+            9
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            9,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P5 outputs-spread": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 0,
+        "moderate": 33.3333,
+        "high": 66.6667,
+        "critical": 100
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P6 outputs-narrow": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 20,
+        "moderate": 40,
+        "high": 60,
+        "critical": 80
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P7 no-vulnerability": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "low",
+        "R04": "low",
+        "R05": "low",
+        "R06": "low",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "moderate",
+        "R10": "low",
+        "R11": "low",
+        "R12": "low",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "moderate",
+        "R16": "high",
+        "R17": "high",
+        "R18": "high",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "moderate",
+        "R22": "high",
+        "R23": "high",
+        "R24": "high",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P8 vulnerability-medium": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "moderate",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "moderate",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "high",
+        "R09": "high",
+        "R10": "low",
+        "R11": "moderate",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "high",
+        "R15": "high",
+        "R16": "high",
+        "R17": "critical",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "high",
+        "R21": "high",
+        "R22": "high",
+        "R23": "critical",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P9 lenient-rules": {
+      "tnorm": "product",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "moderate",
+        "R05": "moderate",
+        "R06": "high",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "moderate",
+        "R11": "moderate",
+        "R12": "high",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    },
+    "P10 min-tnorm": {
+      "tnorm": "min",
+      "inputs": {
+        "low": {
+          "shape": "trapezoid",
+          "points": [
+            0,
+            0,
+            2,
+            5
+          ]
+        },
+        "medium": {
+          "shape": "triangle",
+          "points": [
+            2,
+            5,
+            8
+          ]
+        },
+        "high": {
+          "shape": "trapezoid",
+          "points": [
+            5,
+            8,
+            10,
+            10
+          ]
+        }
+      },
+      "outputs": {
+        "low": 12.5,
+        "moderate": 37.5,
+        "high": 62.5,
+        "critical": 87.5
+      },
+      "rules": {
+        "R01": "low",
+        "R02": "low",
+        "R03": "moderate",
+        "R04": "low",
+        "R05": "low",
+        "R06": "moderate",
+        "R07": "moderate",
+        "R08": "moderate",
+        "R09": "high",
+        "R10": "low",
+        "R11": "low",
+        "R12": "moderate",
+        "R13": "moderate",
+        "R14": "moderate",
+        "R15": "high",
+        "R16": "high",
+        "R17": "high",
+        "R18": "critical",
+        "R19": "moderate",
+        "R20": "moderate",
+        "R21": "high",
+        "R22": "high",
+        "R23": "high",
+        "R24": "critical",
+        "R25": "critical",
+        "R26": "critical",
+        "R27": "critical"
+      }
+    }
+  },
+  "indices": [
+    1000,
+    1039
+  ],
+  "families": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+  ]
+}

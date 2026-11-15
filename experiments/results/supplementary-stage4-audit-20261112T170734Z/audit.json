@@ -1,0 +1,110 @@
+{
+  "run": "extended-20261112T100136Z",
+  "checks": [
+    {
+      "check": "504 scenarios x 4 policies",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "72 scenarios per family",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "seeds are seed_base + 0..71 per family",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unit_coverage = allocated / requested",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "starved_share = starved / zones with demand",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "all metric values in [0, 1] where fractions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "policy means match summary.json",
+      "ok": true,
+      "detail": "max abs diff 0.00e+00"
+    },
+    {
+      "check": "paired AidOS-FCFS unit_coverage: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS urgency_weighted_coverage: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS critical_coverage: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS min_zone_coverage: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS starved_zones: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS starved_share: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS coverage_gap: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "paired AidOS-FCFS jain_fairness: n, mean, d_z, CI contains mean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "sign tests and Holm match",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "AidOS plan == greedy plan in all 504",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dynamic comparisons use 60 script means",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "failures.json empty and manifest says complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "docs/evaluation/figures are byte-identical to the run's figures",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "results-tables.md is generated from this run",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

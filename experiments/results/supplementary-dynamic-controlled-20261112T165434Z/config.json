@@ -1,0 +1,27 @@
+{
+  "levels": {
+    "low": [
+      0,
+      3
+    ],
+    "moderate": [
+      4,
+      6
+    ],
+    "high": [
+      7,
+      10
+    ],
+    "random": [
+      0,
+      10
+    ]
+  },
+  "initial_zones": [
+    3,
+    5,
+    8
+  ],
+  "seeds_per_cell": 10,
+  "seed_base": 1100000
+}

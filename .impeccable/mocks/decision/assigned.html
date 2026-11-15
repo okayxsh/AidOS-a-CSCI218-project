@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Status Rack sketch</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;background:#15212e;color:#eef1f4;font-family:"Barlow","Arial Narrow",Arial,sans-serif;overflow:hidden;position:relative}
+.rails{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.06) 119px 120px)}
+nav{position:relative;height:64px;display:flex;align-items:center;gap:28px;padding:0 48px;border-bottom:1px solid rgba(255,255,255,.12)}
+.mark{font:700 26px "Barlow Condensed",sans-serif;letter-spacing:.02em}
+.tab{font:600 15px "Barlow Condensed";text-transform:uppercase;letter-spacing:.08em;color:#b8c4cf}
+.cta{margin-left:auto;background:#1fa3a0;color:#08201f;font:700 16px "Barlow Condensed";padding:12px 20px;text-transform:uppercase;letter-spacing:.06em}
+.hero{position:relative;padding:56px 48px 0;width:960px}
+.stamp{display:inline-block;border:1.5px solid #e2a63b;color:#e2a63b;font:600 13px "Barlow Condensed";letter-spacing:.14em;padding:5px 10px;text-transform:uppercase}
+h1{font:700 96px/0.95 "Barlow Condensed",sans-serif;margin:22px 0 22px;letter-spacing:-.01em}
+p{font-size:21px;line-height:1.45;color:#c9d3dc;width:640px}
+.btns{display:flex;gap:14px;margin-top:28px}.b1{background:#1fa3a0;color:#08201f;padding:16px 26px;font:700 18px "Barlow Condensed";text-transform:uppercase}.b2{border:1.5px solid #8fa1b1;padding:15px 24px;font:600 18px "Barlow Condensed";text-transform:uppercase}
+.rack{position:absolute;left:48px;right:48px;top:600px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.col{background:#1d2b3a;border-top:6px solid #2c3f52;padding:12px}
+.col h3{font:700 18px "Barlow Condensed";text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.card{position:relative;background:#eef1f4;color:#121a24;height:62px;margin-top:22px;padding:8px 12px;font:600 22px "Barlow";display:flex;justify-content:space-between;align-items:end}
+.card::before{content:attr(data-r);position:absolute;top:-18px;left:0;width:46%;height:18px;background:inherit;font:700 11px "Barlow Condensed";letter-spacing:.1em;text-transform:uppercase;padding:3px 8px}
+.m{background:#cfe8e6}.w{background:#d3e2f2}.s{background:#ece0c8}
+.short{border-left:6px solid #e2a63b}
+</style></head><body><div class="rails"></div>
+<nav><span class="mark">AidOS</span><span class="tab">How it works</span><span class="tab">Features</span><span class="tab">Technology</span><span class="tab">About</span><span class="cta">Launch Dashboard</span></nav>
+<section class="hero"><span class="stamp">CSCI218 academic prototype · synthetic scenarios</span>
+<h1>When every resource matters, every decision counts.</h1>
+<p>AidOS is an explainable simulator for splitting scarce relief supplies between crisis zones, unit by unit, under hard stock limits.</p>
+<div class="btns"><span class="b1">Launch Dashboard</span><span class="b2">Explore how it works</span></div></section>
+<div class="rack">
+<div class="col"><h3>Depot stock</h3><div class="card m" data-r="Medical">90<small>kits</small></div><div class="card w" data-r="Water">180<small>packs</small></div></div>
+<div class="col"><h3>Zone A · req.</h3><div class="card m short" data-r="Medical">75</div><div class="card w" data-r="Water">100</div></div>
+<div class="col"><h3>Zone B · req.</h3><div class="card m short" data-r="Medical">45</div><div class="card w" data-r="Water">130</div></div>
+<div class="col"><h3>Zone C · req.</h3><div class="card m short" data-r="Medical">30</div><div class="card w" data-r="Water">60</div></div>
+</div></body></html>

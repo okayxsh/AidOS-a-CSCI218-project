@@ -1,0 +1,49 @@
+[project]
+name = "aidos-api"
+version = "0.4.0"
+description = "AidOS backend: FastAPI adapter over the fuzzy urgency, CP-SAT allocation and crisis-simulation engine (CSCI218 academic prototype)."
+readme = "../../README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "fastapi>=0.162.3",
+    "numpy>=2.4.6",
+    "ortools>=9.15.6755",
+    "pydantic>=2.14.3",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+analysis = [
+    "matplotlib>=3.11.2",
+]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
+
+# Not an installable package yet: uv manages the environment and lockfile only.
+# Revisit (add a build backend) if the engine needs to be installed elsewhere.
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+# Tests live at the repository root (see "AidOS project info.md" Section 8).
+testpaths = ["../../tests"]
+pythonpath = ["."]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = [".", "../../tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# Offline report/plot scripts build long Markdown and label strings; the engine stays at 100.
+"../../experiments/*.py" = ["E501"]
+# Report figure generators (docs/report/figures/src) hand-place SVG text; long literal lines are expected.
+"../../docs/report/figures/src/*.py" = ["E501", "B007"]
+"../../docs/report/source/*.py" = ["E501"]

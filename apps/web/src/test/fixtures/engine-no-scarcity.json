@@ -1,0 +1,1410 @@
+{
+  "compare": {
+    "scenario_id": "no-scarcity",
+    "snapshot_hash": "85b6091b229bcbc36d80acde93abd47b459b63013114ae60d3b17d2b84e81e76",
+    "engine_version": "0.2.0",
+    "fuzzy": {
+      "method": "sugeno-0-product-weighted-average",
+      "config_version": "1.0"
+    },
+    "urgency": [
+      {
+        "zone_id": "zone-a",
+        "active": true,
+        "score": 37.5,
+        "category": "moderate",
+        "inputs": {
+          "severity": 5.0,
+          "time_criticality": 5.0,
+          "vulnerability": 4.0
+        },
+        "normalized": {
+          "severity": 0.5,
+          "time_criticality": 0.5,
+          "vulnerability": 0.4
+        },
+        "memberships": {
+          "severity": {
+            "low": 0.0,
+            "medium": 1.0,
+            "high": 0.0
+          },
+          "time_criticality": {
+            "low": 0.0,
+            "medium": 1.0,
+            "high": 0.0
+          },
+          "vulnerability": {
+            "low": 0.3333333333333333,
+            "medium": 0.6666666666666666,
+            "high": 0.0
+          }
+        },
+        "activations": [
+          {
+            "rule_id": "R14",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is medium THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.6666666666666666,
+            "output": 37.5,
+            "contribution": 25.0
+          },
+          {
+            "rule_id": "R13",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is low THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.3333333333333333,
+            "output": 37.5,
+            "contribution": 12.5
+          }
+        ],
+        "term_support": {
+          "low": 0.0,
+          "moderate": 1.0,
+          "high": 0.0,
+          "critical": 0.0
+        },
+        "explanation": "Urgency 37.5 (moderate). Severity 5/10 is mostly medium (1.00); time criticality 5/10 is mostly medium (1.00); vulnerability 4/10 is mostly medium (0.67). 2 rules fired; the strongest, R14, fired at 0.67 and contributes 25.0 points."
+      },
+      {
+        "zone_id": "zone-b",
+        "active": true,
+        "score": 62.5,
+        "category": "high",
+        "inputs": {
+          "severity": 6.0,
+          "time_criticality": 4.0,
+          "vulnerability": 8.0
+        },
+        "normalized": {
+          "severity": 0.6,
+          "time_criticality": 0.4,
+          "vulnerability": 0.8
+        },
+        "memberships": {
+          "severity": {
+            "low": 0.0,
+            "medium": 0.6666666666666666,
+            "high": 0.3333333333333333
+          },
+          "time_criticality": {
+            "low": 0.3333333333333333,
+            "medium": 0.6666666666666666,
+            "high": 0.0
+          },
+          "vulnerability": {
+            "low": 0.0,
+            "medium": 0.0,
+            "high": 1.0
+          }
+        },
+        "activations": [
+          {
+            "rule_id": "R15",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is high THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.4444444444444444,
+            "output": 62.5,
+            "contribution": 27.77777777777778
+          },
+          {
+            "rule_id": "R12",
+            "text": "IF severity is medium AND time criticality is low AND vulnerability is high THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.2222222222222222,
+            "output": 37.5,
+            "contribution": 8.333333333333334
+          },
+          {
+            "rule_id": "R24",
+            "text": "IF severity is high AND time criticality is medium AND vulnerability is high THEN urgency is critical",
+            "consequent": "critical",
+            "strength": 0.2222222222222222,
+            "output": 87.5,
+            "contribution": 19.444444444444446
+          },
+          {
+            "rule_id": "R21",
+            "text": "IF severity is high AND time criticality is low AND vulnerability is high THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.1111111111111111,
+            "output": 62.5,
+            "contribution": 6.944444444444445
+          }
+        ],
+        "term_support": {
+          "low": 0.0,
+          "moderate": 0.22222222222222224,
+          "high": 0.5555555555555556,
+          "critical": 0.22222222222222224
+        },
+        "explanation": "Urgency 62.5 (high). Severity 6/10 is mostly medium (0.67); time criticality 4/10 is mostly medium (0.67); vulnerability 8/10 is mostly high (1.00). 4 rules fired; the strongest, R15, fired at 0.44 and contributes 27.8 points."
+      },
+      {
+        "zone_id": "zone-c",
+        "active": true,
+        "score": 37.5,
+        "category": "moderate",
+        "inputs": {
+          "severity": 4.0,
+          "time_criticality": 6.0,
+          "vulnerability": 3.0
+        },
+        "normalized": {
+          "severity": 0.4,
+          "time_criticality": 0.6,
+          "vulnerability": 0.3
+        },
+        "memberships": {
+          "severity": {
+            "low": 0.3333333333333333,
+            "medium": 0.6666666666666666,
+            "high": 0.0
+          },
+          "time_criticality": {
+            "low": 0.0,
+            "medium": 0.6666666666666666,
+            "high": 0.3333333333333333
+          },
+          "vulnerability": {
+            "low": 0.6666666666666666,
+            "medium": 0.3333333333333333,
+            "high": 0.0
+          }
+        },
+        "activations": [
+          {
+            "rule_id": "R13",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is low THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.2962962962962963,
+            "output": 37.5,
+            "contribution": 11.111111111111112
+          },
+          {
+            "rule_id": "R04",
+            "text": "IF severity is low AND time criticality is medium AND vulnerability is low THEN urgency is low",
+            "consequent": "low",
+            "strength": 0.14814814814814814,
+            "output": 12.5,
+            "contribution": 1.851851851851852
+          },
+          {
+            "rule_id": "R14",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is medium THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.14814814814814814,
+            "output": 37.5,
+            "contribution": 5.555555555555556
+          },
+          {
+            "rule_id": "R16",
+            "text": "IF severity is medium AND time criticality is high AND vulnerability is low THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.14814814814814814,
+            "output": 62.5,
+            "contribution": 9.259259259259261
+          },
+          {
+            "rule_id": "R05",
+            "text": "IF severity is low AND time criticality is medium AND vulnerability is medium THEN urgency is low",
+            "consequent": "low",
+            "strength": 0.07407407407407407,
+            "output": 12.5,
+            "contribution": 0.925925925925926
+          },
+          {
+            "rule_id": "R07",
+            "text": "IF severity is low AND time criticality is high AND vulnerability is low THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.07407407407407407,
+            "output": 37.5,
+            "contribution": 2.777777777777778
+          },
+          {
+            "rule_id": "R17",
+            "text": "IF severity is medium AND time criticality is high AND vulnerability is medium THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.07407407407407407,
+            "output": 62.5,
+            "contribution": 4.629629629629631
+          },
+          {
+            "rule_id": "R08",
+            "text": "IF severity is low AND time criticality is high AND vulnerability is medium THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.037037037037037035,
+            "output": 37.5,
+            "contribution": 1.388888888888889
+          }
+        ],
+        "term_support": {
+          "low": 0.22222222222222227,
+          "moderate": 0.5555555555555556,
+          "high": 0.22222222222222227,
+          "critical": 0.0
+        },
+        "explanation": "Urgency 37.5 (moderate). Severity 4/10 is mostly medium (0.67); time criticality 6/10 is mostly medium (0.67); vulnerability 3/10 is mostly low (0.67). 8 rules fired; the strongest, R13, fired at 0.30 and contributes 11.1 points."
+      }
+    ],
+    "urgency_ms": 0.2581999870017171,
+    "config": {
+      "epsilon": 1.0,
+      "resource_weights": {},
+      "min_coverage": 0.25,
+      "time_limit_s": 5.0,
+      "random_seed": 0,
+      "workers": 1
+    },
+    "results": [
+      {
+        "policy_id": "fcfs",
+        "label": "First come, first served",
+        "status": "COMPLETE",
+        "has_plan": true,
+        "message": "",
+        "zone_order": ["zone-a", "zone-b", "zone-c"],
+        "cells": [
+          {
+            "zone_id": "zone-a",
+            "resource_id": "medical_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "water_packs",
+            "requested": 90,
+            "allocated": 90,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "shelter_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "nutrition_packs",
+            "requested": 60,
+            "allocated": 60,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "medical_kits",
+            "requested": 30,
+            "allocated": 30,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "water_packs",
+            "requested": 70,
+            "allocated": 70,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "shelter_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "nutrition_packs",
+            "requested": 80,
+            "allocated": 80,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "medical_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "water_packs",
+            "requested": 110,
+            "allocated": 110,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "shelter_kits",
+            "requested": 20,
+            "allocated": 20,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "nutrition_packs",
+            "requested": 50,
+            "allocated": 50,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          }
+        ],
+        "metrics": {
+          "unit_coverage": 1.0,
+          "coverage_by_resource": {
+            "medical_kits": 1.0,
+            "water_packs": 1.0,
+            "shelter_kits": 1.0,
+            "nutrition_packs": 1.0
+          },
+          "coverage_by_zone": {
+            "zone-a": 1.0,
+            "zone-b": 1.0,
+            "zone-c": 1.0
+          },
+          "allocated_units": 640,
+          "unmet_units": 0,
+          "feasibility_violations": 0,
+          "allocated_by_resource": {
+            "medical_kits": 95,
+            "water_packs": 270,
+            "shelter_kits": 85,
+            "nutrition_packs": 190
+          },
+          "remaining_by_resource": {
+            "medical_kits": 105,
+            "water_packs": 130,
+            "shelter_kits": 65,
+            "nutrition_packs": 110
+          },
+          "stock_utilization": 0.6095238095238096,
+          "urgency_weighted_coverage": 1.0,
+          "min_zone_coverage": 1.0,
+          "jain_fairness": 1.0,
+          "unmet_high_urgency": 0
+        },
+        "validation": {
+          "applicable": true,
+          "valid": true,
+          "checks": [
+            {
+              "name": "integer",
+              "passed": true,
+              "hard": true,
+              "detail": "Every allocation is a whole number of units."
+            },
+            {
+              "name": "non_negative",
+              "passed": true,
+              "hard": true,
+              "detail": "No allocation is negative."
+            },
+            {
+              "name": "within_demand",
+              "passed": true,
+              "hard": true,
+              "detail": "No zone receives more than it requested."
+            },
+            {
+              "name": "within_stock",
+              "passed": true,
+              "hard": true,
+              "detail": "No resource is allocated beyond the depot's stock."
+            },
+            {
+              "name": "complete",
+              "passed": true,
+              "hard": true,
+              "detail": "One cell per active zone and resource, matching the scenario's requests."
+            },
+            {
+              "name": "no_idle_stock",
+              "passed": true,
+              "hard": false,
+              "detail": "No stock is left unused while a zone still needs it."
+            }
+          ],
+          "violations": []
+        },
+        "solver": null,
+        "runtime_ms": 0.049400026910007
+      },
+      {
+        "policy_id": "greedy",
+        "label": "Urgency greedy",
+        "status": "COMPLETE",
+        "has_plan": true,
+        "message": "",
+        "zone_order": ["zone-b", "zone-a", "zone-c"],
+        "cells": [
+          {
+            "zone_id": "zone-b",
+            "resource_id": "medical_kits",
+            "requested": 30,
+            "allocated": 30,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "water_packs",
+            "requested": 70,
+            "allocated": 70,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "shelter_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "nutrition_packs",
+            "requested": 80,
+            "allocated": 80,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "medical_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "water_packs",
+            "requested": 90,
+            "allocated": 90,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "shelter_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "nutrition_packs",
+            "requested": 60,
+            "allocated": 60,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "medical_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "water_packs",
+            "requested": 110,
+            "allocated": 110,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "shelter_kits",
+            "requested": 20,
+            "allocated": 20,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "nutrition_packs",
+            "requested": 50,
+            "allocated": 50,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          }
+        ],
+        "metrics": {
+          "unit_coverage": 1.0,
+          "coverage_by_resource": {
+            "medical_kits": 1.0,
+            "water_packs": 1.0,
+            "shelter_kits": 1.0,
+            "nutrition_packs": 1.0
+          },
+          "coverage_by_zone": {
+            "zone-b": 1.0,
+            "zone-a": 1.0,
+            "zone-c": 1.0
+          },
+          "allocated_units": 640,
+          "unmet_units": 0,
+          "feasibility_violations": 0,
+          "allocated_by_resource": {
+            "medical_kits": 95,
+            "water_packs": 270,
+            "shelter_kits": 85,
+            "nutrition_packs": 190
+          },
+          "remaining_by_resource": {
+            "medical_kits": 105,
+            "water_packs": 130,
+            "shelter_kits": 65,
+            "nutrition_packs": 110
+          },
+          "stock_utilization": 0.6095238095238096,
+          "urgency_weighted_coverage": 1.0,
+          "min_zone_coverage": 1.0,
+          "jain_fairness": 1.0,
+          "unmet_high_urgency": 0
+        },
+        "validation": {
+          "applicable": true,
+          "valid": true,
+          "checks": [
+            {
+              "name": "integer",
+              "passed": true,
+              "hard": true,
+              "detail": "Every allocation is a whole number of units."
+            },
+            {
+              "name": "non_negative",
+              "passed": true,
+              "hard": true,
+              "detail": "No allocation is negative."
+            },
+            {
+              "name": "within_demand",
+              "passed": true,
+              "hard": true,
+              "detail": "No zone receives more than it requested."
+            },
+            {
+              "name": "within_stock",
+              "passed": true,
+              "hard": true,
+              "detail": "No resource is allocated beyond the depot's stock."
+            },
+            {
+              "name": "complete",
+              "passed": true,
+              "hard": true,
+              "detail": "One cell per active zone and resource, matching the scenario's requests."
+            },
+            {
+              "name": "no_idle_stock",
+              "passed": true,
+              "hard": false,
+              "detail": "No stock is left unused while a zone still needs it."
+            }
+          ],
+          "violations": []
+        },
+        "solver": null,
+        "runtime_ms": 0.04409998655319214
+      },
+      {
+        "policy_id": "aidos",
+        "label": "AidOS (fuzzy + CP-SAT)",
+        "status": "OPTIMAL",
+        "has_plan": true,
+        "message": "",
+        "zone_order": ["zone-b", "zone-a", "zone-c"],
+        "cells": [
+          {
+            "zone_id": "zone-a",
+            "resource_id": "medical_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "water_packs",
+            "requested": 90,
+            "allocated": 90,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "shelter_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "nutrition_packs",
+            "requested": 60,
+            "allocated": 60,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "medical_kits",
+            "requested": 30,
+            "allocated": 30,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "water_packs",
+            "requested": 70,
+            "allocated": 70,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "shelter_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "nutrition_packs",
+            "requested": 80,
+            "allocated": 80,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "medical_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "water_packs",
+            "requested": 110,
+            "allocated": 110,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "shelter_kits",
+            "requested": 20,
+            "allocated": 20,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "nutrition_packs",
+            "requested": 50,
+            "allocated": 50,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          }
+        ],
+        "metrics": {
+          "unit_coverage": 1.0,
+          "coverage_by_resource": {
+            "medical_kits": 1.0,
+            "water_packs": 1.0,
+            "shelter_kits": 1.0,
+            "nutrition_packs": 1.0
+          },
+          "coverage_by_zone": {
+            "zone-b": 1.0,
+            "zone-a": 1.0,
+            "zone-c": 1.0
+          },
+          "allocated_units": 640,
+          "unmet_units": 0,
+          "feasibility_violations": 0,
+          "allocated_by_resource": {
+            "medical_kits": 95,
+            "water_packs": 270,
+            "shelter_kits": 85,
+            "nutrition_packs": 190
+          },
+          "remaining_by_resource": {
+            "medical_kits": 105,
+            "water_packs": 130,
+            "shelter_kits": 65,
+            "nutrition_packs": 110
+          },
+          "stock_utilization": 0.6095238095238096,
+          "urgency_weighted_coverage": 1.0,
+          "min_zone_coverage": 1.0,
+          "jain_fairness": 1.0,
+          "unmet_high_urgency": 0
+        },
+        "validation": {
+          "applicable": true,
+          "valid": true,
+          "checks": [
+            {
+              "name": "integer",
+              "passed": true,
+              "hard": true,
+              "detail": "Every allocation is a whole number of units."
+            },
+            {
+              "name": "non_negative",
+              "passed": true,
+              "hard": true,
+              "detail": "No allocation is negative."
+            },
+            {
+              "name": "within_demand",
+              "passed": true,
+              "hard": true,
+              "detail": "No zone receives more than it requested."
+            },
+            {
+              "name": "within_stock",
+              "passed": true,
+              "hard": true,
+              "detail": "No resource is allocated beyond the depot's stock."
+            },
+            {
+              "name": "complete",
+              "passed": true,
+              "hard": true,
+              "detail": "One cell per active zone and resource, matching the scenario's requests."
+            },
+            {
+              "name": "no_idle_stock",
+              "passed": true,
+              "hard": false,
+              "detail": "No stock is left unused while a zone still needs it."
+            }
+          ],
+          "violations": []
+        },
+        "solver": {
+          "engine": "OR-Tools CP-SAT",
+          "status": "OPTIMAL",
+          "objective": "urgency_first",
+          "objective_value": 301400000,
+          "objective_scale": 10000,
+          "phases": [
+            {
+              "name": "urgency",
+              "status": "OPTIMAL",
+              "objective_value": 301400000.0,
+              "best_bound": 301400000.0,
+              "wall_time_ms": 0.44550000000000006
+            },
+            {
+              "name": "tie_break",
+              "status": "OPTIMAL",
+              "objective_value": 1290.0,
+              "best_bound": 1290.0,
+              "wall_time_ms": 0.7434000000000001
+            }
+          ],
+          "variables": 12,
+          "constraints": 6,
+          "parameters": {
+            "max_time_in_seconds": 5.0,
+            "num_workers": 1,
+            "random_seed": 0
+          },
+          "coefficients": {
+            "zone-a": {
+              "medical_kits": 385000,
+              "water_packs": 385000,
+              "shelter_kits": 385000,
+              "nutrition_packs": 385000
+            },
+            "zone-b": {
+              "medical_kits": 635000,
+              "water_packs": 635000,
+              "shelter_kits": 635000,
+              "nutrition_packs": 635000
+            },
+            "zone-c": {
+              "medical_kits": 385000,
+              "water_packs": 385000,
+              "shelter_kits": 385000,
+              "nutrition_packs": 385000
+            }
+          },
+          "coverage_floor": {},
+          "message": ""
+        },
+        "runtime_ms": 2.7707000263035297
+      },
+      {
+        "policy_id": "aidos_balanced",
+        "label": "AidOS balanced (coverage floor)",
+        "status": "OPTIMAL",
+        "has_plan": true,
+        "message": "",
+        "zone_order": ["zone-b", "zone-a", "zone-c"],
+        "cells": [
+          {
+            "zone_id": "zone-a",
+            "resource_id": "medical_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "water_packs",
+            "requested": 90,
+            "allocated": 90,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "shelter_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-a",
+            "resource_id": "nutrition_packs",
+            "requested": 60,
+            "allocated": 60,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "medical_kits",
+            "requested": 30,
+            "allocated": 30,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "water_packs",
+            "requested": 70,
+            "allocated": 70,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "shelter_kits",
+            "requested": 40,
+            "allocated": 40,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-b",
+            "resource_id": "nutrition_packs",
+            "requested": 80,
+            "allocated": 80,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "medical_kits",
+            "requested": 25,
+            "allocated": 25,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "water_packs",
+            "requested": 110,
+            "allocated": 110,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "shelter_kits",
+            "requested": 20,
+            "allocated": 20,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          },
+          {
+            "zone_id": "zone-c",
+            "resource_id": "nutrition_packs",
+            "requested": 50,
+            "allocated": 50,
+            "unmet": 0,
+            "limit": "met",
+            "reason": "Request met in full."
+          }
+        ],
+        "metrics": {
+          "unit_coverage": 1.0,
+          "coverage_by_resource": {
+            "medical_kits": 1.0,
+            "water_packs": 1.0,
+            "shelter_kits": 1.0,
+            "nutrition_packs": 1.0
+          },
+          "coverage_by_zone": {
+            "zone-b": 1.0,
+            "zone-a": 1.0,
+            "zone-c": 1.0
+          },
+          "allocated_units": 640,
+          "unmet_units": 0,
+          "feasibility_violations": 0,
+          "allocated_by_resource": {
+            "medical_kits": 95,
+            "water_packs": 270,
+            "shelter_kits": 85,
+            "nutrition_packs": 190
+          },
+          "remaining_by_resource": {
+            "medical_kits": 105,
+            "water_packs": 130,
+            "shelter_kits": 65,
+            "nutrition_packs": 110
+          },
+          "stock_utilization": 0.6095238095238096,
+          "urgency_weighted_coverage": 1.0,
+          "min_zone_coverage": 1.0,
+          "jain_fairness": 1.0,
+          "unmet_high_urgency": 0
+        },
+        "validation": {
+          "applicable": true,
+          "valid": true,
+          "checks": [
+            {
+              "name": "integer",
+              "passed": true,
+              "hard": true,
+              "detail": "Every allocation is a whole number of units."
+            },
+            {
+              "name": "non_negative",
+              "passed": true,
+              "hard": true,
+              "detail": "No allocation is negative."
+            },
+            {
+              "name": "within_demand",
+              "passed": true,
+              "hard": true,
+              "detail": "No zone receives more than it requested."
+            },
+            {
+              "name": "within_stock",
+              "passed": true,
+              "hard": true,
+              "detail": "No resource is allocated beyond the depot's stock."
+            },
+            {
+              "name": "complete",
+              "passed": true,
+              "hard": true,
+              "detail": "One cell per active zone and resource, matching the scenario's requests."
+            },
+            {
+              "name": "no_idle_stock",
+              "passed": true,
+              "hard": false,
+              "detail": "No stock is left unused while a zone still needs it."
+            }
+          ],
+          "violations": []
+        },
+        "solver": {
+          "engine": "OR-Tools CP-SAT",
+          "status": "OPTIMAL",
+          "objective": "balanced",
+          "objective_value": 301400000,
+          "objective_scale": 10000,
+          "phases": [
+            {
+              "name": "coverage_floor",
+              "status": "OPTIMAL",
+              "objective_value": 1000.0,
+              "best_bound": 1000.0,
+              "wall_time_ms": 0.7745
+            },
+            {
+              "name": "urgency",
+              "status": "OPTIMAL",
+              "objective_value": 301400000.0,
+              "best_bound": 301400000.0,
+              "wall_time_ms": 1.0631
+            },
+            {
+              "name": "tie_break",
+              "status": "OPTIMAL",
+              "objective_value": 1290.0,
+              "best_bound": 1290.0,
+              "wall_time_ms": 0.8646
+            }
+          ],
+          "variables": 16,
+          "constraints": 19,
+          "parameters": {
+            "max_time_in_seconds": 5.0,
+            "num_workers": 1,
+            "random_seed": 0
+          },
+          "coefficients": {
+            "zone-a": {
+              "medical_kits": 385000,
+              "water_packs": 385000,
+              "shelter_kits": 385000,
+              "nutrition_packs": 385000
+            },
+            "zone-b": {
+              "medical_kits": 635000,
+              "water_packs": 635000,
+              "shelter_kits": 635000,
+              "nutrition_packs": 635000
+            },
+            "zone-c": {
+              "medical_kits": 385000,
+              "water_packs": 385000,
+              "shelter_kits": 385000,
+              "nutrition_packs": 385000
+            }
+          },
+          "coverage_floor": {
+            "medical_kits": 0.25,
+            "water_packs": 0.25,
+            "shelter_kits": 0.25,
+            "nutrition_packs": 0.25
+          },
+          "message": ""
+        },
+        "runtime_ms": 5.85529999807477
+      }
+    ]
+  },
+  "urgency": {
+    "method": "sugeno-0-product-weighted-average",
+    "config_version": "1.0",
+    "scenario_id": "no-scarcity",
+    "snapshot_hash": "85b6091b229bcbc36d80acde93abd47b459b63013114ae60d3b17d2b84e81e76",
+    "zones": [
+      {
+        "zone_id": "zone-a",
+        "active": true,
+        "score": 37.5,
+        "category": "moderate",
+        "inputs": {
+          "severity": 5.0,
+          "time_criticality": 5.0,
+          "vulnerability": 4.0
+        },
+        "normalized": {
+          "severity": 0.5,
+          "time_criticality": 0.5,
+          "vulnerability": 0.4
+        },
+        "memberships": {
+          "severity": {
+            "low": 0.0,
+            "medium": 1.0,
+            "high": 0.0
+          },
+          "time_criticality": {
+            "low": 0.0,
+            "medium": 1.0,
+            "high": 0.0
+          },
+          "vulnerability": {
+            "low": 0.3333333333333333,
+            "medium": 0.6666666666666666,
+            "high": 0.0
+          }
+        },
+        "activations": [
+          {
+            "rule_id": "R14",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is medium THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.6666666666666666,
+            "output": 37.5,
+            "contribution": 25.0
+          },
+          {
+            "rule_id": "R13",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is low THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.3333333333333333,
+            "output": 37.5,
+            "contribution": 12.5
+          }
+        ],
+        "term_support": {
+          "low": 0.0,
+          "moderate": 1.0,
+          "high": 0.0,
+          "critical": 0.0
+        },
+        "explanation": "Urgency 37.5 (moderate). Severity 5/10 is mostly medium (1.00); time criticality 5/10 is mostly medium (1.00); vulnerability 4/10 is mostly medium (0.67). 2 rules fired; the strongest, R14, fired at 0.67 and contributes 25.0 points."
+      },
+      {
+        "zone_id": "zone-b",
+        "active": true,
+        "score": 62.5,
+        "category": "high",
+        "inputs": {
+          "severity": 6.0,
+          "time_criticality": 4.0,
+          "vulnerability": 8.0
+        },
+        "normalized": {
+          "severity": 0.6,
+          "time_criticality": 0.4,
+          "vulnerability": 0.8
+        },
+        "memberships": {
+          "severity": {
+            "low": 0.0,
+            "medium": 0.6666666666666666,
+            "high": 0.3333333333333333
+          },
+          "time_criticality": {
+            "low": 0.3333333333333333,
+            "medium": 0.6666666666666666,
+            "high": 0.0
+          },
+          "vulnerability": {
+            "low": 0.0,
+            "medium": 0.0,
+            "high": 1.0
+          }
+        },
+        "activations": [
+          {
+            "rule_id": "R15",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is high THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.4444444444444444,
+            "output": 62.5,
+            "contribution": 27.77777777777778
+          },
+          {
+            "rule_id": "R12",
+            "text": "IF severity is medium AND time criticality is low AND vulnerability is high THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.2222222222222222,
+            "output": 37.5,
+            "contribution": 8.333333333333334
+          },
+          {
+            "rule_id": "R24",
+            "text": "IF severity is high AND time criticality is medium AND vulnerability is high THEN urgency is critical",
+            "consequent": "critical",
+            "strength": 0.2222222222222222,
+            "output": 87.5,
+            "contribution": 19.444444444444446
+          },
+          {
+            "rule_id": "R21",
+            "text": "IF severity is high AND time criticality is low AND vulnerability is high THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.1111111111111111,
+            "output": 62.5,
+            "contribution": 6.944444444444445
+          }
+        ],
+        "term_support": {
+          "low": 0.0,
+          "moderate": 0.22222222222222224,
+          "high": 0.5555555555555556,
+          "critical": 0.22222222222222224
+        },
+        "explanation": "Urgency 62.5 (high). Severity 6/10 is mostly medium (0.67); time criticality 4/10 is mostly medium (0.67); vulnerability 8/10 is mostly high (1.00). 4 rules fired; the strongest, R15, fired at 0.44 and contributes 27.8 points."
+      },
+      {
+        "zone_id": "zone-c",
+        "active": true,
+        "score": 37.5,
+        "category": "moderate",
+        "inputs": {
+          "severity": 4.0,
+          "time_criticality": 6.0,
+          "vulnerability": 3.0
+        },
+        "normalized": {
+          "severity": 0.4,
+          "time_criticality": 0.6,
+          "vulnerability": 0.3
+        },
+        "memberships": {
+          "severity": {
+            "low": 0.3333333333333333,
+            "medium": 0.6666666666666666,
+            "high": 0.0
+          },
+          "time_criticality": {
+            "low": 0.0,
+            "medium": 0.6666666666666666,
+            "high": 0.3333333333333333
+          },
+          "vulnerability": {
+            "low": 0.6666666666666666,
+            "medium": 0.3333333333333333,
+            "high": 0.0
+          }
+        },
+        "activations": [
+          {
+            "rule_id": "R13",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is low THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.2962962962962963,
+            "output": 37.5,
+            "contribution": 11.111111111111112
+          },
+          {
+            "rule_id": "R04",
+            "text": "IF severity is low AND time criticality is medium AND vulnerability is low THEN urgency is low",
+            "consequent": "low",
+            "strength": 0.14814814814814814,
+            "output": 12.5,
+            "contribution": 1.851851851851852
+          },
+          {
+            "rule_id": "R14",
+            "text": "IF severity is medium AND time criticality is medium AND vulnerability is medium THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.14814814814814814,
+            "output": 37.5,
+            "contribution": 5.555555555555556
+          },
+          {
+            "rule_id": "R16",
+            "text": "IF severity is medium AND time criticality is high AND vulnerability is low THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.14814814814814814,
+            "output": 62.5,
+            "contribution": 9.259259259259261
+          },
+          {
+            "rule_id": "R05",
+            "text": "IF severity is low AND time criticality is medium AND vulnerability is medium THEN urgency is low",
+            "consequent": "low",
+            "strength": 0.07407407407407407,
+            "output": 12.5,
+            "contribution": 0.925925925925926
+          },
+          {
+            "rule_id": "R07",
+            "text": "IF severity is low AND time criticality is high AND vulnerability is low THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.07407407407407407,
+            "output": 37.5,
+            "contribution": 2.777777777777778
+          },
+          {
+            "rule_id": "R17",
+            "text": "IF severity is medium AND time criticality is high AND vulnerability is medium THEN urgency is high",
+            "consequent": "high",
+            "strength": 0.07407407407407407,
+            "output": 62.5,
+            "contribution": 4.629629629629631
+          },
+          {
+            "rule_id": "R08",
+            "text": "IF severity is low AND time criticality is high AND vulnerability is medium THEN urgency is moderate",
+            "consequent": "moderate",
+            "strength": 0.037037037037037035,
+            "output": 37.5,
+            "contribution": 1.388888888888889
+          }
+        ],
+        "term_support": {
+          "low": 0.22222222222222227,
+          "moderate": 0.5555555555555556,
+          "high": 0.22222222222222227,
+          "critical": 0.0
+        },
+        "explanation": "Urgency 37.5 (moderate). Severity 4/10 is mostly medium (0.67); time criticality 6/10 is mostly medium (0.67); vulnerability 3/10 is mostly low (0.67). 8 rules fired; the strongest, R13, fired at 0.30 and contributes 11.1 points."
+      }
+    ]
+  }
+}

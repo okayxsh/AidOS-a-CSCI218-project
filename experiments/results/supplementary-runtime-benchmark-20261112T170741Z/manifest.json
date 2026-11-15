@@ -1,0 +1,31 @@
+{
+  "run_id": "supplementary-runtime-benchmark-20261112T170741Z",
+  "experiment": "runtime-benchmark",
+  "status": "complete",
+  "classification": "supplementary / exploratory (Stage 5); not the frozen Stage 4 benchmark",
+  "created_utc": "2026-11-12T17:07:41+00:00",
+  "finished_utc": "2026-11-12T17:09:13+00:00",
+  "counts": {
+    "timed_runs": 2100
+  },
+  "notes": "CPU load during run 1-15%. Supplements, and does not replace, the Stage 4 timings.",
+  "environment": {
+    "engine": "0.4.0",
+    "fuzzy_config": "1.0",
+    "ortools": "9.15.6755",
+    "numpy": "2.4.6",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpus": 16,
+    "source_revision": "HEAD"
+  },
+  "files": {
+    "config.json": "410baab86e8aa2c26258a0e83934ca4843e4deffeb4364ed49e4bf1b48371b5f",
+    "cpu_load.csv": "66decddb60fd89a58ca26f7d60332923454411fd9f09a1927e80c1b84f0961f3",
+    "fig12_runtime_benchmark.png": "64fad25d471cfa795c3b2208ac7245b8034ca942e6602c877cad125bb6f96fba",
+    "fig12_runtime_benchmark.svg": "4899bf984b9bb92f494f4cb5480df6bf677dee085e67acc5dabaa1682d8e0b53",
+    "runtime.csv": "781da937a69c58c00dee9ab7a20d839c807b5829e3dcfb9ec6cca240470fb910",
+    "summary.json": "dc82fc0ed66774da440319b558173f3653707e651943a67ebb84c1c3688b1987"
+  }
+}

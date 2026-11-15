@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "medical-escalation-006",
+  "title": "Medical escalation",
+  "description": "Medical kits are short. Zone C starts as the least urgent zone; the demo event escalates its severity and time-criticality.",
+  "seed": 2182031,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {
+      "id": "medical_kits",
+      "label": "Medical kits",
+      "unit": "kits"
+    },
+    {
+      "id": "water_packs",
+      "label": "Water packs",
+      "unit": "packs"
+    },
+    {
+      "id": "shelter_kits",
+      "label": "Shelter kits",
+      "unit": "kits"
+    }
+  ],
+  "stock": {
+    "medical_kits": 60,
+    "water_packs": 220,
+    "shelter_kits": 70
+  },
+  "zones": [
+    {
+      "id": "zone-a",
+      "name": "Zone A · Valley school shelter",
+      "arrival_order": 1,
+      "severity": 7,
+      "vulnerability": 6,
+      "time_criticality": 7,
+      "activation_step": 0,
+      "population": 5400,
+      "demand": {
+        "medical_kits": 30,
+        "water_packs": 80,
+        "shelter_kits": 25
+      }
+    },
+    {
+      "id": "zone-b",
+      "name": "Zone B · Market district",
+      "arrival_order": 2,
+      "severity": 6,
+      "vulnerability": 5,
+      "time_criticality": 6,
+      "activation_step": 0,
+      "population": 8200,
+      "demand": {
+        "medical_kits": 25,
+        "water_packs": 70,
+        "shelter_kits": 30
+      }
+    },
+    {
+      "id": "zone-c",
+      "name": "Zone C · Northern clinic",
+      "arrival_order": 3,
+      "severity": 4,
+      "vulnerability": 6,
+      "time_criticality": 4,
+      "activation_step": 0,
+      "population": 2900,
+      "demand": {
+        "medical_kits": 35,
+        "water_packs": 60,
+        "shelter_kits": 25
+      }
+    }
+  ]
+}

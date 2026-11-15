@@ -1,0 +1,9 @@
+{
+ "verifDate": "13 November 2026",
+ "backendTests": "288 passed",
+ "ruff": "All checks passed; 115 files formatted",
+ "frontend": "All five passed; 81 tests in 7 files",
+ "smoke": "Passed: every fixture, four policies, invariants re-checked",
+ "verify": "All checks passed; 560 + 560 shared rows identical",
+ "checksums": "8 of 8 folders match"
+}

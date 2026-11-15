@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1563" viewBox="0 0 1600 1563" font-family="Calibri, 'Segoe UI', Arial, sans-serif">
+<defs><marker id="ah-teal" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#087F84"/></marker><marker id="ah-teal-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#087F84"/></marker><marker id="ah-navy" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#13283B"/></marker><marker id="ah-navy-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#13283B"/></marker><marker id="ah-amber" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B7791F"/></marker><marker id="ah-amber-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#B7791F"/></marker><marker id="ah-muted" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7A"/></marker><marker id="ah-muted-s" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#5B6B7A"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1563" fill="#FFFFFF"/>
+<rect x="20" y="20" width="1000" height="400" rx="6" ry="6" fill="#EEF4F6" stroke="#D5DDE3" stroke-width="1.5"/>
+<text x="36" y="48" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Static families A–G  ·  <tspan font-family="Consolas, 'Courier New', monospace">families.py</tspan></text>
+<text x="44" y="100" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="700" text-anchor="start" style="white-space:pre"></text>
+<text x="100" y="100" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="700" text-anchor="start" style="white-space:pre">purpose</text>
+<text x="600" y="100" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="700" text-anchor="start" style="white-space:pre">stock / requests</text>
+<text x="880" y="100" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="700" text-anchor="start" style="white-space:pre">seed base</text>
+<text x="44" y="136" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">A</text>
+<text x="100" y="136" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Low scarcity</text>
+<text x="600" y="136" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">85–110%</text>
+<text x="880" y="136" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">100000</text>
+<text x="44" y="169" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">B</text>
+<text x="100" y="169" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Moderate scarcity</text>
+<text x="600" y="169" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">60–85%</text>
+<text x="880" y="169" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">200000</text>
+<text x="44" y="202" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">C</text>
+<text x="100" y="202" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Severe scarcity</text>
+<text x="600" y="202" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">25–50%</text>
+<text x="880" y="202" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">300000</text>
+<text x="44" y="235" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">D</text>
+<text x="100" y="235" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Unequal urgency</text>
+<text x="600" y="235" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">50–80%</text>
+<text x="880" y="235" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">400000</text>
+<text x="44" y="268" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">E</text>
+<text x="100" y="268" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Equal or near-equal urgency</text>
+<text x="600" y="268" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">50–80%</text>
+<text x="880" y="268" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">500000</text>
+<text x="44" y="301" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">F</text>
+<text x="100" y="301" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Unequal demand</text>
+<text x="600" y="301" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">50–80%</text>
+<text x="880" y="301" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">600000</text>
+<text x="44" y="334" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">G</text>
+<text x="100" y="334" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">Multiple shortages</text>
+<text x="600" y="334" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">3 short, 1 ample</text>
+<text x="880" y="334" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">700000</text>
+<line x1="44" y1="370" x2="996" y2="370" stroke="#D5DDE3" stroke-width="1.5"/>
+<text x="44" y="404" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-weight="700">72 scenarios each = 504</tspan>;  seed = base + i</text>
+<rect x="1050" y="20" width="530" height="400" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1068" y="64" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Dynamic family H</text>
+<text x="1068" y="103" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">60 scripts (family-B base)</text>
+<text x="1068" y="137" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-weight="700">recommendation:</tspan> 7 events,</text>
+<text x="1068" y="171" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">shared state, 420 steps</text>
+<text x="1068" y="205" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-weight="700">dispatch:</tspan> 11 events with</text>
+<text x="1068" y="239" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">4 dispatches; 240 runs</text>
+<text x="1068" y="273" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-weight="700">scaling:</tspan> 5–50 zones,</text>
+<text x="1068" y="307" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">600 timed rows</text>
+<line x1="520" y1="420" x2="520" y2="444" stroke="#087F84" stroke-width="2"/>
+<line x1="1315" y1="420" x2="1315" y2="444" stroke="#087F84" stroke-width="2"/>
+<line x1="300" y1="444" x2="1315" y2="444" stroke="#087F84" stroke-width="2"/>
+<path d="M300,444 L300,474" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="474" width="1040" height="135" rx="6" ry="6" fill="#FFFFFF" stroke="#087F84" stroke-width="2"/>
+<text x="38" y="518" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#087F84" font-weight="700" text-anchor="start" style="white-space:pre">1  Four policies, identical inputs</text>
+<text x="38" y="557" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-family="Consolas, 'Courier New', monospace">fcfs</tspan>, <tspan font-family="Consolas, 'Courier New', monospace">greedy</tspan>, <tspan font-family="Consolas, 'Courier New', monospace">aidos</tspan>, <tspan font-family="Consolas, 'Courier New', monospace">aidos_balanced</tspan></text>
+<text x="38" y="591" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">same snapshot, same fuzzy scores, frozen config</text>
+<path d="M300,609 L300,641" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="641" width="1040" height="101" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="38" y="685" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">2  Independent validator</text>
+<text x="38" y="724" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">all plans valid: 2,016 static, 1,680 step plans</text>
+<path d="M300,742 L300,774" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="774" width="1040" height="135" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="38" y="818" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">3  Metrics</text>
+<text x="38" y="857" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">urgency-weighted coverage, lowest zone</text>
+<text x="38" y="891" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">coverage, starved zones, Jain index, runtime</text>
+<path d="M300,909 L300,941" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="941" width="1040" height="101" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="38" y="985" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">4  Raw CSV rows</text>
+<text x="38" y="1024" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">static 2,016  ·  dynamic 1,680 + 240  ·  scaling 600</text>
+<path d="M300,1042 L300,1074" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="1074" width="1040" height="203" rx="6" ry="6" fill="#FFFFFF" stroke="#087F84" stroke-width="2"/>
+<text x="38" y="1118" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#087F84" font-weight="700" text-anchor="start" style="white-space:pre">5  Paired statistics  →  <tspan font-family="Consolas, 'Courier New', monospace">summary.json</tspan></text>
+<text x="38" y="1157" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">differences per scenario or script</text>
+<text x="38" y="1191" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">95% bootstrap CI (5,000 resamples), d_z</text>
+<text x="38" y="1225" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">4 primary tests, AidOS vs FCFS:</text>
+<text x="38" y="1259" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">exact sign test, Holm-adjusted</text>
+<path d="M300,1277 L300,1309" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="1309" width="1040" height="101" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="38" y="1353" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">6  Manifest</text>
+<text x="38" y="1392" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">versions, counts, SHA-256 of every file</text>
+<path d="M300,1410 L300,1442" fill="none" stroke="#087F84" stroke-width="2" stroke-linejoin="round" marker-end="url(#ah-teal)"/>
+<rect x="20" y="1442" width="1040" height="101" rx="6" ry="6" fill="#FFFFFF" stroke="#087F84" stroke-width="2"/>
+<text x="38" y="1486" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#087F84" font-weight="700" text-anchor="start" style="white-space:pre">7  Verify, then report</text>
+<text x="38" y="1525" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre"><tspan font-family="Consolas, 'Courier New', monospace">verify_results.py</tspan>, then figures and tables</text>
+<rect x="1100" y="474" width="480" height="1069" rx="6" ry="6" fill="#EEF4F6" stroke="#D5DDE3" stroke-width="1.5"/>
+<text x="1116" y="502" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="28" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Stage 5 supplementary</text>
+<text x="1120" y="540" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="start" style="white-space:pre">exploratory, new seeds</text>
+<rect x="1120" y="566" width="440" height="104" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1136" y="606" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="26" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Greedy equivalence</text>
+<text x="1136" y="644" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">36,240 + 700 instances</text>
+<rect x="1120" y="684" width="440" height="104" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1136" y="724" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="26" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Floor sweep</text>
+<text x="1136" y="762" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">280 scenarios × 6 floors</text>
+<rect x="1120" y="802" width="440" height="104" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1136" y="842" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="26" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Fuzzy sensitivity</text>
+<text x="1136" y="880" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">280 scenarios × 11 variants</text>
+<rect x="1120" y="920" width="440" height="104" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1136" y="960" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="26" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Controlled dynamic</text>
+<text x="1136" y="998" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">120 scripts</text>
+<rect x="1120" y="1038" width="440" height="104" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1136" y="1078" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="26" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Runtime benchmark</text>
+<text x="1136" y="1116" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">2,100 timed runs</text>
+<rect x="1120" y="1156" width="440" height="104" rx="6" ry="6" fill="#FFFFFF" stroke="#13283B" stroke-width="1.5"/>
+<text x="1136" y="1196" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="26" fill="#13283B" font-weight="700" text-anchor="start" style="white-space:pre">Stage 4 audit</text>
+<text x="1136" y="1234" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="24" fill="#182B3D" font-weight="400" text-anchor="start" style="white-space:pre">21 checks</text>
+<text x="1120" y="1300" font-family="Calibri, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#5B6B7A" font-weight="400" text-anchor="start" style="white-space:pre">own runs, fig9–fig12</text>
+<path d="M1060,534 L1100,534" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#ah-navy)"/>
+<path d="M1100,1492.5 L1060,1492.5" fill="none" stroke="#13283B" stroke-width="1.5" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#ah-navy)"/>
+</svg>

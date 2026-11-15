@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "late-critical-arrival",
+  "title": "Critical zone reports last",
+  "description": "The most severe and time-critical zone files its request after three moderate zones. A test case where arrival order and urgency disagree.",
+  "seed": 2182028,
+  "synthetic": true,
+  "step": 0,
+  "resources": [
+    {"id": "medical_kits", "label": "Medical kits", "unit": "kits"},
+    {"id": "water_packs", "label": "Water packs", "unit": "packs"},
+    {"id": "shelter_kits", "label": "Shelter kits", "unit": "kits"},
+    {"id": "nutrition_packs", "label": "Nutrition packs", "unit": "packs"}
+  ],
+  "stock": {"medical_kits": 100, "water_packs": 240, "shelter_kits": 80, "nutrition_packs": 160},
+  "zones": [
+    {"id": "zone-a", "name": "Zone A · Suburban ward", "arrival_order": 1, "severity": 4, "vulnerability": 3, "time_criticality": 3, "population": 9100, "demand": {"medical_kits": 35, "water_packs": 80, "shelter_kits": 20, "nutrition_packs": 50}},
+    {"id": "zone-b", "name": "Zone B · Industrial estate", "arrival_order": 2, "severity": 5, "vulnerability": 4, "time_criticality": 4, "population": 4700, "demand": {"medical_kits": 30, "water_packs": 70, "shelter_kits": 25, "nutrition_packs": 45}},
+    {"id": "zone-c", "name": "Zone C · Ring-road settlement", "arrival_order": 3, "severity": 5, "vulnerability": 5, "time_criticality": 5, "population": 6600, "demand": {"medical_kits": 25, "water_packs": 60, "shelter_kits": 25, "nutrition_packs": 40}},
+    {"id": "zone-d", "name": "Zone D · Collapsed bridge village", "arrival_order": 4, "severity": 10, "vulnerability": 9, "time_criticality": 10, "population": 3200, "demand": {"medical_kits": 60, "water_packs": 90, "shelter_kits": 40, "nutrition_packs": 50}}
+  ]
+}

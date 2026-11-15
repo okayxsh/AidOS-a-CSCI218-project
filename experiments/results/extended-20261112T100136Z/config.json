@@ -1,0 +1,232 @@
+{
+  "run_id": "extended-20261112T100136Z",
+  "preset": {
+    "name": "extended",
+    "per_family": 72,
+    "dynamic_scripts": 60,
+    "timing_repeats": 3,
+    "scaling_sizes": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "scaling_seeds": 5,
+    "scaling_repeats": 5,
+    "bootstrap_resamples": 5000,
+    "bootstrap_seed": 20261111,
+    "families": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ]
+  },
+  "families": {
+    "A": {
+      "key": "A",
+      "name": "Low scarcity",
+      "description": "Stock is 85-110% of requests per resource.",
+      "seed_base": 100000,
+      "zones": [
+        3,
+        8
+      ],
+      "resources": [
+        3,
+        4
+      ],
+      "stock_factor": [
+        0.85,
+        1.1
+      ],
+      "ratings": "uniform",
+      "demand": "uniform",
+      "mixed_shortage": false
+    },
+    "B": {
+      "key": "B",
+      "name": "Moderate scarcity",
+      "description": "Stock is 60-85% of requests per resource.",
+      "seed_base": 200000,
+      "zones": [
+        3,
+        8
+      ],
+      "resources": [
+        3,
+        4
+      ],
+      "stock_factor": [
+        0.6,
+        0.85
+      ],
+      "ratings": "uniform",
+      "demand": "uniform",
+      "mixed_shortage": false
+    },
+    "C": {
+      "key": "C",
+      "name": "Severe scarcity",
+      "description": "Stock is 25-50% of requests per resource.",
+      "seed_base": 300000,
+      "zones": [
+        3,
+        8
+      ],
+      "resources": [
+        3,
+        4
+      ],
+      "stock_factor": [
+        0.25,
+        0.5
+      ],
+      "ratings": "uniform",
+      "demand": "uniform",
+      "mixed_shortage": false
+    },
+    "D": {
+      "key": "D",
+      "name": "Unequal urgency",
+      "description": "Half the zones are rated 7-10 on every input, half 0-3; stock 50-80%.",
+      "seed_base": 400000,
+      "zones": [
+        4,
+        8
+      ],
+      "resources": [
+        3,
+        4
+      ],
+      "stock_factor": [
+        0.5,
+        0.8
+      ],
+      "ratings": "bimodal",
+      "demand": "uniform",
+      "mixed_shortage": false
+    },
+    "E": {
+      "key": "E",
+      "name": "Equal or near-equal urgency",
+      "description": "All zones share one rating triple (even seeds) or differ by at most 1 point per input (odd seeds); stock 50-80%.",
+      "seed_base": 500000,
+      "zones": [
+        3,
+        8
+      ],
+      "resources": [
+        3,
+        4
+      ],
+      "stock_factor": [
+        0.5,
+        0.8
+      ],
+      "ratings": "equal",
+      "demand": "uniform",
+      "mixed_shortage": false
+    },
+    "F": {
+      "key": "F",
+      "name": "Unequal demand",
+      "description": "One or two zones request 4-8 times more than the others; stock 50-80%.",
+      "seed_base": 600000,
+      "zones": [
+        4,
+        8
+      ],
+      "resources": [
+        3,
+        4
+      ],
+      "stock_factor": [
+        0.5,
+        0.8
+      ],
+      "ratings": "uniform",
+      "demand": "skewed",
+      "mixed_shortage": false
+    },
+    "G": {
+      "key": "G",
+      "name": "Multiple resource shortages",
+      "description": "Four resources: three are short (30-60%), one is ample (100-130%).",
+      "seed_base": 700000,
+      "zones": [
+        3,
+        8
+      ],
+      "resources": [
+        4,
+        4
+      ],
+      "stock_factor": [
+        0.3,
+        0.6
+      ],
+      "ratings": "uniform",
+      "demand": "uniform",
+      "mixed_shortage": true
+    }
+  },
+  "family_seeds": {
+    "A": [
+      100000,
+      100071
+    ],
+    "B": [
+      200000,
+      200071
+    ],
+    "C": [
+      300000,
+      300071
+    ],
+    "D": [
+      400000,
+      400071
+    ],
+    "E": [
+      500000,
+      500071
+    ],
+    "F": [
+      600000,
+      600071
+    ],
+    "G": [
+      700000,
+      700071
+    ]
+  },
+  "dynamic": {
+    "base_family": "B",
+    "base_seeds": "800000 + i (family-B generator)",
+    "script_seeds": "800000 + i (recommendation), 850000 + i (dispatch)",
+    "dispatch_initial_stock_share": 0.3,
+    "dispatch_wave_share": 0.15
+  },
+  "policies": [
+    "fcfs",
+    "greedy",
+    "aidos",
+    "aidos_balanced"
+  ],
+  "aidos_config": {
+    "epsilon": 1.0,
+    "resource_weights": {},
+    "min_coverage": 0.25,
+    "time_limit_s": 5.0,
+    "random_seed": 0,
+    "workers": 1
+  },
+  "fuzzy_config_version": "1.0",
+  "fuzzy_method": "sugeno-0-product-weighted-average"
+}
