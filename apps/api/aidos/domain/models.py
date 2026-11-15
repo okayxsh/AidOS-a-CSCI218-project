@@ -21,7 +21,8 @@ Identifier = Annotated[
     StringConstraints(min_length=1, max_length=64, pattern=r"^[a-z0-9][a-z0-9_-]*$"),
 ]
 Units = Annotated[int, Field(ge=0, le=MAX_UNITS, strict=True)]
-Rating = Annotated[float, Field(ge=0, le=10)]
+# strict: a JSON true or "7" is rejected rather than coerced (integers are still accepted).
+Rating = Annotated[float, Field(ge=0, le=10, strict=True)]
 
 
 class Frozen(BaseModel):

@@ -8,9 +8,10 @@ from __future__ import annotations
 import os
 
 from fastapi import FastAPI, Request
-from fastapi.exceptions import HTTPException, RequestValidationError
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from aidos import ENGINE_STAGE, __version__
 from aidos.ai.constraints import AllocationConfigError
@@ -76,9 +77,16 @@ def create_app() -> FastAPI:
     async def _config_invalid(_: Request, exc: AllocationConfigError):
         return _error(422, "invalid_config", str(exc))
 
-    @app.exception_handler(HTTPException)
-    async def _http(_: Request, exc: HTTPException):
-        codes = {404: "not_found", 405: "method_not_allowed", 422: "validation_error"}
+    # Starlette's base class also catches the router's own 404/405 and FastAPI's 400 for
+    # bodies it cannot parse, so every error uses the documented envelope.
+    @app.exception_handler(StarletteHTTPException)
+    async def _http(_: Request, exc: StarletteHTTPException):
+        codes = {
+            400: "bad_request",
+            404: "not_found",
+            405: "method_not_allowed",
+            422: "validation_error",
+        }
         return _error(exc.status_code, codes.get(exc.status_code, "http_error"), str(exc.detail))
 
     @app.exception_handler(InvalidRunIdError)

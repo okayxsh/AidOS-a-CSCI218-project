@@ -252,7 +252,10 @@ def allocate_aidos(
         "but not proven optimal for the full lexicographic objective."
     )
     allocated = {key: values.get(key, 0) for key in x}
-    cells = _explain_cells(scenario, zones, coef, allocated, floor_values, objective, status)
+    target = round(config.min_coverage * FLOOR_SCALE)
+    cells = _explain_cells(
+        scenario, zones, coef, allocated, floor_values, objective, status, target
+    )
     order = tuple(
         z.id for z in sorted(zones, key=lambda z: (-urgency[z.id], z.arrival_order, z.id))
     )
@@ -284,6 +287,7 @@ def _explain_cells(
     floors: Mapping[str, int],
     objective: Objective,
     status: PolicyStatus,
+    target: int = 0,
 ) -> list[CellResult]:
     """Explain every cell from quantities in the solved model; no counterfactual claims."""
     cells: list[CellResult] = []
@@ -329,11 +333,24 @@ def _explain_cells(
             if objective == "balanced" and rid in floors:
                 fraction = floors[rid] / FLOOR_SCALE
                 reserved = sum(_floor_units(fraction, scenario.demand_of(z, rid)) for z in others)
-                parts.append(
-                    f"Balanced mode first guaranteed every requesting zone {fraction:.1%} of its "
-                    f"request (this zone: {_floor_units(fraction, requested)}; the others: "
-                    f"{reserved}), then gave the remaining stock by urgency."
-                )
+                share = f"(this zone: {_floor_units(fraction, requested)}; the others: {reserved})"
+                if floors[rid] >= target:
+                    parts.append(
+                        f"Balanced mode first gave every requesting zone at least {fraction:.1%} "
+                        f"of its request {share}, then gave the remaining stock by urgency."
+                    )
+                elif floors[rid] > 0:
+                    parts.append(
+                        f"Stock was too low for the {target / FLOOR_SCALE:.0%} coverage target, "
+                        f"so balanced mode reduced the common floor to {fraction:.1%} {share}, "
+                        f"then gave the remaining stock by urgency."
+                    )
+                else:
+                    parts.append(
+                        f"Stock was too low for any common coverage floor (target "
+                        f"{target / FLOOR_SCALE:.0%}), so this resource was allocated by urgency "
+                        f"alone."
+                    )
             if higher:
                 units = sum(allocated.get((z.id, rid), 0) for z in higher)
                 parts.append(

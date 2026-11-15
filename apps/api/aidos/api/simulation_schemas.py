@@ -46,11 +46,12 @@ class ReplayRequest(VersionedRequest):
 
 
 class ExportConfig(BaseModel):
+    # Same bounds as AidosConfigIn, so an imported session cannot exceed the API's limits.
     policy: Literal["aidos", "aidos_balanced"] = "aidos"
-    epsilon: float = 1.0
+    epsilon: float = Field(default=1.0, gt=0, le=100)
     resource_weights: dict[str, int] = {}
-    min_coverage: float = 0.25
-    time_limit_s: float = 5.0
+    min_coverage: float = Field(default=0.25, ge=0, le=1)
+    time_limit_s: float = Field(default=5.0, ge=0.01, le=10)
 
 
 class ExportedEvent(BaseModel):

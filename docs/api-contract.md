@@ -67,7 +67,7 @@ Unchanged from Stage 1. The list returns `{scenario_id, title, description, seed
 
 ## `POST /api/urgency/evaluate`
 
-Request: exactly one of `{ "scenario": <Scenario> }` or `{ "ratings": { "severity": 7, "time_criticality": 7, "vulnerability": 5 } }`. Ratings are numbers from 0 to 10.
+Request: exactly one of `{ "scenario": <Scenario> }` or `{ "ratings": { "severity": 7, "time_criticality": 7, "vulnerability": 5 } }`. Ratings are JSON numbers from 0 to 10; booleans and numeric strings (`true`, `"7"`) are rejected with `validation_error`.
 
 ```json
 {
@@ -210,11 +210,13 @@ Every error uses one shape:
 | 409 | `invalid_transition` | The action or event is not allowed in the session's state |
 | 409 | `stale_plan` | `plan_committed` named a snapshot that is not the current one |
 | 422 | `invalid_event`, `unknown_zone`, `unknown_resource`, `insufficient_stock`, `no_change`, `last_zone`, `duplicate_zone`, `no_plan`, `invalid_plan`, `invalid_result`, `too_many_events` | The event cannot be applied to the current scenario; nothing changed |
-| 422 | `replay_failed` | A replay or import failed; `details[0].path` is `events.<i>` or `document` |
+| 422 | `replay_failed` | A replay or import failed; `details[0].path` is `events.<i>` or `document`. An imported `config` must respect the same ranges as `/api/allocations/compare` (`time_limit_s` at most 10) |
 | 503 | `solver_failed` | The recommended policy returned no plan for the new state; the event was not applied |
 | 500 | `engine_invariant` | A computed plan broke a hard constraint (an engine defect); the session moved to ERROR |
 | 422 | `invalid_run_id` | Evaluation run id does not match `<preset>-<YYYYMMDD>T<HHMMSS>Z` |
 | 404 | `run_not_found` | No evaluation run with that id in `experiments/results/` |
+| 404 / 405 | `not_found` / `method_not_allowed` | Unknown route, or a method the route does not accept |
+| 400 | `bad_request` | The body could not be parsed (for example, nesting or numbers beyond the parser's limits) |
 
 The Stage 1 `501 policy_not_implemented` response no longer occurs: all four policies exist.
 
