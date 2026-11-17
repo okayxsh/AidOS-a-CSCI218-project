@@ -1,5 +1,7 @@
 # Deploying the frontend to Vercel
 
+Live site: <https://aid-os-a-csci-218-project.vercel.app/>
+
 Only `apps/web` (the React/Vite dashboard) is deployed to Vercel. The FastAPI engine is not part of this deployment; it will be hosted separately (Render) and connected later through a Vercel rewrite. Until then, every engine-backed page shows the "engine not running" state. No numbers are invented.
 
 ## How the frontend finds the engine

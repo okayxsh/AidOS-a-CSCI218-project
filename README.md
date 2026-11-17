@@ -8,6 +8,8 @@ AidOS is an academic simulator that helps a *simulated* emergency coordinator de
 
 Repository: <https://github.com/okayxsh/AidOS-a-CSCI218-project>
 
+Live site: <https://aid-os-a-csci-218-project.vercel.app/> (frontend only, hosted on Vercel). The landing page works fully. The engine is not deployed yet, so the dashboard pages show an "engine is not running" message instead of results. To use the full dashboard, run the engine locally (see [Run the app](#run-the-app)). Deployment notes: [`docs/deployment/vercel-frontend.md`](docs/deployment/vercel-frontend.md).
+
 ## Status
 
 **Complete and verified** (all checks pass in CI):
@@ -140,6 +142,7 @@ npm run preview         # serve the production build on :4173
 - [`docs/submission/`](docs/submission/): final checklist, final demo runbook, viva question bank, reflection template, instructor confirmation request, readiness audit, git and reproducibility
 - [`docs/api-contract.md`](docs/api-contract.md): endpoints, schemas and error shape
 - [`docs/frontend.md`](docs/frontend.md): routes, components, data flow, design system
+- [`docs/deployment/vercel-frontend.md`](docs/deployment/vercel-frontend.md): the Vercel frontend deployment and how to connect the engine later
 - [`data/README.md`](data/README.md): the synthetic scenario fixtures
 
 ## Academic scope
