@@ -62,7 +62,8 @@ export function useSimulation(scenarioId: string) {
       },
       (error: unknown) => {
         if (cancelled) return;
-        if (error instanceof ApiError && error.status === 404) setExpired(urlSession);
+        if (error instanceof ApiError && error.kind === 'http' && error.status === 404)
+          setExpired(urlSession);
         else
           setFeedback({
             source: 'session',

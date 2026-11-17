@@ -35,13 +35,19 @@ export function ErrorState({ error, onRetry, title }: ErrorStateProps) {
           {title ?? (offline ? 'The AidOS engine is not running' : 'Something went wrong')}
         </h2>
         <p className="state__body">{error?.message ?? 'Unknown error.'}</p>
-        {offline && (
-          <p className="state__help">
-            Start it from <code>apps/api</code> with{' '}
-            <code>uv run uvicorn aidos.main:app --port 8000</code>, then retry. The dashboard never
-            shows numbers the engine did not compute.
-          </p>
-        )}
+        {offline &&
+          (import.meta.env.DEV ? (
+            <p className="state__help">
+              Start it from <code>apps/api</code> with{' '}
+              <code>uv run uvicorn aidos.main:app --port 8000</code>, then retry. The dashboard
+              never shows numbers the engine did not compute.
+            </p>
+          ) : (
+            <p className="state__help">
+              This deployment could not reach its engine, so there is nothing to show. Try again
+              later. The dashboard never shows numbers the engine did not compute.
+            </p>
+          ))}
         {onRetry && (
           <button type="button" className="btn btn--quiet state__retry" onClick={onRetry}>
             <RotateCcw size={15} aria-hidden="true" />

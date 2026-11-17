@@ -26,9 +26,32 @@ export type AidosConfigInput = Partial<
   Pick<AidosConfig, 'epsilon' | 'resource_weights' | 'min_coverage' | 'time_limit_s'>
 >;
 
-export const API_BASE_URL: string = (
-  import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'
-).replace(/\/$/, '');
+/**
+ * Trim a configured engine address so request paths, which all start with `/api/`, never
+ * become `/api/api/...`: `https://host/api/` and `https://host` both give `https://host`.
+ */
+export function normaliseApiBase(base: string): string {
+  return base
+    .trim()
+    .replace(/\/+$/, '')
+    .replace(/\/api$/, '');
+}
+
+// The dev server talks to a local engine. A production build has no default host: it calls
+// `/api/...` on its own origin, which the hosting platform forwards to the engine. The
+// literal sits behind import.meta.env.DEV so it is removed from production bundles.
+const DEV_ENGINE = import.meta.env.DEV ? 'http://localhost:8000' : '';
+
+/** Engine base URL: VITE_API_BASE_URL when set, otherwise the default above ('' = same origin). */
+export const API_BASE_URL: string = normaliseApiBase(
+  import.meta.env.VITE_API_BASE_URL?.trim() || DEV_ENGINE,
+);
+
+/** Where the engine is expected, for messages. */
+const ENGINE_LOCATION = API_BASE_URL || "this site's /api";
+
+/** Replies that mean "no engine answered here" when they do not carry the engine's JSON. */
+const UNAVAILABLE_STATUSES = new Set([404, 502, 503, 504]);
 
 /** A failed API call. `kind` separates "engine not running" from "engine said no". */
 export class ApiError extends Error {
@@ -77,28 +100,41 @@ async function request<T>(
         'network',
       );
     }
-    throw new ApiError(`Cannot reach the AidOS engine at ${API_BASE_URL}.`, 'network');
+    throw new ApiError(`Cannot reach the AidOS engine at ${ENGINE_LOCATION}.`, 'network');
   }
 
   if (!response.ok) {
-    let message = `The engine returned HTTP ${response.status}.`;
-    let code: string | null = null;
+    let body: unknown;
     try {
-      const body = (await response.json()) as ApiErrorBody;
-      message = body.error.message;
-      code = body.error.code;
+      body = await response.json();
     } catch {
-      // Keep the generic message when the body is not the standard error shape.
+      // Not JSON: a hosting platform's own error page (no backend, backend asleep or down)
+      // rather than the engine, which always answers errors in its JSON envelope.
+      if (UNAVAILABLE_STATUSES.has(response.status)) {
+        throw new ApiError(
+          `No AidOS engine answered at ${ENGINE_LOCATION} (HTTP ${response.status}).`,
+          'network',
+          response.status,
+        );
+      }
     }
-    throw new ApiError(message, 'http', response.status, code);
+    const envelope = (body as Partial<ApiErrorBody> | undefined)?.error;
+    throw new ApiError(
+      envelope?.message ?? `The engine returned HTTP ${response.status}.`,
+      'http',
+      response.status,
+      envelope?.code ?? null,
+    );
   }
 
   try {
     return (await response.json()) as T;
   } catch {
+    // A successful reply that is not JSON (an HTML page, for example) did not come from the
+    // engine, so treat it as "engine not reachable" rather than as an engine error.
     throw new ApiError(
-      'The engine sent a response that is not valid JSON.',
-      'http',
+      `The server at ${ENGINE_LOCATION} sent a response that is not valid JSON, so no AidOS engine answered.`,
+      'network',
       response.status,
     );
   }

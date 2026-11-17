@@ -16,7 +16,10 @@ interface ScenarioGateProps {
 /** Renders loading and error states once, so every page handles them the same way. */
 export function ScenarioGate({ detail, children }: ScenarioGateProps) {
   if (detail.status === 'error') {
-    const notFound = detail.error instanceof ApiError && detail.error.status === 404;
+    const notFound =
+      detail.error instanceof ApiError &&
+      detail.error.kind === 'http' &&
+      detail.error.status === 404;
     return (
       <>
         <ErrorState
