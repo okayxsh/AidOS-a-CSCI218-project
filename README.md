@@ -8,7 +8,12 @@ AidOS is an academic simulator that helps a *simulated* emergency coordinator de
 
 Repository: <https://github.com/okayxsh/AidOS-a-CSCI218-project>
 
-Live site: <https://aid-os-a-csci-218-project.vercel.app/> (frontend only, hosted on Vercel). The landing page works fully. The engine is not deployed yet, so the dashboard pages show an "engine is not running" message instead of results. To use the full dashboard, run the engine locally (see [Run the app](#run-the-app)). Deployment notes: [`docs/deployment/vercel-frontend.md`](docs/deployment/vercel-frontend.md).
+Live demo: <https://aid-os-a-csci-218-project.vercel.app/>. The frontend is hosted on Vercel and the FastAPI engine on Render (<https://aidos-a-csci218-project.onrender.com>); Vercel forwards `/api/*` to Render, so the whole dashboard works on the live site. The engine is on Render's free tier:
+
+- **Cold starts:** after about 15 idle minutes it spins down, and the first request can take about a minute. The dashboard then shows "engine is not running" until Retry succeeds.
+- **Lost sessions:** a restart or redeploy ends open simulation sessions.
+
+Architecture, settings and verification steps: [`docs/deployment/vercel-frontend.md`](docs/deployment/vercel-frontend.md).
 
 ## Status
 
@@ -35,7 +40,7 @@ Live site: <https://aid-os-a-csci-218-project.vercel.app/> (frontend only, hoste
 - get the instructor's confirmations;
 - rehearse the demo.
 
-The engine reports version `0.4.0` and stage 4, because Stages 5 and 6 added experiments and documentation rather than engine features.
+The engine reports version `0.4.0` and stage 4, and the dashboard shows this as "v0.4.0 · stage 4". That is the **engine's** version, not the project's overall status. Stages 5 and 6 and the deployment added experiments, documentation, hardening and hosting rather than engine features.
 
 The full specification is in [`AidOS project info.md`](AidOS%20project%20info.md), and it overrides this README if the two disagree.
 
@@ -90,7 +95,7 @@ npm run dev
 
 Open <http://localhost:5173/> for the landing page and <http://localhost:5173/dashboard> for the dashboard. The crisis simulator is at <http://localhost:5173/dashboard/simulate>; the live-demo walkthrough is in [`docs/simulation/demo-scenarios.md`](docs/simulation/demo-scenarios.md). Simulation sessions live in the engine's memory: restarting the engine ends them (export a session first to keep it). Run the engine with a single worker. The landing page works without the engine. The dashboard shows a clear "engine is not running" state until the engine starts; it never shows numbers the engine did not compute. Interactive API docs are at <http://localhost:8000/docs>.
 
-The frontend reads the engine URL from `VITE_API_BASE_URL` (default `http://localhost:8000`), and the engine allows the origins in `AIDOS_CORS_ORIGINS` (default: the Vite dev and preview ports). See `.env.example`.
+The frontend reads the engine URL from `VITE_API_BASE_URL`. If it is unset, the dev server uses `http://localhost:8000` and a production build calls `/api/...` on its own domain, and the engine allows the origins in `AIDOS_CORS_ORIGINS` (default: the Vite dev and preview ports). See `.env.example`.
 
 ## Development commands
 
@@ -142,7 +147,7 @@ npm run preview         # serve the production build on :4173
 - [`docs/submission/`](docs/submission/): final checklist, final demo runbook, viva question bank, reflection template, instructor confirmation request, readiness audit, git and reproducibility
 - [`docs/api-contract.md`](docs/api-contract.md): endpoints, schemas and error shape
 - [`docs/frontend.md`](docs/frontend.md): routes, components, data flow, design system
-- [`docs/deployment/vercel-frontend.md`](docs/deployment/vercel-frontend.md): the Vercel frontend deployment and how to connect the engine later
+- [`docs/deployment/vercel-frontend.md`](docs/deployment/vercel-frontend.md): the live deployment (Vercel frontend, Render engine), its constraints and how to verify it
 - [`data/README.md`](data/README.md): the synthetic scenario fixtures
 
 ## Academic scope
